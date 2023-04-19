@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+scss/
+package-lock.json
+package.json
+*.scss
+*.css.map
+
+index.php
+assets/includes/
+template/

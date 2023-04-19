@@ -1,0 +1,9 @@
+ErrorDocument 401 /error/?code=401
+ErrorDocument 403 /error/?code=403
+ErrorDocument 404 /error/?code=404
+
+#prevent folder listing
+IndexIgnore *
+
+#disable directory browsing
+Options -Indexes
