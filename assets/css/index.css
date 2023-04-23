@@ -11217,10 +11217,6 @@ iframe.yt-iframe.yt-16-10 {
   transform: scale(1.05);
 }
 
-.display-view:not(:first-of-type) {
-  display: none;
-}
-
 /* Waving Hand Emoji */
 /* Reference: https://jarv.is/notes/css-waving-hand-emoji/ */
 .wave {
