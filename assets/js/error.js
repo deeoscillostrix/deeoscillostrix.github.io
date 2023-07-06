@@ -32,9 +32,20 @@ const ERROR = {
 			"What's his password.. what's his password? I'VE GOT NOTHING ON A PASSWORD!",
 		],
 	},
+	default: {
+		title: "Unknown Error Code",
+		messages: ["I'm sorry, what's that?", "This is not the error page you're looking for."],
+	},
 };
 
 function displayErrorMessage(error_code) {
+	// error code not in [401, 403, 404]
+	if (!Object.keys(ERROR).includes(error_code)) {
+		console.log(`Unaccounted for error code received: ${error_code}`);
+		// error_code = 404;
+		document.querySelector(`#message-${error_code}`).innerHTML = ERROR["default"].messages[RANDOM_INDEX];
+	}
+
 	// display random error message
 	const RANDOM_INDEX = Math.floor(Math.random() * ERROR[error_code].messages.length);
 	document.querySelector(`#message-${error_code}`).innerHTML = ERROR[error_code].messages[RANDOM_INDEX];
