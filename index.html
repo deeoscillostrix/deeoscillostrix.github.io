@@ -1,318 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta property="og:url" content="localhost:8888" />
+		<meta property="og:title" content="Oscillo Strix" />
+		<meta property="og:description" content="Oscillo's Website" />
+		<meta property="og:image" content="assets/images/oscii_favico.webp" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="deeoscillostrix" />
+		<meta name="description" content="Oscillo's Website" />
+		<meta name="keywords" content="Oscillo Strix, Oscillo, oscii, deezombiedude, deeoscillostrix" />
+		<title>Oscillo Strix</title>
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:url" content="localhost:8888">
-    <meta property="og:title" content="Oscillo Strix">
-    <meta property="og:description" content="Oscillo's Website">
-    <meta property="og:image" content="assets/images/oscii_favico.webp">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="deeoscillostrix">
-    <meta name="description" content="Oscillo's Website">
-    <meta name="keywords" content="Oscillo Strix, Oscillo, oscii, deezombiedude, deeoscillostrix">
-    <title>Oscillo Strix</title>
+		<link rel="shortcut icon" href="assets/images/oscii_favico.webp" type="image/x-icon" />
 
-    <link rel="shortcut icon" href="assets/images/oscii_favico.webp" type="image/x-icon">
+		<link rel="stylesheet" href="assets/css/index.css" />
+	</head>
 
-    <link rel="stylesheet" href="assets/css/index.css">
-  </head>
+	<body>
+		<main class="container">
+			<div class="pt-5">
+				<picture id="portrait" class="d-flex justify-content-center pt-5">
+					<source media="(min-width: 1920px)" srcset="assets/images/oscii_profile04.webp" />
+					<source media="(max-width: 756px)" srcset="assets/images/oscii_profile04_sm.webp" />
 
-  <body>
+					<img
+						class="mx-auto rounded-pill mb-5 shadow-lg w-75"
+						src="assets/images/oscii_profile04_md.webp"
+						alt="portrait"
+					/>
+				</picture>
+				<!-- /picture#portrait -->
+			</div>
+			<!-- /.pt-5 -->
 
-    <main class="container">
-      <div class="pt-5">
-        <picture id="portrait" class="d-flex justify-content-center pt-5">
-          <source media="(min-width: 1920px)" srcset="assets/images/oscii_profile04.webp">
-          <source media="(max-width: 756px)" srcset="assets/images/oscii_profile04_sm.webp">
+			<div class="text-center">
+				<p class="display-2 heading text-primary">Oscillo Strix</p>
+			</div>
+			<!-- /.text-center -->
 
-          <img class="mx-auto rounded-pill mb-5 shadow-lg w-75" src="assets/images/oscii_profile04_md.webp"
-               alt="portrait">
-        </picture>
-        <!-- /picture#portrait -->
-      </div>
-      <!-- /.pt-5 -->
+			<div class="row justify-content-center">
+				<section
+					class="col-11 col-md-8 card bg-white bg-opacity-50 border-primary fs-5 fw-normal px-md-3 py-3 text-center"
+					id="intro-text"
+				>
+					<p class="my-1">
+						<a
+							href="https://en.wikipedia.org/wiki/Stilt-owl"
+							class="fw-semibold text-decoration-none text-primary"
+							target="_blank"
+							>Stilt owl</a
+						>, not a Pokémon.
+					</p>
+					<p class="my-1">Graduate student with a passion for education. Also an ex-college sensei.</p>
+					<p class="my-1">CS nerd, Math enthusiast.</p>
+					<p class="my-1">
+						<a
+							href="https://www.16personalities.com/infp-personality"
+							class="fw-semibold text-decoration-none"
+							target="_blank"
+						>
+							INFP-T</a
+						>, if you're into that sort of thing.
+					</p>
+					<p class="my-1">
+						<a class="fw-semibold text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#verse"
+							>Galatians 5:13</a
+						>.
+					</p>
+				</section>
+				<!-- /section#intro-text -->
 
-      <div class="text-center">
-        <p class="display-2 heading text-primary">
-          Oscillo Strix
-        </p>
-      </div>
-      <!-- /.text-center -->
+				<div class="col-12 mt-4 text-center">
+					<button class="btn btn-outline-primary m-1" data-bs-toggle="modal" data-bs-target="#socials">Socials</button>
 
-      <div class="row justify-content-center">
-        <section
-            class="col-11 col-md-8 card bg-white bg-opacity-50 border-primary fs-5 fw-normal px-md-3 py-3 text-center"
-            id="intro-text">
-          <p class="my-1">
-            <a href="https://en.wikipedia.org/wiki/Stilt-owl" class="fw-semibold text-decoration-none text-primary"
-               target="_blank">Stilt owl</a>,
-            not a Pokémon.
-          </p>
-          <p class="my-1">Graduate student with a passion for education. Also an ex-college sensei.</p>
-          <p class="my-1">CS nerd, Math enthusiast.</p>
-          <p class="my-1">
-            <a href="https://www.16personalities.com/infp-personality" class="fw-semibold text-decoration-none"
-               target="_blank">
-              INFP-T</a>, if you're into that sort of thing.</p>
-          <p class="my-1">
-            <a class="fw-semibold text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#verse">Galatians
-              5:13</a>.
-          </p>
-        </section>
-        <!-- /section#intro-text -->
+					<div class="modal fade" id="socials" tabindex="-1" aria-labelledby="label-socials" aria-hidden="true">
+						<div class="modal-dialog modal-lg modal-fullscreen-md-down modal-dialog-centered modal-dialog-scrollable">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="label-socials">Socials</h1>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<!-- /.modal-header -->
 
-        <div class="col-12 mt-4 text-center">
-          <button class="btn btn-outline-primary m-1" data-bs-toggle="modal"
-                  data-bs-target="#socials">Socials
-          </button>
+								<div class="modal-body">
+									<h1 class="heading text-center text-primary">Connect with or follow me here!</h1>
 
-          <div class="modal fade" id="socials" tabindex="-1" aria-labelledby="label-socials" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-fullscreen-md-down modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="label-socials">Socials</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <!-- /.modal-header -->
+									<p class="text-center">The following links open a new tab in your browser.</p>
 
-                <div class="modal-body">
-                  <h1 class="heading text-center text-primary">Connect with or follow me here!</h1>
+									<div class="row justify-content-center mx-1">
+										<a
+											href="https://t.me/deezombiedude"
+											class="btn btn-outline-primary col-sm-5 m-2 rounded-pill"
+											target="_blank"
+										>
+											<i class="fa-brands fa-telegram"></i> Telegram<br />
+											<span class="font-monospace"> @deezombiedude </span>
+										</a>
+										<a
+											href="https://discordapp.com/users/deezombiedude"
+											class="btn btn-outline-primary col-sm-5 m-2 rounded-pill"
+											target="_blank"
+										>
+											<i class="fa-brands fa-discord"></i> Discord<br />
+											<span class="font-monospace"> @deezombiedude </span>
+										</a>
+										<a
+											href="https://instagram.com/deeoscillostrix"
+											class="btn btn-outline-primary col-sm-5 m-2 rounded-pill"
+											target="_blank"
+										>
+											<i class="fa-brands fa-instagram"></i> Instagram<br />
+											<span class="font-monospace"> @deeoscillostrix </span>
+										</a>
+										<a
+											href="https://youtube.com/@deezombiedude"
+											class="btn btn-outline-primary col-sm-5 m-2 rounded-pill"
+											target="_blank"
+										>
+											<i class="fa-brands fa-youtube"></i> YouTube<br />
+											<span class="font-monospace"> @deezombiedude </span>
+										</a>
+										<a
+											href="https://steamcommunity.com/id/deezombiedude"
+											class="btn btn-outline-primary col-sm-5 m-2 rounded-pill"
+											target="_blank"
+										>
+											<i class="fa-brands fa-steam"></i> Steam<br />
+											<span class="font-monospace"> @deezombiedude </span>
+										</a>
+										<a
+											href="https://tumblr.com/deeoscillostrix"
+											class="btn btn-outline-primary col-sm-5 m-2 rounded-pill"
+											target="_blank"
+										>
+											<i class="fa-brands fa-tumblr"></i> Tumblr<br />
+											<span class="font-monospace"> @deeoscillostrix </span>
+										</a>
+										<a
+											href="https://mastodon.social/@deeoscillostrix"
+											class="btn btn-outline-primary col-sm-5 m-2 rounded-pill"
+											target="_blank"
+										>
+											<i class="fa-brands fa-mastodon"></i> Mastodon<br />
+											<span class="font-monospace"> @deeoscillostrix </span>
+										</a>
+										<a
+											href="https://twitter.com/deezombiedude"
+											class="btn btn-outline-primary col-sm-5 m-2 rounded-pill"
+											target="_blank"
+										>
+											<i class="fa-brands fa-twitter"></i> Twitter<br />
+											<span class="font-monospace"> @deezombiedude </span>
+										</a>
+										<a
+											href="https://twitch.tv/deezombiedude"
+											class="btn btn-outline-primary col-sm-5 m-2 rounded-pill"
+											target="_blank"
+										>
+											<i class="fa-brands fa-twitch"></i> Twitch<br />
+											<span class="font-monospace"> @deezombiedude </span>
+										</a>
 
-                  <p class="text-center">The following links open a new tab in your browser.</p>
+										<a
+											href="https://ko-fi.com/deezombiedude"
+											class="btn btn-outline-primary col-sm-5 m-2 rounded-pill"
+											target="_blank"
+										>
+											<i class="fa-solid fa-mug-hot"></i> Ko-fi<br />
+											<span class="font-monospace"> @deezombiedude </span>
+										</a>
 
-                  <div class="row justify-content-center mx-1">
-                    <a href="https://t.me/deezombiedude"
-                       class="btn btn-outline-primary col-sm-5 m-2 rounded-pill" target="_blank">
-                      <i class="fa-brands fa-telegram"></i> Telegram<br>
-                      <span class="font-monospace">@deezombiedude</span>
-                    </a>
-                    <a href="https://discordapp.com/users/deezombiedude"
-                       class="btn btn-outline-primary col-sm-5 m-2 rounded-pill" target="_blank">
-                      <i class="fa-brands fa-discord"></i> Discord<br>
-                      <span class="font-monospace">@deezombiedude</span>
-                    </a>
-                    <a href="https://instagram.com/deeoscillostrix"
-                       class="btn btn-outline-primary col-sm-5 m-2 rounded-pill" target="_blank">
-                      <i class="fa-brands fa-instagram"></i> Instagram<br>
-                      <span class="font-monospace">@deeoscillostrix</span>
-                    </a>
-                    <a href="https://youtube.com/@deezombiedude"
-                       class="btn btn-outline-primary col-sm-5 m-2 rounded-pill" target="_blank">
-                      <i class="fa-brands fa-youtube"></i> YouTube<br>
-                      <span class="font-monospace">@deezombiedude</span>
-                    </a>
-                    <a href="https://steamcommunity.com/id/deezombiedude"
-                       class="btn btn-outline-primary col-sm-5 m-2 rounded-pill" target="_blank">
-                      <i class="fa-brands fa-steam"></i> Steam<br>
-                      <span class="font-monospace">@deezombiedude</span>
-                    </a>
-                    <a href="https://tumblr.com/deeoscillostrix"
-                       class="btn btn-outline-primary col-sm-5 m-2 rounded-pill" target="_blank">
-                      <i class="fa-brands fa-tumblr"></i> Tumblr<br>
-                      <span class="font-monospace">@deeoscillostrix</span>
-                    </a>
-                    <a href="https://birds.town/@deeoscillostrix"
-                       class="btn btn-outline-primary col-sm-5 m-2 rounded-pill" target="_blank">
-                      <i class="fa-brands fa-mastodon"></i> Mastodon<br>
-                      <span class="font-monospace">@deeoscillostrix</span>
-                    </a>
-                    <a href="https://twitter.com/deezombiedude"
-                       class="btn btn-outline-primary col-sm-5 m-2 rounded-pill" target="_blank">
-                      <i class="fa-brands fa-twitter"></i> Twitter<br>
-                      <span class="font-monospace">@deezombiedude</span>
-                    </a>
-                    <a href="https://twitch.tv/deezombiedude"
-                       class="btn btn-outline-primary col-sm-5 m-2 rounded-pill" target="_blank">
-                      <i class="fa-brands fa-twitch"></i> Twitch<br>
-                      <span class="font-monospace">@deezombiedude</span>
-                    </a>
+										<a
+											href="https://threads.net/@deeoscillostrix"
+											class="btn btn-outline-primary col-sm-5 m-2 rounded-pill"
+											target="_blank"
+										>
+											<i class="fa-solid fa-at"></i> Threads<br />
+											<span class="font-monospace"> @deeoscillostrix </span>
+										</a>
 
-                    <a href="https://ko-fi.com/deezombiedude"
-                       class="btn btn-outline-primary col-sm-5 m-2 rounded-pill" target="_blank">
-                      <i class="fa-solid fa-mug-hot"></i> Ko-fi<br>
-                      <span class="font-monospace">@deezombiedude</span>
-                    </a>
+										<p class="col-12 mt-3">
+											Previous Discord tag: <span class="font-monospace">deezombiedude#7918</span>
+										</p>
 
-                    <a href="https://threads.net/@deeoscillostrix"
-                       class="btn btn-outline-primary col-sm-5 m-2 rounded-pill" target="_blank">
-                      <i class="fa-solid fa-at"></i> Threads<br>
-                      <span class="font-monospace">@deeoscillostrix</span>
-                    </a>
+										<div class="col-12">
+											<h1 class="heading text-center text-primary">Other places you can add me:</h1>
 
-                    <p class="col-12 mt-3">Previous Discord tag:
-                      <span class="font-monospace">deezombiedude#7918</span></p>
+											<p class="text-center">Click to copy to clipboard.</p>
+										</div>
 
-                    <div class="col-12">
-                      <h1 class="heading text-center text-primary">Other places you can add me:</h1>
+										<button
+											class="btn btn-outline-primary col-sm-5 m-2 rounded-pill btn-copyData"
+											data-value="SW-3183-5486-6125"
+										>
+											<i class="fa-solid fa-gamepad"></i> Switch Friend Code<br />
+											<span class="font-monospace"> SW-3183-5486-6125 </span>
+										</button>
 
-                      <p class="text-center">Click to copy to clipboard.</p>
-                    </div>
+										<button
+											class="btn btn-outline-primary col-sm-5 m-2 rounded-pill btn-copyData"
+											data-value="2742 4927 9116"
+										>
+											<i class="fa-solid fa-gamepad"></i> Pokémon GO<br />
+											<span class="font-monospace"> 2742 4927 9116 </span>
+										</button>
 
-                    <button class="btn btn-outline-primary col-sm-5 m-2 rounded-pill btn-copyData"
-                            data-value="SW-3183-5486-6125">
-                      <i class="fa-solid fa-gamepad"></i> Switch Friend Code<br>
-                      <span class="font-monospace">SW-3183-5486-6125</span>
-                    </button>
+										<button
+											class="btn btn-outline-primary col-sm-5 m-2 rounded-pill btn-copyData"
+											data-value="0614-7313-6573"
+										>
+											<i class="fa-solid fa-moon"></i> Pokémon Sleep<br />
+											<span class="font-monospace"> 0614-7313-6573 </span>
+										</button>
 
-                    <button class="btn btn-outline-primary col-sm-5 m-2 rounded-pill btn-copyData"
-                            data-value="2742 4927 9116">
-                      <i class="fa-solid fa-gamepad"></i> Pokémon GO<br>
-                      <span class="font-monospace">2742 4927 9116</span>
-                    </button>
+										<p class="col-12 mt-3">
+											Also available as <span class="font-monospace">deezombiedude</span> on
+											<span class="fw-semibold text-primary">Epic Games.</span>
+										</p>
+										<!-- /.col-12.mt-3 -->
+									</div>
+									<!-- /.row.justify-content-center.mx-1 -->
+								</div>
+								<!-- /.modal-body -->
+							</div>
+							<!-- /.modal-content -->
+						</div>
+						<!-- /.modal-dialog.modal-xl.modal-fullscreen-md-down.modal-dialog-centered.modal-dialog-scrollable -->
+					</div>
+					<!-- /#socials -->
+					<button class="btn btn-outline-primary m-1" data-bs-toggle="modal" data-bs-target="#stickers">
+						Stickers
+					</button>
 
-                    <p class="col-12 mt-3">Also available as <span class="font-monospace">deezombiedude</span> on
-                      <span class="fw-semibold text-primary">Epic Games.</span></p>
-                    <!-- /.col-12.mt-3 -->
-                  </div>
-                  <!-- /.row.justify-content-center.mx-1 -->
-                </div>
-                <!-- /.modal-body -->
-              </div>
-              <!-- /.modal-content -->
-            </div>
-            <!-- /.modal-dialog.modal-xl.modal-fullscreen-md-down.modal-dialog-centered.modal-dialog-scrollable -->
-          </div>
-          <!-- /#socials -->
-          <button class="btn btn-outline-primary m-1" data-bs-toggle="modal"
-                  data-bs-target="#stickers">Stickers
-          </button>
+					<div class="modal fade" id="stickers" tabindex="-1" aria-labelledby="label-stickers" aria-hidden="true">
+						<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="label-stickers">Stickers</h1>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<!-- /.modal-header -->
 
-          <div class="modal fade" id="stickers" tabindex="-1" aria-labelledby="label-stickers" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="label-stickers">Stickers</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <!-- /.modal-header -->
+								<div class="modal-body">
+									<p class="fs-2 heading text-primary">Feel free to add these sticker packs in Telegram to use!</p>
 
-                <div class="modal-body">
-                  <p class="fs-2 heading text-primary">Feel free to add these sticker packs in Telegram to use!</p>
+									<a href="https://t.me/addstickers/oscistickers" class="btn btn-outline-primary m-2" target="_blank">
+										<i class="fa-brands fa-telegram"></i> Oscillo Sticker Pack #1
+									</a>
+									<a href="https://t.me/addstickers/oscillostrix" class="btn btn-outline-primary m-2" target="_blank">
+										<i class="fa-brands fa-telegram"></i> Oscillo Sticker Pack #2
+									</a>
+									<a href="https://t.me/addstickers/dzdSnowPea" class="btn btn-outline-primary m-2" target="_blank">
+										<i class="fa-brands fa-telegram"></i> SnowTrap Sticker Pack
+									</a>
+								</div>
+								<!-- /.modal-body -->
+							</div>
+							<!-- /.modal-content -->
+						</div>
+						<!-- /.modal-dialog.modal-lg.modal-dialog-centered.modal-dialog-scrollable -->
+					</div>
+					<!-- /#stickers -->
+					<a href="https://deeoscillostrix.github.io/blog" class="btn btn-outline-primary m-1" target="_blank">
+						Blog <i class="fa-solid fa-up-right-from-square ms-1"></i
+					></a>
+					<a href="https://refsheet.net/deeoscillostrix/oscillo" class="btn btn-outline-primary m-1" target="_blank">
+						Refs <i class="fa-solid fa-up-right-from-square ms-1"></i
+					></a>
+				</div>
+			</div>
+			<!-- /.row.justify-content-center -->
 
-                  <a href="https://t.me/addstickers/oscistickers"
-                     class="btn btn-outline-primary m-2" target="_blank">
-                    <i class="fa-brands fa-telegram"></i> Oscillo Sticker Pack #1 </a>
-                  <a href="https://t.me/addstickers/oscillostrix"
-                     class="btn btn-outline-primary m-2" target="_blank">
-                    <i class="fa-brands fa-telegram"></i> Oscillo Sticker Pack #2 </a>
-                  <a href="https://t.me/addstickers/dzdSnowPea"
-                     class="btn btn-outline-primary m-2" target="_blank">
-                    <i class="fa-brands fa-telegram"></i> SnowTrap Sticker Pack </a>
-                </div>
-                <!-- /.modal-body -->
-              </div>
-              <!-- /.modal-content -->
-            </div>
-            <!-- /.modal-dialog.modal-lg.modal-dialog-centered.modal-dialog-scrollable -->
-          </div>
-          <!-- /#stickers -->
-          <a href="https://deeoscillostrix.github.io/blog" class="btn btn-outline-primary m-1" target="_blank">
-            Blog <i class="fa-solid fa-up-right-from-square ms-1"></i></a>
-          <a href="https://refsheet.net/deeoscillostrix/oscillo" class="btn btn-outline-primary m-1" target="_blank">
-            Refs <i class="fa-solid fa-up-right-from-square ms-1"></i></a>
-        </div>
-      </div>
-      <!-- /.row.justify-content-center -->
+			<div class="modal fade" id="verse" tabindex="-1" aria-labelledby="label-verse" aria-hidden="true">
+				<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+					<div class="modal-content">
+						<div class="modal-body handwriting">
+							<figure class="mt-5">
+								<blockquote class="blockquote">
+									<p class="display-6 handwriting text-center mb-3">
+										"For you were called to freedom, brothers. Only do not use your freedom as an opportunity for the
+										flesh, but through love serve one another."
+									</p>
+									<!-- /p.display-6.handwriting.text-center.mb-3 -->
 
-      <div class="modal fade" id="verse" tabindex="-1" aria-labelledby="label-verse" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-body handwriting">
-              <figure class="mt-5">
-                <blockquote class="blockquote">
-                  <p class="display-6 handwriting text-center mb-3">
-                    "For you were called to freedom, brothers. Only do not use your freedom as an opportunity for the
-                    flesh, but through love serve one another."
-                  </p>
-                  <!-- /p.display-6.handwriting.text-center.mb-3 -->
+									<figcaption class="blockquote-footer text-end text-italic">
+										<span class="fs-2 handwriting"> Galatians 5:13 (ESV) </span>
+									</figcaption>
+									<!-- /figcaption.blockquote-footer.text-end.text-italic -->
+								</blockquote>
+								<!-- /blockquote.blockquote -->
+							</figure>
+						</div>
+						<!-- /.modal-body -->
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog.modal-lg.modal-dialog-centered.modal-dialog-scrollable -->
+			</div>
+			<!-- /#verse -->
+		</main>
+		<!-- /main.container -->
 
-                  <figcaption class="blockquote-footer text-end text-italic">
-                    <span class="fs-2 handwriting">
-                      Galatians 5:13 (ESV)
-                    </span>
-                  </figcaption>
-                  <!-- /figcaption.blockquote-footer.text-end.text-italic -->
-                </blockquote>
-                <!-- /blockquote.blockquote -->
-              </figure>
-            </div>
-            <!-- /.modal-body -->
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog.modal-lg.modal-dialog-centered.modal-dialog-scrollable -->
-      </div>
-      <!-- /#verse -->
-    </main>
-    <!-- /main.container -->
+		<footer>
+			<picture>
+				<source media="(min-width: 1920px)" srcset="assets/images/footer-banner.webp" type="image/png" />
+				<source media="(max-width: 756px)" srcset="assets/images/footer-banner_sm.webp" type="image/webp" />
 
-    <footer>
-      <picture>
-        <source media="(min-width: 1920px)" srcset="assets/images/footer-banner.webp" type="image/png">
-        <source media="(max-width: 756px)" srcset="assets/images/footer-banner_sm.webp" type="image/webp">
+				<img
+					src="assets/images/footer-banner_md.webp"
+					alt="Footer Banner"
+					id="footer_banner"
+					loading="lazy"
+					decoding="async"
+					fetchpriority="high"
+				/>
+			</picture>
 
-        <img src="assets/images/footer-banner_md.webp" alt="Footer Banner" id="footer_banner" loading="lazy"
-             decoding="async" fetchpriority="high">
-      </picture>
+			<p class="font-monospace">
+				@<span class="font-monospace" id="year"></span> Oscillo Strix &#x1F989;<br />
+				Artwork by
+				<a class="font-monospace text-decoration-none" href="https://twitter.com/lucy_was_taken_" target="_blank">
+					<i class="fa-brands fa-twitter fa-lg footer-fa"></i> @lucy_was_taken_
+				</a>
+				and
+				<a class="font-monospace text-decoration-none" href="https://twitter.com/eunmao" target="_blank">
+					<i class="fa-brands fa-twitter fa-lg footer-fa"></i> @eunmao
+				</a>
+			</p>
+			<!-- /p.font-monospace -->
+		</footer>
+		<!-- /footer -->
 
-      <p class="font-monospace">
-        @<span class="font-monospace" id="year"></span> Oscillo Strix &#x1F989;<br>
-        Artwork by
-        <a class="font-monospace text-decoration-none" href="https://twitter.com/lucy_was_taken_"
-           target="_blank">
-          <i class="fa-brands fa-twitter fa-lg footer-fa"></i> @lucy_was_taken_ </a> and
-        <a class="font-monospace text-decoration-none" href="https://twitter.com/eunmao"
-           target="_blank">
-          <i class="fa-brands fa-twitter fa-lg footer-fa"></i> @eunmao </a>
-      </p>
-      <!-- /p.font-monospace -->
-    </footer>
-    <!-- /footer -->
+		<section
+			class="modal fade"
+			id="gameCodeModal"
+			tabindex="-1"
+			aria-labelledby="gameCodeModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="gameCodeModalLabel">Friend Codes</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<!-- /.modal-header -->
 
-    <section class="modal fade" id="gameCodeModal" tabindex="-1" aria-labelledby="gameCodeModalLabel"
-             aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="gameCodeModalLabel">Friend Codes</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <!-- /.modal-header -->
+					<div class="modal-body text-center">
+						<h4>Game Code</h4>
 
-          <div class="modal-body text-center">
-            <h4>Game Code</h4>
+						<p>Click on the codes to copy them to the clipboard!</p>
+						<p>
+							Pokémon GO:
+							<a class="copy-link text-decoration-none" data-value="2742 4927 9116">
+								<code class="fs-6 text-secondary"> 2742&nbsp;4927&nbsp;9116</code>
+							</a>
+						</p>
 
-            <p>Click on the codes to copy them to the clipboard!</p>
-            <p>
-              Pokémon GO:
-              <a class="copy-link text-decoration-none"
-                 data-value="2742 4927 9116">
-                <code class="fs-6 text-secondary">
-                  2742&nbsp;4927&nbsp;9116</code>
-              </a>
-            </p>
+						<p>
+							Switch Friend Code:
+							<a class="copy-link text-decoration-none" data-value="SW-3183-5486-6125">
+								<code class="fs-6 text-secondary">SW-3183-5486-6125</code>
+							</a>
+						</p>
+					</div>
+					<!-- /.modal-body.text-center -->
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog.modal-dialog-centered -->
+		</section>
+		<!-- /section#gameCodeModal -->
 
-            <p>
-              Switch Friend Code:
-              <a class="copy-link text-decoration-none"
-                 data-value="SW-3183-5486-6125">
-                <code class="fs-6 text-secondary">SW-3183-5486-6125</code>
-              </a>
-            </p>
-          </div>
-          <!-- /.modal-body.text-center -->
-        </div>
-        <!-- /.modal-content -->
-      </div>
-      <!-- /.modal-dialog.modal-dialog-centered -->
-    </section>
-    <!-- /section#gameCodeModal -->
-
-    <script src="assets/js/bootstrap-js/bootstrap.bundle.js"></script>
-    <script src="assets/js/common.js"></script>
-    <script src="assets/js/index.js"></script>
-  </body>
-
+		<script src="assets/js/bootstrap-js/bootstrap.bundle.js"></script>
+		<script src="assets/js/common.js"></script>
+		<script src="assets/js/index.js"></script>
+	</body>
 </html>
