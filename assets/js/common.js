@@ -1,13 +1,13 @@
 // Insert current year in footer
-if (document.querySelector("#year")) document.querySelector("#year").innerHTML = new Date().getFullYear();
+if (document.querySelector("#year")) document.querySelector("#year").innerText = new Date().getFullYear();
 
 document.querySelectorAll("a.copy-link").forEach((e) => {
-	e.addEventListener("click", function() {
+	e.addEventListener("click", function () {
 		navigator.clipboard.writeText(this.dataset.value).then(
 			() => {
 				alert(`Copied: ${this.dataset.value}`);
 			},
-			function() {
+			function () {
 				alert(`Oops, something went wrong copying the value!`);
 			}
 		);
@@ -44,6 +44,6 @@ function viewButton(buttonElement) {
 
 // Enables tooltips everywhere
 const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-const tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 	return new bootstrap.Tooltip(tooltipTriggerEl);
 });
