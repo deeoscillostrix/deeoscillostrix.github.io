@@ -15,6 +15,8 @@ const SiteHelmet = () => {
 				/>
 			))}
 
+			<meta httpEquiv="Content-Security-Policy" content="default-src 'self'" />
+
 			<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 			{iconData.map((ico, index) => (
 				<link
