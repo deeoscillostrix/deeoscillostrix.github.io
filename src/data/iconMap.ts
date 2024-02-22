@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa6";
 import { GiNightSleep } from "react-icons/gi";
 import { MdOutlineCatchingPokemon } from "react-icons/md";
-import { PiButterfly } from "react-icons/pi";
+import { PiButterflyFill } from "react-icons/pi";
 import { SiKofi } from "react-icons/si";
 
 const iconMap: { [key: string]: { iconImport: IconType; dataTip: string } } = {
@@ -24,7 +24,7 @@ const iconMap: { [key: string]: { iconImport: IconType; dataTip: string } } = {
 	steam: { iconImport: FaSteam, dataTip: "Steam" },
 	tumblr: { iconImport: FaTumblr, dataTip: "Tumblr" },
 	mastodon: { iconImport: FaMastodon, dataTip: "Mastodon" },
-	bluesky: { iconImport: PiButterfly, dataTip: "Bluesky" },
+	bluesky: { iconImport: PiButterflyFill, dataTip: "Bluesky" },
 	kofi: { iconImport: SiKofi, dataTip: "Ko-fi" },
 
 	switch: { iconImport: BsNintendoSwitch, dataTip: "Switch Friend Code" },
