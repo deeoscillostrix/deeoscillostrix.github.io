@@ -1,11 +1,24 @@
-.DS_Store
-node_modules/
-scss/
-package-lock.json
-package.json
-*.scss
-*.css.map
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-index.php
-assets/includes/
-template/
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
