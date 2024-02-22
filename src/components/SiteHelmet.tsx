@@ -4,7 +4,7 @@ import { commonData, metadata, iconData } from "../data";
 const SiteHelmet = () => {
 	const cspRules = [
 		"default-src 'self'",
-		"font-src https://fonts.googleapis.com",
+		"font-src https://fonts.googleapis.com https://fonts.gstatic.com",
 	];
 
 	return (
