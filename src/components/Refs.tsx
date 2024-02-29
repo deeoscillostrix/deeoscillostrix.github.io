@@ -1,3 +1,5 @@
+import { artists } from "../data";
+
 const Refs = () => {
 	const modalId = "modal_refs";
 	const title = "Character Refs";
@@ -6,38 +8,38 @@ const Refs = () => {
 		{
 			src: "/images/ref-oscii.webp",
 			alt: "Oscillo's Ref",
-			artist: "@eunmao",
-			url: "https://fiverr.com/eunalis",
+			artist: artists.eunalis.handle,
+			artistUrl: artists.eunalis.fiverr,
 		},
 		{
 			src: "/images/ref-kidoscii.webp",
 			alt: "Kid Oscillo's Ref",
-			artist: "@eunmao",
-			url: "https://fiverr.com/eunalis",
+			artist: artists.eunalis.handle,
+			artistUrl: artists.eunalis.fiverr,
 		},
 		{
 			src: "/images/ref-teenoscii.webp",
 			alt: "Teen Oscillo's Ref",
-			artist: "@eunmao",
-			url: "https://fiverr.com/eunalis",
+			artist: artists.eunalis.handle,
+			artistUrl: artists.eunalis.fiverr,
 		},
 		{
 			src: "/images/ref-snowtrap.webp",
 			alt: "SnowTrap's Ref",
-			artist: "@lucy_was_taken_",
-			url: "https://twitter.com/lucy_was_taken_",
+			artist: artists.cheekysonas.handle,
+			artistUrl: artists.cheekysonas.website,
 		},
 		{
 			src: "/images/ref-osciioutfits.webp",
 			alt: "Oscillo's Outfit Ref",
-			artist: "@Orlando_Fox",
-			url: "https://twitter.com/Orlando_Fox",
+			artist: artists.orlandofox.handle,
+			artistUrl: artists.orlandofox.website,
 		},
 		{
 			src: "/images/ref-osciioutfits2.webp",
 			alt: "Oscillo's Outfit Ref Add-ons",
-			artist: "@Orlando_Fox",
-			url: "https://twitter.com/Orlando_Fox",
+			artist: artists.orlandofox.handle,
+			artistUrl: artists.orlandofox.website,
 		},
 	];
 
@@ -74,7 +76,7 @@ const Refs = () => {
 							</div>
 							<p>
 								{image.alt} by{" "}
-								<a href={image.url} target="_blank">
+								<a href={image.artistUrl} target="_blank" rel="noopener">
 									{image.artist}
 								</a>
 								<span className="ms-2 text-primary">

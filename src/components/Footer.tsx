@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { author } from "../data";
+import { artists, author } from "../data";
 import { useEffect, useState } from "react";
 
 const Footer = () => {
@@ -20,12 +20,12 @@ const Footer = () => {
 			@{new Date().getFullYear()} {author.name} 🦉
 			<br />
 			Artwork by{" "}
-			<a href="https://instagram.com/cyannocti" target="_blank">
-				@cyannocti
+			<a href={artists.cyannocti.instagram} target="_blank" rel="noopener">
+				{artists.cyannocti.handle}
 			</a>{" "}
 			&amp;{" "}
-			<a href="https://fiverr.com/eunalis" target="_blank">
-				@eunmao
+			<a href={artists.eunalis.fiverr} target="_blank" rel="noopener">
+				{artists.eunalis.handle}
 			</a>
 		</footer>
 	);

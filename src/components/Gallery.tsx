@@ -1,3 +1,5 @@
+import { artists } from "../data";
+
 const Gallery = () => {
 	const modalId = "modal_gallery";
 	const title = "Gallery";
@@ -6,26 +8,26 @@ const Gallery = () => {
 		{
 			src: "/images/snowtrap-vs-octogeddon.webp",
 			alt: "SnowTrap vs. Octogeddon",
-			artist: "@Orlando_Fox",
-			url: "https://twitter.com/Orlando_Fox",
+			artist: artists.orlandofox.handle,
+			artistUrl: artists.orlandofox.website,
 		},
 		{
 			src: "/images/oscii-morizora.webp",
 			alt: "Oscillo & SnowTrap in Morizora",
-			artist: "@ThatSquirrelly",
-			url: "https://twitter.com/ThatSquirrelly",
+			artist: artists.thatsquirrelly.handle,
+			artistUrl: artists.thatsquirrelly.twitter,
 		},
 		{
 			src: "/images/oscii-apocalypse-2021.webp",
 			alt: "Oscillo in Post-Apocalypse 2021",
-			artist: "@orcaowlart",
-			url: "https://twitter.com/orcaowlart",
+			artist: artists.orcaowlart.handle,
+			artistUrl: artists.orcaowlart.website,
 		},
 		{
 			src: "/images/snowtrap-yattamengachi.webp",
 			alt: "SnowTrap & No Holds Bard!!!",
-			artist: "@lucy_was_taken_",
-			url: "https://twitter.com/lucy_was_taken_",
+			artist: artists.cheekysonas.handle,
+			artistUrl: artists.cheekysonas.website,
 		},
 	];
 
@@ -61,7 +63,7 @@ const Gallery = () => {
 								<img src={image.src} alt={image.alt} loading="lazy" />
 							</div>
 							Artwork by{" "}
-							<a href={image.url} target="_blank">
+							<a href={image.artistUrl} target="_blank" rel="noopener">
 								{image.artist}
 							</a>
 						</div>

@@ -52,7 +52,8 @@ function App() {
 										href={
 											author.socials[socialKey as keyof typeof author.socials]
 										}
-										target="_blank">
+										target="_blank"
+										rel="noopener">
 										{createElement(iconMap[socialKey].iconImport)}
 									</a>
 								))}
@@ -91,7 +92,8 @@ function App() {
 									key={index}
 									href={stickerLink.href}
 									className="btn btn-accent btn-outline m-2"
-									target="_blank">
+									target="_blank"
+									rel="noopener">
 									<FaTelegramPlane />
 									{stickerLink.label}
 								</a>
