@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { commonData, metadata, iconData } from "../data";
+import { commonData, metadata, iconData, author } from "../data";
 
 const SiteHelmet = () => {
 	// const cspRules = [
@@ -33,6 +33,7 @@ const SiteHelmet = () => {
 				/>
 			))}
 			<link rel="manifest" href="/site.webmanifest" />
+			<link rel="me" href={author.socials.mastodon} />
 		</Helmet>
 	);
 };
