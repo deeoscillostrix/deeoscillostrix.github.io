@@ -23,6 +23,12 @@
 	@apply my-2;
 }
 
+.galleryDisplay .imgContainer img {
+	max-height: 80svh;
+
+	@apply mx-auto;
+}
+
 .galleryDisplay a:not(.btn) {
 	@apply text-secondary hover:scale-110 transition ease-in-out;
 }
