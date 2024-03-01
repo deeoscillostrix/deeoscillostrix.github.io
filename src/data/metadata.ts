@@ -12,8 +12,8 @@ export default {
 
 	// Twitter Card
 	"twitter:card": "summary_large_image",
-	"twitter:site": "@deezombiedude",
-	"twitter:creator": "@deezombiedude",
+	"twitter:site": "@deeoscillostrix",
+	"twitter:creator": "@deeoscillostrix",
 	"twitter:url": commonData.url,
 	"twitter:title": commonData.title,
 	"twitter:description": commonData.description,
