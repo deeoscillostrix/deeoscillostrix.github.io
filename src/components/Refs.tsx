@@ -19,6 +19,8 @@ const Refs = () => {
 				"#00a879",
 				"#ffe002",
 				"#e38d37",
+				// "#1b603d",
+				// "#063a20",
 			],
 		},
 		{
@@ -33,6 +35,8 @@ const Refs = () => {
 				"#fb9e00",
 				"#ffe002",
 				"#e38d37",
+				// "#733229",
+				// "#ac4a3d",
 			],
 		},
 		{
@@ -141,7 +145,7 @@ const PaletteButtons = ({ palette }: { palette: string[] }) => {
 		<div
 			className={classNames(
 				`grid grid-cols-3 sm:grid-cols-4 gap-4 lg:w-5/6 mx-auto`,
-				`md:grid-cols-` + (palette.length | 7),
+				`md:grid-cols-7`,
 			)}>
 			{palette.map((paletteColor, key) => (
 				<button
