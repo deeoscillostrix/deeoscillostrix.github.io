@@ -12,7 +12,6 @@ const Refs = () => {
 			alt: "Oscillo's Ref",
 			artist: artists.eunalis.handle,
 			artistUrl: artists.eunalis.fiverr,
-			paletteName: "oscii",
 			palette: [
 				"#dca978",
 				"#f3f0dc",
@@ -27,7 +26,6 @@ const Refs = () => {
 			alt: "Kid Oscillo's Ref",
 			artist: artists.eunalis.handle,
 			artistUrl: artists.eunalis.fiverr,
-			paletteName: "koscii",
 			palette: [
 				"#a7886b",
 				"#fff4e3",
@@ -42,7 +40,6 @@ const Refs = () => {
 			alt: "Teen Oscillo's Ref",
 			artist: artists.eunalis.handle,
 			artistUrl: artists.eunalis.fiverr,
-			paletteName: "toscii",
 			palette: [
 				"#dca979",
 				"#a7886b",
@@ -57,7 +54,6 @@ const Refs = () => {
 			alt: "SnowTrap's Ref",
 			artist: artists.cheekysonas.handle,
 			artistUrl: artists.cheekysonas.website,
-			paletteName: "snowtrap",
 			palette: [
 				"#d1fffe",
 				"#6fe6fa",
