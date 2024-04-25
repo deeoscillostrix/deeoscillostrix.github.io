@@ -130,6 +130,7 @@ const Refs = () => {
 							{"palette" in image && (
 								<PaletteButtons palette={image.palette!} />
 							)}
+							{index < refImages.length - 1 && <hr />}
 						</div>
 					))}
 				</div>
@@ -144,7 +145,7 @@ const PaletteButtons = ({ palette }: { palette: string[] }) => {
 	return (
 		<div
 			className={classNames(
-				`grid grid-cols-3 sm:grid-cols-4 gap-4 lg:w-5/6 mx-auto`,
+				`grid grid-cols-3 sm:grid-cols-4 gap-4 lg:w-5/6 mb-4 mx-auto`,
 				`md:grid-cols-7`,
 			)}>
 			{palette.map((paletteColor, key) => (
