@@ -123,7 +123,7 @@ const Refs = () => {
 									</a>
 								</span>
 							</p>
-							{"palette" in image && "paletteName" in image && (
+							{"palette" in image && (
 								<PaletteButtons palette={image.palette!} />
 							)}
 						</div>
