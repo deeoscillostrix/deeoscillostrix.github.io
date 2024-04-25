@@ -108,7 +108,7 @@
 }
 
 body {
-	@apply bg-oscii-wallpaper bg-[length:1200px] font-shantellSans text-black m-0 min-w-[320px] min-h-[100svh] relative;
+	@apply bg-oscii-wallpaper bg-[length:800px] font-shantellSans text-black m-0 min-w-[320px] min-h-[100svh] relative;
 	/* @apply bg-oscii-wallpaper bg-cover bg-center font-shantellSans text-black m-0 min-w-[320px] min-h-[100svh] relative; */
 	/* @apply bg-meta-image bg-cover bg-center font-shantellSans text-black m-0 min-w-[320px] min-h-[100svh] relative; */
 	/* @apply bg-gradient-to-br from-[#dca978] to-[#89623d] bg-cover bg-center text-white m-0 min-w-[320px] min-h-[100svh] relative; */

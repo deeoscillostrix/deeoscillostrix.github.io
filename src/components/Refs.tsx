@@ -1,4 +1,6 @@
+import classNames from "classnames";
 import { artists } from "../data";
+import HandleClipboardCopy from "./HandleClipboardCopy";
 
 const Refs = () => {
 	const modalId = "modal_refs";
@@ -10,24 +12,61 @@ const Refs = () => {
 			alt: "Oscillo's Ref",
 			artist: artists.eunalis.handle,
 			artistUrl: artists.eunalis.fiverr,
+			paletteName: "oscii",
+			palette: [
+				"#dca978",
+				"#f3f0dc",
+				"#89623d",
+				"#00a879",
+				"#ffe002",
+				"#e38d37",
+			],
 		},
 		{
 			src: "/images/ref-kidoscii.webp",
 			alt: "Kid Oscillo's Ref",
 			artist: artists.eunalis.handle,
 			artistUrl: artists.eunalis.fiverr,
+			paletteName: "koscii",
+			palette: [
+				"#a7886b",
+				"#fff4e3",
+				"#59a482",
+				"#fb9e00",
+				"#ffe002",
+				"#e38d37",
+			],
 		},
 		{
 			src: "/images/ref-teenoscii.webp",
 			alt: "Teen Oscillo's Ref",
 			artist: artists.eunalis.handle,
 			artistUrl: artists.eunalis.fiverr,
+			paletteName: "toscii",
+			palette: [
+				"#dca979",
+				"#a7886b",
+				"#fdf2e1",
+				"#5ba582",
+				"#e48c36",
+				"#fce105",
+			],
 		},
 		{
 			src: "/images/ref-snowtrap.webp",
 			alt: "SnowTrap's Ref",
 			artist: artists.cheekysonas.handle,
 			artistUrl: artists.cheekysonas.website,
+			paletteName: "snowtrap",
+			palette: [
+				"#d1fffe",
+				"#6fe6fa",
+				"#62d463",
+				"#ff9a50",
+				"#ffeea6",
+				"#ff6b26",
+				"#03147c",
+			],
 		},
 		{
 			src: "/images/ref-osciioutfits.webp",
@@ -74,7 +113,7 @@ const Refs = () => {
 							<div className="imgContainer">
 								<img src={image.src} alt={image.alt} loading="lazy" />
 							</div>
-							<p>
+							<p className="mt-2 mb-4">
 								{image.alt} by{" "}
 								<a href={image.artistUrl} target="_blank" rel="noopener">
 									{image.artist}
@@ -88,6 +127,9 @@ const Refs = () => {
 									</a>
 								</span>
 							</p>
+							{"palette" in image && "paletteName" in image && (
+								<PaletteButtons palette={image.palette!} />
+							)}
 						</div>
 					))}
 				</div>
@@ -97,3 +139,24 @@ const Refs = () => {
 };
 
 export default Refs;
+
+const PaletteButtons = ({ palette }: { palette: string[] }) => {
+	return (
+		<div
+			className={classNames(
+				`grid grid-cols-3 sm:grid-cols-4 gap-4 lg:w-5/6 mx-auto`,
+				`md:grid-cols-` + (palette.length | 7),
+			)}>
+			{palette.map((paletteColor, key) => (
+				<button
+					key={key}
+					className="btn btn-sm border-none mx-auto h-[60px] w-[100px] tooltip hover:scale-110 transition ease-in-out"
+					style={{ backgroundColor: paletteColor }}
+					data-tip={paletteColor.toUpperCase()}
+					onClick={() =>
+						HandleClipboardCopy(paletteColor.toUpperCase())
+					}></button>
+			))}
+		</div>
+	);
+};

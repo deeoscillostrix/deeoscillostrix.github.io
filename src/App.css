@@ -11,6 +11,10 @@
 	@apply flex flex-row flex-wrap justify-center mb-8;
 }
 
+#copyLinks {
+	@apply mb-0;
+}
+
 #socialIcons a {
 	@apply m-3 text-3xl transition ease-in-out hover:scale-150 hover:cursor-pointer text-koscii7;
 }
