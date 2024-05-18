@@ -37,7 +37,7 @@ function App() {
 						<div id="persona">
 							<img src="/images/owl comm_stroke.webp" alt="Oscillo" />
 							<h1 className="font-caveat">Oscillo Strix</h1>
-							<p>{briefs.join(" • ")}</p>
+							<p className="lg:mx-2">{briefs.join(" • ")}</p>
 						</div>
 
 						<div className="lg:flex-auto lg:mt-16">
@@ -84,20 +84,22 @@ function App() {
 
 							<hr className="lg:w-5/6 mx-auto" />
 
-							<Gallery />
-							<Refs />
+							<div className="lg:mx-8">
+								<Gallery />
+								<Refs />
 
-							{stickerPacks.map((stickerLink, index) => (
-								<a
-									key={index}
-									href={stickerLink.href}
-									className="btn btn-accent btn-outline m-2"
-									target="_blank"
-									rel="noopener">
-									<FaTelegramPlane />
-									{stickerLink.label}
-								</a>
-							))}
+								{stickerPacks.map((stickerLink, index) => (
+									<a
+										key={index}
+										href={stickerLink.href}
+										className="btn btn-accent btn-outline m-2"
+										target="_blank"
+										rel="noopener">
+										<FaTelegramPlane />
+										{stickerLink.label}
+									</a>
+								))}
+							</div>
 						</div>
 					</div>
 				</main>
