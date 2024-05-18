@@ -60,7 +60,7 @@ function App() {
 								))}
 							</p>
 
-							<h2 className="mt-8">Other places you can add me in:</h2>
+							<h3>Click any of the following to copy to clipboard.</h3>
 
 							<p id="copyLinks">
 								{Object.keys(author.friendCodes).map((codeType, index) => (
@@ -81,9 +81,8 @@ function App() {
 									</span>
 								))}
 							</p>
-							<p>Click to copy to clipboard.</p>
 
-							<hr className="lg:w-5/6 mx-auto" />
+							<hr className="lg:w-5/6 mx-auto mt-6" />
 
 							<div className="lg:mx-8">
 								<Gallery />
