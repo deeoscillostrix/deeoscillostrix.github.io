@@ -3,7 +3,8 @@ import { createElement, useEffect, useState } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { FaTelegramPlane } from "react-icons/fa";
 import "./App.css";
-import { ClipboardLink, Footer, Gallery, Refs, SiteHelmet } from "./components";
+import { ClipboardLink, Footer, Gallery, Refs } from "./components";
+// import { ClipboardLink, Footer, Gallery, Refs, SiteHelmet } from "./components";
 import { author, iconMap, stickerPacks } from "./data";
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
 	return (
 		<>
 			<HelmetProvider>
-				<SiteHelmet />
+				{/* <SiteHelmet /> */}
 
 				<main
 					className={classNames("transition-opacity", "ease-in-out", {
