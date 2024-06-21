@@ -3,9 +3,16 @@ import { createElement, useEffect, useState } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { FaTelegramPlane } from "react-icons/fa";
 import "./App.css";
-import { ClipboardLink, Footer, Gallery, Refs } from "./components";
+import {
+	AboutOscillo,
+	ClipboardLink,
+	Footer,
+	Gallery,
+	Refs,
+} from "./components";
 // import { ClipboardLink, Footer, Gallery, Refs, SiteHelmet } from "./components";
 import { author, iconMap, stickerPacks } from "./data";
+import { AboutSnowTrap } from "./components/Almanac";
 
 function App() {
 	const [loaded, setLoaded] = useState(false);
@@ -19,7 +26,7 @@ function App() {
 
 	const briefs = [
 		"Stilt Owl",
-		"Grad Stew",
+		"Uni Sensei",
 		"Aspiring Educator",
 		"INFP-T",
 		"Galatians 5:13",
@@ -41,7 +48,7 @@ function App() {
 							<p className="lg:mx-2">{briefs.join(" • ")}</p>
 						</div>
 
-						<div className="lg:flex-auto lg:mt-16">
+						<div className="lg:flex-auto lg:mt-10">
 							<h2 className="mt-8">Connect with me!</h2>
 
 							<p id="socialIcons">
@@ -99,6 +106,18 @@ function App() {
 										{stickerLink.label}
 									</a>
 								))}
+							</div>
+
+							<hr className="lg:w-5/6 mx-auto mt-6" />
+
+							<div className="lg:mx-8">
+								<p>
+									Almanac: Read more about my characters here - lore and
+									shtuff!!
+								</p>
+
+								<AboutOscillo />
+								<AboutSnowTrap />
 							</div>
 						</div>
 					</div>
