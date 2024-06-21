@@ -7,7 +7,7 @@
 }
 
 .almanacPortrait {
-	@apply mx-auto max-w-[400px];
+	@apply mx-auto max-w-[300px];
 }
 
 #socialIcons,
