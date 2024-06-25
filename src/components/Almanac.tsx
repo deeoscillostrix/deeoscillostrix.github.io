@@ -45,13 +45,18 @@ export const AboutOscillo = () => {
 										{ name: "Pronouns", content: "he/him" },
 										{ name: "Species", content: "Stilt Owl" },
 										{
-											name: "Residence",
+											name: "Current Residence",
 											content: "Suburbia, Neighborville",
 										},
 										{
-											name: "Special",
-											content: "exhibits Ghost/Flying type behavior",
+											name: "Likes",
+											content:
+												"Unorthodox teaching methods, hoodies, deep but clean jokes, Chinese tea (esp. Oolong)",
 										},
+										// {
+										// 	name: "Special",
+										// 	content: "exhibits Ghost/Flying type behavior",
+										// },
 									].map((charDetail, key) => (
 										<li key={key} className="leading-8">
 											{charDetail.name}:{" "}
@@ -62,9 +67,10 @@ export const AboutOscillo = () => {
 									))}
 									<li className="mt-2 text-amber-700">
 										Your average, not-so-old, not-so-wise, and inexperienced
-										owl. Definitely not that Grass-type Pokémon, if you happen
-										to see and assume any resemblance. His favorite color isn't
-										green either.
+										owl. While usually reserved, he has a keen interest in
+										education and loves being a teacher figure. Definitely not
+										that Grass-type Pokémon, if you happen to assume any
+										resemblance. His favorite color isn't green either.
 									</li>
 								</ul>
 							</div>
@@ -83,23 +89,19 @@ export const AboutOscillo = () => {
 								"How the heck did this one hatch out of nowhere then?", you may
 								ask. Also how do stilt owls act? The sheer number of questions
 								you can think of really accentuate the long-standing conundrum
-								behind how Oscillo initially hatched into existence. In any
-								case, he's just ready to wing it and find out these answers and
-								more over time. Right now, he still doesn't know how exactly he
-								came to be.. maybe that's how he got himself a sentient, mobile
-								plant companion (how did that even happen?). Now if he could
-								pull off a "Sinister Arrow Raid" or "Triple Arrows" attack..
+								behind how Oscillo initially hatched into existence. "I wish I
+								knew," he postulates. "But I really do hope to find out some
+								day. For now, I'm just winging it till that happens!"
 							</p>
 
 							<p>
-								Oscillo has always been quite the oddball growing up. Not
-								withstanding the fact that he's of an extinct species of owl, he
-								often found himself ostracized a lot as a hatchling. Making
-								friends used to be out of the question as his interests and
-								personality never really aligned well with them. This, along
-								with his upbringing has mostly shaped him to prefer to not be in
-								the limelight in several situations. Given that he's naturally
-								an introvert, however, it more or less worked out in his favor.
+								As an oddball amongst the others while growing up, making
+								friends was tough for Oscillo. This, along with his upbringing
+								has mostly shaped him to prefer to not be in the limelight in
+								several situations. Given that he's naturally an introvert,
+								however, it more or less worked out in his favor. "I also do end
+								up learning to observe from a distance a lot, and it does pay
+								off to be eventually heard in the end!"
 							</p>
 
 							<p>
@@ -110,8 +112,8 @@ export const AboutOscillo = () => {
 								next generations are better than he is. "Being on top isn't
 								something that would satisfy me in the long run. It's seeing
 								those lives I touch achieve more than I did that would satisfy
-								me immensely." He also attributes his passion to how he was
-								blessed to have great teachers in school while growing up.
+								me immensely. I think that's what I hoped my teachers I was
+								blessed to have had felt when they taught me."
 							</p>
 						</div>
 					</div>
@@ -169,8 +171,12 @@ export const AboutSnowTrap = () => {
 										{ name: "Species", content: "Snow Pea" },
 										{ name: "Damage", content: "normal, slows zombies" },
 										{
-											name: "Residence",
+											name: "Current Residence",
 											content: "Suburbia, Neighborville",
+										},
+										{
+											name: "Likes",
+											content: `The Fridge, orange-colored things, Chinese tea, "NO HOLDS BARD!!!"`,
 										},
 									].map((charDetail, key) => (
 										<li key={key} className="leading-8">
@@ -228,7 +234,7 @@ export const AboutSnowTrap = () => {
 						</div>
 
 						<a
-							className="btn btn-primary"
+							className="btn btn-outline btn-primary"
 							href="https://deeoscillostrix.github.io/snowtrap"
 							target="_blank">
 							PvZ-style Almanac Entry
