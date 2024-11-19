@@ -11,7 +11,7 @@ export default {
 		twitch: "https://twitch.tv/deezombiedude",
 		steam: "https://steamcommunity.com/id/deezombiedude",
 		// tumblr: "https://tumblr.com/deeoscillostrix",
-		// mastodon: "https://mastodon.social/@deeoscillostrix",
+		mastodon: "https://mastodon.social/@deeoscillostrix",
 		kofi: "https://ko-fi.com/deezombiedude",
 		facebook: "https://facebook.com/deeoscillostrix",
 	},
