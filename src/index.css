@@ -1,101 +1,102 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
 @font-face {
-	font-family: "SF Mono";
-	src: url("/src/assets/fonts/sf-mono/SF-Mono-Regular.otf") format("opentype");
-	font-style: normal;
-	font-weight: normal;
-	font-display: swap;
+  font-family: "SF Mono";
+  src: url("/src/assets/fonts/sf-mono/SF-Mono-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
 }
 @font-face {
-	font-family: "SF Mono";
-	src: url("/src/assets/fonts/sf-mono/SF-Mono-RegularItalic.otf")
-		format("opentype");
-	font-style: italic;
-	font-weight: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "SF Mono";
-	src: url("/src/assets/fonts/sf-mono/SF-Mono-Bold.otf") format("opentype");
-	font-style: normal;
-	font-weight: bold;
-	font-display: swap;
-}
-@font-face {
-	font-family: "SF Mono";
-	src: url("/src/assets/fonts/sf-mono/SF-Mono-BoldItalic.otf")
-		format("opentype");
-	font-style: italic;
-	font-weight: bold;
-	font-display: swap;
+  font-family: "SF Mono";
+  src: url("/src/assets/fonts/sf-mono/SF-Mono-RegularItalic.otf")
+    format("opentype");
+  font-style: italic;
+  font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: "SF Mono";
-	src: url("/src/assets/fonts/sf-mono/SF-Mono-Light.otf") format("opentype");
-	font-style: normal;
-	font-weight: 300;
-	font-display: swap;
+  font-family: "SF Mono";
+  src: url("/src/assets/fonts/sf-mono/SF-Mono-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
 }
 @font-face {
-	font-family: "SF Mono";
-	src: url("/src/assets/fonts/sf-mono/SF-Mono-LightItalic.otf")
-		format("opentype");
-	font-style: italic;
-	font-weight: 300;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "SF Mono";
-	src: url("/src/assets/fonts/sf-mono/SF-Mono-Medium.otf") format("opentype");
-	font-style: normal;
-	font-weight: 500;
-	font-display: swap;
-}
-@font-face {
-	font-family: "SF Mono";
-	src: url("/src/assets/fonts/sf-mono/SF-Mono-MediumItalic.otf")
-		format("opentype");
-	font-style: italic;
-	font-weight: 500;
-	font-display: swap;
+  font-family: "SF Mono";
+  src: url("/src/assets/fonts/sf-mono/SF-Mono-BoldItalic.otf")
+    format("opentype");
+  font-style: italic;
+  font-weight: bold;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: "SF Mono";
-	src: url("/src/assets/fonts/sf-mono/SF-Mono-Semibold.otf") format("opentype");
-	font-style: normal;
-	font-weight: 600;
-	font-display: swap;
+  font-family: "SF Mono";
+  src: url("/src/assets/fonts/sf-mono/SF-Mono-Light.otf") format("opentype");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
 }
 @font-face {
-	font-family: "SF Mono";
-	src: url("/src/assets/fonts/sf-mono/SF-Mono-SemiboldItalic.otf")
-		format("opentype");
-	font-style: italic;
-	font-weight: 600;
-	font-display: swap;
+  font-family: "SF Mono";
+  src: url("/src/assets/fonts/sf-mono/SF-Mono-LightItalic.otf")
+    format("opentype");
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: "SF Mono";
-	src: url("/src/assets/fonts/sf-mono/SF-Mono-Heavy.otf") format("opentype");
-	font-style: normal;
-	font-weight: 800;
-	font-display: swap;
+  font-family: "SF Mono";
+  src: url("/src/assets/fonts/sf-mono/SF-Mono-Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
 }
 @font-face {
-	font-family: "SF Mono";
-	src: url("/src/assets/fonts/sf-mono/SF-Mono-HeavyItalic.otf")
-		format("opentype");
-	font-style: italic;
-	font-weight: 800;
-	font-display: swap;
+  font-family: "SF Mono";
+  src: url("/src/assets/fonts/sf-mono/SF-Mono-MediumItalic.otf")
+    format("opentype");
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Mono";
+  src: url("/src/assets/fonts/sf-mono/SF-Mono-Semibold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Mono";
+  src: url("/src/assets/fonts/sf-mono/SF-Mono-SemiboldItalic.otf")
+    format("opentype");
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Mono";
+  src: url("/src/assets/fonts/sf-mono/SF-Mono-Heavy.otf") format("opentype");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Mono";
+  src: url("/src/assets/fonts/sf-mono/SF-Mono-HeavyItalic.otf")
+    format("opentype");
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
 }
 
 @tailwind base;
@@ -103,75 +104,76 @@
 @tailwind utilities;
 
 :root {
-	--fallback-sc: #fff;
-	--fallback-ac: #fff;
+  --fallback-sc: #fff;
+  --fallback-ac: #fff;
 }
 
 body {
-	@apply bg-oscii-wallpaper bg-[length:800px] font-shantellSans text-black m-0 min-w-[320px] min-h-[100svh] relative;
-	/* @apply bg-oscii-wallpaper bg-cover bg-center font-shantellSans text-black m-0 min-w-[320px] min-h-[100svh] relative; */
-	/* @apply bg-meta-image bg-cover bg-center font-shantellSans text-black m-0 min-w-[320px] min-h-[100svh] relative; */
-	/* @apply bg-gradient-to-br from-[#dca978] to-[#89623d] bg-cover bg-center text-white m-0 min-w-[320px] min-h-[100svh] relative; */
-	/* @apply bg-gradient-to-tr from-koscii1 to-oscii2 bg-cover bg-center font-shantellSans m-0 min-w-[320px] min-h-[100svh] relative text-black; */
+  @apply bg-oscii-wallpaper bg-[length:800px] font-shantellSans text-black m-0 min-w-[320px] min-h-[100svh] relative;
+  /* @apply bg-oscii-wallpaper bg-cover bg-center font-shantellSans text-black m-0 min-w-[320px] min-h-[100svh] relative; */
+  /* @apply bg-meta-image bg-cover bg-center font-shantellSans text-black m-0 min-w-[320px] min-h-[100svh] relative; */
+  /* @apply bg-gradient-to-br from-[#dca978] to-[#89623d] bg-cover bg-center text-white m-0 min-w-[320px] min-h-[100svh] relative; */
+  /* @apply bg-gradient-to-tr from-koscii1 to-oscii2 bg-cover bg-center font-shantellSans m-0 min-w-[320px] min-h-[100svh] relative text-black; */
 }
 
 body:before {
-	content: " ";
+  content: " ";
 
-	@apply bg-white bg-opacity-80 min-w-[100svw] min-h-[100svh] h-full w-full absolute z-10;
-	/* @apply bg-white bg-opacity-20 min-w-[100svw] min-h-[100svh] absolute z-10; */
+  @apply bg-white bg-opacity-80 min-w-[100svw] min-h-[100svh] h-full w-full absolute z-10;
+  /* @apply bg-white bg-opacity-20 min-w-[100svw] min-h-[100svh] absolute z-10; */
 }
 
 main {
-	@apply bg-white bg-opacity-75 rounded-3xl border border-dotted border-primary p-4;
+  @apply bg-white bg-opacity-75 rounded-3xl border border-dotted border-primary p-4;
 }
 
 h1,
 h2,
 h3 {
-	@apply mb-4;
+  @apply mb-4;
 }
 
 h1 {
-	@apply text-5xl;
+  @apply text-5xl;
 }
 
 h2 {
-	@apply text-3xl;
+  @apply text-3xl;
 }
 
 h3 {
-	@apply text-xl;
+  @apply text-xl;
 }
 
 hr {
-	@apply mb-4;
+  @apply mb-4;
 }
 
 p {
-	@apply my-4;
+  @apply my-4;
 }
 
 footer {
-	@apply font-mono font-thin my-8;
+  @apply font-mono font-thin my-8;
 }
 
 footer a {
-	@apply text-oscii3 hover:font-semibold;
+  @apply text-oscii3 hover:font-semibold;
 }
 
 .font-mono {
-	@apply font-sfMono font-light;
+  /* @apply font-sfMono font-light; */
+  @apply font-jetbrainsMono font-extralight;
 }
 
 .modal-box::webkit-scrollbar {
-	/* display: none; */
-	@apply hidden;
+  /* display: none; */
+  @apply hidden;
 }
 
 .modal-box {
-	-ms-overflow-style: none;
-	scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* @layer base {

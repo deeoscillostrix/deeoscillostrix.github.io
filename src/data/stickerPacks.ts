@@ -11,4 +11,8 @@ export default [
 		href: "https://t.me/addstickers/dzdSnowPea",
 		label: "SnowTrap Sticker Pack",
 	},
+	{
+		href: "https://t.me/addstickers/dzdFirePea",
+		label: "Milo Sticker Pack",
+	},
 ];

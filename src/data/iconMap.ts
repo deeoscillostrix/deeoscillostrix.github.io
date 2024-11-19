@@ -1,6 +1,7 @@
 import { IconType } from "react-icons";
 import { BsNintendoSwitch } from "react-icons/bs";
 import {
+	FaBluesky,
 	FaDiscord,
 	FaInstagram,
 	FaMastodon,
@@ -9,10 +10,11 @@ import {
 	FaTumblr,
 	FaTwitch,
 	FaYoutube,
+	FaFacebookF,
 } from "react-icons/fa6";
 import { GiNightSleep } from "react-icons/gi";
 import { MdOutlineCatchingPokemon } from "react-icons/md";
-import { PiButterflyFill } from "react-icons/pi";
+// import { PiButterflyFill } from "react-icons/pi";
 import { SiKofi } from "react-icons/si";
 
 const iconMap: { [key: string]: { iconImport: IconType; dataTip: string } } = {
@@ -24,8 +26,9 @@ const iconMap: { [key: string]: { iconImport: IconType; dataTip: string } } = {
 	steam: { iconImport: FaSteam, dataTip: "Steam" },
 	tumblr: { iconImport: FaTumblr, dataTip: "Tumblr" },
 	mastodon: { iconImport: FaMastodon, dataTip: "Mastodon" },
-	bluesky: { iconImport: PiButterflyFill, dataTip: "Bluesky" },
+	bluesky: { iconImport: FaBluesky, dataTip: "Bluesky" },
 	kofi: { iconImport: SiKofi, dataTip: "Ko-fi" },
+	facebook: { iconImport: FaFacebookF, dataTip: "Facebook" },
 
 	switch: { iconImport: BsNintendoSwitch, dataTip: "Switch Friend Code" },
 	pokemonGo: {

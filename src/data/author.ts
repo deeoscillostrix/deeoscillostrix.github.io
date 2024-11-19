@@ -6,13 +6,14 @@ export default {
 		telegram: "https://t.me/deezombiedude",
 		discord: "https://discordapp.com/users/deezombiedude",
 		instagram: "https://instagram.com/deeoscillostrix",
+		bluesky: "https://deeoscillostrix.bsky.social",
 		youtube: "https://youtube.com/@deezombiedude",
 		twitch: "https://twitch.tv/deezombiedude",
 		steam: "https://steamcommunity.com/id/deezombiedude",
-		tumblr: "https://tumblr.com/deeoscillostrix",
-		mastodon: "https://mastodon.social/@deeoscillostrix",
-		bluesky: "https://bsky.app/profile/deeoscillostrix.bsky.social",
+		// tumblr: "https://tumblr.com/deeoscillostrix",
+		// mastodon: "https://mastodon.social/@deeoscillostrix",
 		kofi: "https://ko-fi.com/deezombiedude",
+		facebook: "https://facebook.com/deeoscillostrix",
 	},
 
 	friendCodes: {
