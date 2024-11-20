@@ -11,7 +11,7 @@ export default {
 		twitch: "https://twitch.tv/deezombiedude",
 		steam: "https://steamcommunity.com/id/deezombiedude",
 		// tumblr: "https://tumblr.com/deeoscillostrix",
-		mastodon: "https://mastodon.social/@deeoscillostrix",
+		// mastodon: "https://mastodon.social/@deeoscillostrix",
 		kofi: "https://ko-fi.com/deezombiedude",
 		facebook: "https://facebook.com/deeoscillostrix",
 	},
@@ -20,5 +20,6 @@ export default {
 		switch: "SW-3183-5486-6125",
 		pokemonGo: "2742 4927 9116",
 		pokemonSleep: "0614-7313-6573",
+		pokemonTCGP: "0084-5941-6328-1608"
 	},
 };

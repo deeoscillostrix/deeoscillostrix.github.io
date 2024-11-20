@@ -3,6 +3,7 @@ import { BsNintendoSwitch } from "react-icons/bs";
 import {
 	FaBluesky,
 	FaDiscord,
+	FaFacebookF,
 	FaInstagram,
 	FaMastodon,
 	FaSteam,
@@ -10,12 +11,12 @@ import {
 	FaTumblr,
 	FaTwitch,
 	FaYoutube,
-	FaFacebookF,
 } from "react-icons/fa6";
 import { GiNightSleep } from "react-icons/gi";
 import { MdOutlineCatchingPokemon } from "react-icons/md";
 // import { PiButterflyFill } from "react-icons/pi";
 import { SiKofi } from "react-icons/si";
+import { TbCardsFilled } from "react-icons/tb";
 
 const iconMap: { [key: string]: { iconImport: IconType; dataTip: string } } = {
 	telegram: { iconImport: FaTelegram, dataTip: "Telegram" },
@@ -36,6 +37,7 @@ const iconMap: { [key: string]: { iconImport: IconType; dataTip: string } } = {
 		dataTip: "Pokémon GO",
 	},
 	pokemonSleep: { iconImport: GiNightSleep, dataTip: "Pokémon Sleep" },
+	pokemonTCGP: { iconImport: TbCardsFilled, dataTip: "Pokémon TCGP" },
 };
 
 export default iconMap;
