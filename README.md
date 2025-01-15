@@ -5,20 +5,6 @@ Oscillo's website!
 - Built using React + TypeScript + Vite
 - Designed using TailwindCSS + DaisyUI
 
-## Setup
-
-1. Clone this repository.
-
-```zsh
-git clone https://github.com/deeoscillostrix/deeoscillostrix.github.io.git
-```
-
-2. Run the following command to install required dependencies.
-
-```zsh
-npm i
-```
-
 ## Extra Notes
 
 ### Images
