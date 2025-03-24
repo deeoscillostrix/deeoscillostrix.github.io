@@ -11,6 +11,7 @@ import {
   Footer,
   Gallery,
   Refs,
+  Calendar,
 } from "./components";
 // import { ClipboardLink, Footer, Gallery, Refs, SiteHelmet } from "./components";
 import { author, iconMap, stickerPacks } from "./data";
@@ -51,80 +52,21 @@ function App() {
             </div>
 
             <div className="lg:flex-auto lg:mt-10">
-              <h2 className="mt-8">Connect with me!</h2>
+              <Socials />
 
-              <p id="socialIcons">
-                {Object.keys(author.socials).map((socialKey, index) => (
-                  <a
-                    key={index}
-                    className="tooltip"
-                    data-tip={iconMap[socialKey].dataTip}
-                    href={
-                      author.socials[socialKey as keyof typeof author.socials]
-                    }
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    {createElement(iconMap[socialKey].iconImport)}
-                  </a>
-                ))}
-              </p>
-
-              <h3>Click any of the following to copy to clipboard.</h3>
-
-              <p id="copyLinks">
-                {Object.keys(author.friendCodes).map((codeType, index) => (
-                  <span
-                    key={index}
-                    // className="tooltip"
-                    // data-tip={iconMap[codeType].dataTip}
-                  >
-                    <ClipboardLink
-                      dataValue={
-                        author.friendCodes[
-                          codeType as keyof typeof author.friendCodes
-                        ]
-                      }
-                      isButton={true}
-                    >
-                      {iconMap[codeType].dataTip}
-                    </ClipboardLink>
-                  </span>
-                ))}
-              </p>
+              <CopyLinks />
 
               <hr className="lg:w-5/6 mx-auto mt-6" />
 
-              <div className="lg:mx-8">
-                <Gallery />
-                <Refs />
-
-                {stickerPacks.map((stickerLink, index) => (
-                  <a
-                    key={index}
-                    href={stickerLink.href}
-                    className="btn btn-accent btn-outline m-2"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <FaTelegramPlane />
-                    {stickerLink.label}
-                  </a>
-                ))}
-              </div>
+              <Art />
 
               <hr className="lg:w-5/6 mx-auto mt-6" />
 
-              <div className="lg:mx-8">
-                <p>
-                  Almanac: Read more about my characters here - lore and
-                  shtuff!!
-                </p>
+              <Lore />
 
-                <AboutOscillo />
-                <AboutSnowTrap />
-                <AboutMilo />
-              </div>
+              <hr className="lg:w-5/6 mx-auto mt-6" />
+
+              <MyCal />
             </div>
           </div>
         </main>
@@ -135,3 +77,103 @@ function App() {
 }
 
 export default App;
+
+const Socials = () => {
+  return (
+    <>
+      <h2 className="mt-8">Let's keep in touch!</h2>
+      {/* <p>Let's keep in touch!</p> */}
+
+      <p id="socialIcons">
+        {Object.keys(author.socials).map((socialKey, index) => (
+          <a
+            key={index}
+            className="tooltip"
+            data-tip={iconMap[socialKey].dataTip}
+            href={author.socials[socialKey as keyof typeof author.socials]}
+            target="_blank"
+            rel="noopener"
+          >
+            {createElement(iconMap[socialKey].iconImport)}
+          </a>
+        ))}
+      </p>
+    </>
+  );
+};
+
+const CopyLinks = () => {
+  return (
+    <>
+      {/* <h3>Click any of the following to copy to clipboard.</h3> */}
+
+      <p id="copyLinks">
+        {Object.keys(author.friendCodes).map((codeType, index) => (
+          <span
+            key={index}
+            // className="tooltip"
+            // data-tip={iconMap[codeType].dataTip}
+          >
+            <ClipboardLink
+              dataValue={
+                author.friendCodes[codeType as keyof typeof author.friendCodes]
+              }
+              isButton={true}
+            >
+              {iconMap[codeType].dataTip}
+            </ClipboardLink>
+          </span>
+        ))}
+      </p>
+    </>
+  );
+};
+
+const Art = () => {
+  return (
+    <>
+      <div className="lg:mx-8">
+        <Gallery />
+        <Refs />
+
+        {stickerPacks.map((stickerLink, index) => (
+          <a
+            key={index}
+            href={stickerLink.href}
+            className="btn btn-accent btn-outline m-2"
+            target="_blank"
+            rel="noopener"
+          >
+            <FaTelegramPlane />
+            {stickerLink.label}
+          </a>
+        ))}
+      </div>
+    </>
+  );
+};
+
+const Lore = () => {
+  return (
+    <>
+      <div className="lg:mx-8">
+        <p>Almanac: Read more about my characters here - lore and shtuff!!</p>
+
+        <AboutOscillo />
+        <AboutSnowTrap />
+        <AboutMilo />
+      </div>
+    </>
+  );
+};
+
+const MyCal = () => {
+  return (
+    <>
+      <div className="lg:mx-8">
+        {/* <p>Check out where I'll be going or where I've been for events here!</p> */}
+        <Calendar />
+      </div>
+    </>
+  );
+};
