@@ -11,7 +11,7 @@ import {
   Footer,
   Gallery,
   Refs,
-  Calendar,
+  // Calendar,
 } from "./components";
 // import { ClipboardLink, Footer, Gallery, Refs, SiteHelmet } from "./components";
 import { author, iconMap, stickerPacks } from "./data";
@@ -64,9 +64,13 @@ function App() {
 
               <Lore />
 
-              <hr className="lg:w-5/6 mx-auto mt-6" />
+              {/* <hr className="lg:w-5/6 mx-auto mt-6" />
 
-              <MyCal />
+              <MyCal /> */}
+
+              <p className="text-gray-200">
+                Calendar coming soon, fixing some bugs!
+              </p>
             </div>
           </div>
         </main>
@@ -167,13 +171,13 @@ const Lore = () => {
   );
 };
 
-const MyCal = () => {
-  return (
-    <>
-      <div className="lg:mx-8">
-        {/* <p>Check out where I'll be going or where I've been for events here!</p> */}
-        <Calendar />
-      </div>
-    </>
-  );
-};
+// const MyCal = () => {
+//   return (
+//     <>
+//       <div className="lg:mx-8">
+//         {/* <p>Check out where I'll be going or where I've been for events here!</p> */}
+//         <Calendar />
+//       </div>
+//     </>
+//   );
+// };

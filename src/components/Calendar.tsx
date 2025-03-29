@@ -34,7 +34,13 @@ const Calendar = () => {
             "Schedule" to "Month" to have a better overview of events!
           </p>
 
-          <iframe src="https://calendar.google.com/calendar/embed?wkst=1&ctz=Asia%2FKuala_Lumpur&showPrint=0&title=Oscillo's%20Calendar&mode=AGENDA&src=ZGU4MmUyMThmMmZiODY4NTNmZWE1ZWJlNmY2MjU0ZmYxMWRjNDZiZDEyNDZiOGZkNGQ1OTVjZmVhNjljODkwY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F09300"></iframe>
+          {/* <iframe
+            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FKuala_Lumpur&showPrint=0&title=Oscillo's%20Calendar&src=ZGU4MmUyMThmMmZiODY4NTNmZWE1ZWJlNmY2MjU0ZmYxMWRjNDZiZDEyNDZiOGZkNGQ1OTVjZmVhNjljODkwY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F09300"
+            // width="800"
+            // height="600"
+            // scrolling="no"
+          ></iframe> */}
+          {/* <iframe src="https://calendar.google.com/calendar/embed?wkst=1&ctz=Asia%2FKuala_Lumpur&showPrint=0&title=Oscillo's%20Calendar&mode=AGENDA&src=ZGU4MmUyMThmMmZiODY4NTNmZWE1ZWJlNmY2MjU0ZmYxMWRjNDZiZDEyNDZiOGZkNGQ1OTVjZmVhNjljODkwY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F09300"></iframe> */}
         </div>
       </dialog>
     </>
