@@ -22,7 +22,7 @@ const CopyLinks = () => {
         <form method="dialog" className="modal-backdrop">
           <button>close</button>
         </form>
-        <div className="modal-box w-full lg:w-3/4 xl:w-5/12 max-w-7xl">
+        <div className="modal-box w-3/4 lg:w-1/2 xl:w-1/3 max-w-7xl">
           <form method="dialog">
             {/* if there is a button in form, it will close the modal */}
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
