@@ -16,7 +16,7 @@ const CopyLinks = () => {
           modal!.showModal();
         }}
       >
-        Game Links
+        {title}
       </button>
       <dialog id={modalId} className="modal">
         <form method="dialog" className="modal-backdrop">
