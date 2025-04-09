@@ -320,7 +320,8 @@ export const AboutMilo = () => {
                     of what she intends to heat up or burn, or not. Contrary to
                     what some may think, dousing her with water or fire
                     extinguishers do not kill or immobilize her - it only puts
-                    out her fire temporarily.
+                    out her fire temporarily. Also immune to caffeine effects,
+                    apparently.
                   </li>
                 </ul>
               </div>
@@ -337,7 +338,7 @@ export const AboutMilo = () => {
                 sweetheart really, really loves anything chocolate.. she's
                 mild-tempered and gentle, but we prefer not to find out how to
                 cross the line to cross her. Keep your favorite chocolate bars
-                and snacks away!
+                and chocolate-flavored snacks away from her!
               </p>
 
               <p>
@@ -347,7 +348,8 @@ export const AboutMilo = () => {
                 has no recollection of meeting her before prior to that first
                 sudden encounter. Regardless, they have since formed a strong
                 sibling-like relationship with each other, despite having
-                opposing natural elements between each other.
+                opposing natural elements between each other. Between the two,
+                SnowTrap often acts as the older brother to her.
               </p>
 
               <p>
@@ -356,25 +358,28 @@ export const AboutMilo = () => {
                 caused her to combust into her current form. As such, any acts
                 of extinguishing her fire does not kill her, and her having that
                 inner vitality means she would simply blaze herself back into
-                her normal form in a moment's time. "It was amusing to see the
-                shock on their faces when they realized they couldn't kill me
+                her normal form in a moment's time. "It used to be fun watching
+                them get terrified once they realized they couldn't kill me
                 simply with water or fire extinguishers," she says. "Now it's
-                just mundane, and more of a nuisance to me. My hair sure doesn't
+                more of an unwelcome nuisance to me. My hair sure doesn't
                 appreciate that!"
               </p>
 
               <p>
-                Speaking of her flaming hair, she has amazing fire control,
-                being able to burn anyone she chooses to or not, as well as
-                being a lethal flamethrower if she chooses to do so. Her hair,
-                being made up of flames on her head is skillfully groomed to her
-                liking. Unfortunately, she still has tendencies on starting
-                small insipid flames around her on non-living things around her
-                at times.. the saving grace here is that she's very quick and
-                resourceful to settle such incidents. "I have never had a
-                history of burning anyone by accident, but if I had five bucks
-                for each time I had to quickly douse a small fire I accidentally
-                caused ON SOME THING, I'd buy a mansion to keep SO MUCH
+                Speaking of her flaming hair, she has amazing fire control.
+                Despite being unable to manifest blue fire willingly (only
+                happens when she's unwell), she is able to burn anyone she
+                chooses to or not, as well as being a lethal flamethrower if she
+                chooses to do so. Her hair, being made up of flames on her head
+                is skillfully groomed to her liking. She was not always this
+                good with flame control, though. During her time learning to
+                acquire the skill, she very frequently started insipid flames on
+                various objects around her. However, that also led to her
+                learning to be very quick and resourceful to settle such
+                incidents. "Thankfully, I have never had a history of burning
+                anyone by accident.. but if I had five bucks for each time I had
+                to quickly douse a small fire I accidentally caused ON SOME
+                THING, I'd have enough to buy me a mansion to keep SO MUCH
                 CHOCOLATE for myself."
               </p>
             </div>
