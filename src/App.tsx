@@ -7,10 +7,11 @@ import {
   AboutOscillo,
   AboutSnowTrap,
   AboutMilo,
-  ClipboardLink,
+  // ClipboardLink,
   Footer,
   Gallery,
   Refs,
+  CopyLinks,
   // Calendar,
 } from "./components";
 // import { ClipboardLink, Footer, Gallery, Refs, SiteHelmet } from "./components";
@@ -33,6 +34,7 @@ function App() {
     "INFP-T",
     "Galatians 5:13",
   ];
+  const hrClasses = classNames("mx-auto", "mt-4", "lg:w-5/6");
 
   return (
     <>
@@ -54,13 +56,11 @@ function App() {
             <div className="lg:flex-auto lg:mt-10">
               <Socials />
 
-              <CopyLinks />
-
-              <hr className="lg:w-5/6 mx-auto mt-6" />
+              <hr className={hrClasses} />
 
               <Art />
 
-              <hr className="lg:w-5/6 mx-auto mt-6" />
+              <hr className={hrClasses} />
 
               <Lore />
 
@@ -68,8 +68,9 @@ function App() {
 
               <MyCal /> */}
 
-              <p className="text-gray-200">
-                Calendar coming soon, fixing some bugs!
+              <p className="text-gray-400 lg:w-3/4 mx-auto">
+                Calendar coming soon, last implementation had a run in with
+                Cross Site Tracking Prevention on Safari web browsers. 🥲
               </p>
             </div>
           </div>
@@ -102,33 +103,8 @@ const Socials = () => {
           </a>
         ))}
       </p>
-    </>
-  );
-};
 
-const CopyLinks = () => {
-  return (
-    <>
-      {/* <h3>Click any of the following to copy to clipboard.</h3> */}
-
-      <p id="copyLinks">
-        {Object.keys(author.friendCodes).map((codeType, index) => (
-          <span
-            key={index}
-            // className="tooltip"
-            // data-tip={iconMap[codeType].dataTip}
-          >
-            <ClipboardLink
-              dataValue={
-                author.friendCodes[codeType as keyof typeof author.friendCodes]
-              }
-              isButton={true}
-            >
-              {iconMap[codeType].dataTip}
-            </ClipboardLink>
-          </span>
-        ))}
-      </p>
+      <CopyLinks />
     </>
   );
 };

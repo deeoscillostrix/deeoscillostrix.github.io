@@ -12,7 +12,8 @@
 
 #socialIcons,
 #copyLinks {
-  @apply flex flex-row flex-wrap justify-center mb-8;
+  /* @apply flex flex-row flex-wrap justify-center mb-8; */
+  @apply flex flex-row flex-wrap justify-center mb-2;
 }
 
 #copyLinks {
