@@ -4,15 +4,15 @@ import { HelmetProvider } from "react-helmet-async";
 import { FaTelegramPlane } from "react-icons/fa";
 import "./App.css";
 import {
+  AboutMilo,
   AboutOscillo,
   AboutSnowTrap,
-  AboutMilo,
+  Attendance,
+  CopyLinks,
   // ClipboardLink,
   Footer,
   Gallery,
   Refs,
-  CopyLinks,
-  // Calendar,
 } from "./components";
 // import { ClipboardLink, Footer, Gallery, Refs, SiteHelmet } from "./components";
 import { author, iconMap, stickerPacks } from "./data";
@@ -55,6 +55,7 @@ function App() {
 
             <div className="lg:flex-auto lg:mt-10">
               <Socials />
+              <Attendance />
 
               <hr className={hrClasses} />
 
@@ -68,10 +69,10 @@ function App() {
 
               <MyCal /> */}
 
-              <p className="text-gray-400 lg:w-3/4 mx-auto">
+              {/* <p className="text-gray-400 lg:w-3/4 mx-auto">
                 Calendar coming soon, last implementation had a run in with
                 Cross Site Tracking Prevention on Safari web browsers. 🥲
-              </p>
+              </p> */}
             </div>
           </div>
         </main>
