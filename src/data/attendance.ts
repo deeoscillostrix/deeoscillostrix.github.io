@@ -1,8 +1,10 @@
 const timezones = {
-  idt: "GMT+7",
-  sgt: "GMT+8",
-  myt: "GMT+8",
+  idt: "+07:00",
+  sgt: "+08:00",
+  myt: "+08:00",
 };
+
+const defaultMidnight = "T00:00:00";
 
 interface Event {
   name: string;
@@ -25,8 +27,8 @@ const attendance: { [year: number]: Event[] } = {
   2023: [
     {
       name: conNames.lifc,
-      startDate: new Date(`2023-06-10 ${timezones.sgt}`),
-      endDate: new Date(`2023-06-11 ${timezones.sgt}`),
+      startDate: new Date(`2023-06-10${defaultMidnight}${timezones.sgt}`),
+      endDate: new Date(`2023-06-11${defaultMidnight}${timezones.sgt}`),
       venue: "Resorts World Sentosa Convention Centre",
       theme: "Swords & Sorcery",
 
@@ -37,8 +39,8 @@ const attendance: { [year: number]: Event[] } = {
   2024: [
     {
       name: conNames.lifc,
-      startDate: new Date(`2024-07-06 ${timezones.sgt}`),
-      endDate: new Date(`2024-07-07 ${timezones.sgt}`),
+      startDate: new Date(`2024-07-06${defaultMidnight}${timezones.sgt}`),
+      endDate: new Date(`2024-07-07${defaultMidnight}${timezones.sgt}}`),
       venue: "One Farrer Hotel",
       theme: "Bloom and Gloom",
 
@@ -49,8 +51,8 @@ const attendance: { [year: number]: Event[] } = {
       name: conNames.furum,
       venue: "Hotel Armada PJ",
       theme: "Furkini Bottom",
-      startDate: new Date(`2024-12-07 ${timezones.myt}`),
-      endDate: new Date(`2024-12-08 ${timezones.myt}`),
+      startDate: new Date(`2024-12-07${defaultMidnight}${timezones.myt}`),
+      endDate: new Date(`2024-12-08${defaultMidnight}${timezones.myt}`),
 
       ticketNo: 858,
       tier: "Sponsor",
@@ -59,8 +61,8 @@ const attendance: { [year: number]: Event[] } = {
   2025: [
     {
       name: conNames.lifc,
-      startDate: new Date(`2025-06-14 ${timezones.sgt}`),
-      endDate: new Date(`2025-06-15 ${timezones.sgt}`),
+      startDate: new Date(`2025-06-14${defaultMidnight}${timezones.sgt}`),
+      endDate: new Date(`2025-06-15${defaultMidnight}${timezones.sgt}`),
       venue: "One Farrer Hotel",
       theme: "Retro Arcade",
 
@@ -69,8 +71,8 @@ const attendance: { [year: number]: Event[] } = {
     },
     {
       name: conNames.iwag,
-      startDate: new Date(`2025-07-12 ${timezones.idt}`),
-      endDate: new Date(`2025-07-13 ${timezones.idt}`),
+      startDate: new Date(`2025-07-12${defaultMidnight}${timezones.idt}`),
+      endDate: new Date(`2025-07-13${defaultMidnight}${timezones.idt}`),
       venue: "ibis Styles BSD",
       theme: "IWAG: Return of the Wild",
 
@@ -79,8 +81,8 @@ const attendance: { [year: number]: Event[] } = {
     },
     {
       name: conNames.furum,
-      startDate: new Date(`2025-12-06 ${timezones.myt}`),
-      endDate: new Date(`2025-12-07 ${timezones.myt}`),
+      startDate: new Date(`2025-12-06${defaultMidnight}${timezones.myt}`),
+      endDate: new Date(`2025-12-07${defaultMidnight}${timezones.myt}`),
       venue: "Hotel Armada PJ",
       theme: "Fur Piece",
     },

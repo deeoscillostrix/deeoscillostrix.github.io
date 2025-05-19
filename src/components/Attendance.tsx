@@ -1,9 +1,7 @@
 import { attendance as conAttendance } from "../data";
 
 function MyDateParser(thisDate: Date) {
-  return `${thisDate.getDate()} ${new Intl.DateTimeFormat("en-US", {
-    month: "long",
-  }).format(thisDate)} ${thisDate.getFullYear()}`;
+  return `${thisDate.getDate()} ${thisDate.toLocaleString('default', { month: 'long' })} ${thisDate.getFullYear()}`;
 }
 
 function isComingSoon(startDate: Date, endDate: Date) {
