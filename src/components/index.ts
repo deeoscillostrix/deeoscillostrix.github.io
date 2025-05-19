@@ -1,4 +1,5 @@
 export { AboutOscillo, AboutSnowTrap, AboutMilo } from "./Almanac";
+export { default as Attendance } from "./Attendance";
 export { default as Calendar } from "./Calendar";
 export { default as ClipboardButton } from "./ClipboardButton";
 export { default as ClipboardLink } from "./ClipboardLink";
