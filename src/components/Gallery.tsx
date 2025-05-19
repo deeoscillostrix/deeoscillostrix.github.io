@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { artists } from "../data";
 
 const Gallery = () => {
@@ -58,7 +59,41 @@ const Gallery = () => {
 
           <h3>{title}</h3>
 
-          {galleryImages.map((image, index) => (
+          <div className="carousel carousel-center bg-neutral rounded-box max-w-full space-x-4 p-4">
+            {galleryImages.map((image, index) => (
+              <div className="carousel-item" key={index}>
+                <div>
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className={classNames(
+                      "max-h-[20dvh]",
+                      "sm:max-h-[35dvh]",
+                      "md:max-h-[45dvh]",
+                      "lg:max-h-[55dvh]",
+                      "xl:max-h-[70dvh]",
+                      "max-w-full",
+                      "rounded-box"
+                    )}
+                    loading="lazy"
+                  />
+                  <p>
+                    Artwork by{" "}
+                    <a
+                      href={image.artistUrl}
+                      className="text-secondary"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      {image.artist}
+                    </a>
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* {galleryImages.map((image, index) => (
             <div key={index} className="galleryDisplay">
               <div className="imgContainer">
                 <img src={image.src} alt={image.alt} loading="lazy" />
@@ -68,7 +103,7 @@ const Gallery = () => {
                 {image.artist}
               </a>
             </div>
-          ))}
+          ))} */}
         </div>
       </dialog>
     </>
