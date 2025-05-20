@@ -27,7 +27,7 @@ const AttendanceAccordion = () => {
             className="collapse collapse-arrow join-item border border-primary text-primary"
           >
             {/* <input type="radio" name="my-accordion-4" defaultChecked /> */}
-            <input type="radio" name={accordionName} />
+            <input type="checkbox" name={accordionName} />
             <div className="collapse-title font-semibold">
               {attYear}{" "}
               {parseInt(attYear) - new Date().getFullYear() == 0 && `⭐`}

@@ -4,6 +4,17 @@ import { artists, modalSizes } from "../data";
 const Gallery = () => {
   const modalId = "modal_gallery";
   const title = "Gallery";
+  const carouselClasses = classNames(
+    "carousel",
+    "max-sm:carousel-vertical",
+    "max-sm:h-[75dvh]",
+    "carousel-center",
+    "bg-neutral",
+    "rounded-box",
+    "max-w-full",
+    "space-x-4",
+    "p-4"
+  );
 
   const galleryImages = [
     {
@@ -59,7 +70,7 @@ const Gallery = () => {
 
           <h3>{title}</h3>
 
-          <div className="carousel carousel-center bg-neutral rounded-box max-w-full space-x-4 p-4">
+          <div className={carouselClasses}>
             {galleryImages.map((image, index) => (
               <div className="carousel-item" key={index}>
                 <div>
@@ -67,17 +78,18 @@ const Gallery = () => {
                     src={image.src}
                     alt={image.alt}
                     className={classNames(
-                      "max-h-[20dvh]",
+                      "mx-auto",
                       "sm:max-h-[35dvh]",
                       "md:max-h-[45dvh]",
                       "lg:max-h-[55dvh]",
                       "xl:max-h-[70dvh]",
-                      "max-w-full",
+                      // "max-w-xs",
+                      "sm:max-w-full",
                       "rounded-box"
                     )}
                     loading="lazy"
                   />
-                  <p>
+                  <p className="text-sm">
                     Artwork by{" "}
                     <a
                       href={image.artistUrl}
