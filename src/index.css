@@ -127,6 +127,10 @@ button {
   }
 }
 
+kbd {
+  @apply font-jetbrainsMono font-light;
+}
+
 footer {
   @apply font-jetbrainsMono font-extralight my-8;
 }
