@@ -85,8 +85,8 @@ const Gallery = () => {
                     className={classNames(
                       "mx-auto",
                       "sm:max-h-[35dvh]",
-                      "md:max-h-[45dvh]",
-                      "lg:max-h-[55dvh]",
+                      "md:max-h-[40dvh]",
+                      // "lg:max-h-[50dvh]",
                       "xl:max-h-[70dvh]",
                       // "max-w-xs",
                       "sm:max-w-full",
