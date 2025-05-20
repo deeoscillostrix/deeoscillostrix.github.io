@@ -12,7 +12,7 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 import { GiNightSleep } from "react-icons/gi";
-import { IconType } from "react-icons/lib";
+import type { IconType } from "react-icons/lib";
 import { MdOutlineCatchingPokemon } from "react-icons/md";
 // import { PiButterflyFill } from "react-icons/pi";
 import { SiKofi } from "react-icons/si";
