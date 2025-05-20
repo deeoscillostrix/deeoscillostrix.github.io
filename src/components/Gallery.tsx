@@ -41,6 +41,18 @@ const Gallery = () => {
       artist: artists.cheekysonas.handle,
       artistUrl: artists.cheekysonas.website,
     },
+    {
+      src: "/images/oscii-halloween2024.webp",
+      alt: "Halloween 2024 with Oscillo, SnowTrap and Milo",
+      artist: artists.kareru.handle,
+      artistUrl: artists.kareru.bluesky,
+    },
+    {
+      src: "/images/oscii-lucy-gift-2025.webp",
+      alt: "Gift for Lucy 2025",
+      artist: artists.cyannocti.handle,
+      artistUrl: artists.cyannocti.instagram,
+    },
   ];
 
   return (
