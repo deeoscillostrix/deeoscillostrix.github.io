@@ -1,4 +1,5 @@
 export { default as Almanac } from "./Almanac";
+export { default as Art } from "./Art";
 export { default as Attendance } from "./Attendance";
 export { default as ClipboardLink } from "./ClipboardLink";
 export { default as Footer } from "./Footer";

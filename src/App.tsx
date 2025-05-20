@@ -1,9 +1,7 @@
 import classNames from "classnames";
-import { FaTelegramPlane } from "react-icons/fa";
 import "./App.css";
-import { Almanac, Attendance, Footer, Gallery, Refs } from "./components";
+import { Almanac, Art, Attendance, Footer } from "./components";
 import Socials from "./components/Socials";
-import { stickerPacks } from "./data";
 
 function App() {
   const briefs = [
@@ -61,27 +59,3 @@ function App() {
 }
 
 export default App;
-
-const Art = () => {
-  return (
-    <>
-      <div className="lg:mx-8">
-        <Gallery />
-        <Refs />
-
-        {stickerPacks.map((stickerLink, index) => (
-          <a
-            key={index}
-            href={stickerLink.href}
-            className="btn btn-accent btn-outline m-2"
-            target="_blank"
-            rel="noopener"
-          >
-            <FaTelegramPlane />
-            {stickerLink.label}
-          </a>
-        ))}
-      </div>
-    </>
-  );
-};
