@@ -86,7 +86,7 @@ const Attendance = () => {
           <div className="lg:w-5/6 mx-auto">
             <AttendanceAccordion />
 
-            <p>
+            <p className="text-sm">
               If you are attending any one of these cons too, do feel free to
               come and say hi!
             </p>
