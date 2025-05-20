@@ -3,128 +3,89 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
-@font-face {
-  font-family: "SF Mono";
-  src: url("/src/assets/fonts/sf-mono/SF-Mono-Regular.otf") format("opentype");
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SF Mono";
-  src: url("/src/assets/fonts/sf-mono/SF-Mono-RegularItalic.otf")
-    format("opentype");
-  font-style: italic;
-  font-weight: normal;
-  font-display: swap;
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --font-caveat: "Caveat", sans-serif;
+  --font-jetbrainsMono: "JetBrains Mono", monospace;
+  --font-shantellSans: "Shantell Sans", sans-serif;
 }
 
-@font-face {
-  font-family: "SF Mono";
-  src: url("/src/assets/fonts/sf-mono/SF-Mono-Bold.otf") format("opentype");
-  font-style: normal;
-  font-weight: bold;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SF Mono";
-  src: url("/src/assets/fonts/sf-mono/SF-Mono-BoldItalic.otf")
-    format("opentype");
-  font-style: italic;
-  font-weight: bold;
-  font-display: swap;
+[data-theme="light"] {
+  --color-primary: #89623d;
+  --color-primary-content: #f3f0dc;
+  --color-secondary: #e38d37;
+  --color-accent: #00a879;
+  --color-accent-content: #f3f0dc;
+  --color-neutral: #f3f0dc;
 }
 
-@font-face {
-  font-family: "SF Mono";
-  src: url("/src/assets/fonts/sf-mono/SF-Mono-Light.otf") format("opentype");
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SF Mono";
-  src: url("/src/assets/fonts/sf-mono/SF-Mono-LightItalic.otf")
-    format("opentype");
-  font-style: italic;
-  font-weight: 300;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "SF Mono";
-  src: url("/src/assets/fonts/sf-mono/SF-Mono-Medium.otf") format("opentype");
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SF Mono";
-  src: url("/src/assets/fonts/sf-mono/SF-Mono-MediumItalic.otf")
-    format("opentype");
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "SF Mono";
-  src: url("/src/assets/fonts/sf-mono/SF-Mono-Semibold.otf") format("opentype");
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SF Mono";
-  src: url("/src/assets/fonts/sf-mono/SF-Mono-SemiboldItalic.otf")
-    format("opentype");
-  font-style: italic;
-  font-weight: 600;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "SF Mono";
-  src: url("/src/assets/fonts/sf-mono/SF-Mono-Heavy.otf") format("opentype");
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SF Mono";
-  src: url("/src/assets/fonts/sf-mono/SF-Mono-HeavyItalic.otf")
-    format("opentype");
-  font-style: italic;
-  font-weight: 800;
-  font-display: swap;
-}
-
-@tailwind base;
-@tailwind components;
 @tailwind utilities;
 
 :root {
-  --fallback-sc: #fff;
-  --fallback-ac: #fff;
+  /* Oscillo Colors */
+  --color-oscii1: #dca978;
+  --color-oscii2: #f3f0dc;
+  --color-oscii3: #89623d;
+  --color-oscii4: #00a879;
+  --color-oscii5: #ffe002;
+  --color-oscii6: #e38d37;
+  --color-oscii7: #1b603d;
+  --color-oscii8: #063a20;
+
+  /* Kid Oscillo Colors */
+  --color-koscii1: #a7886b;
+  --color-koscii2: #fff4e3;
+  --color-koscii3: #59a482;
+  --color-koscii4: #fb9e00;
+  --color-koscii5: #ffe002;
+  --color-koscii6: #e38d37;
+  --color-koscii7: #733229;
+  --color-koscii8: #ac4a3d;
+
+  /* Teen Oscii Colors */
+  --color-toscii1: #dca979;
+  --color-toscii2: #a7886b;
+  --color-toscii3: #fdf2e1;
+  --color-toscii4: #5ba582;
+  --color-toscii5: #e48c36;
+  --color-toscii6: #fce105;
+
+  /* SnowTrap Colors */
+  --color-snowtrap1: #d1fffe;
+  --color-snowtrap2: #6fe6fa;
+  --color-snowtrap3: #62d463;
+  --color-snowtrap4: #ff9a50;
+  --color-snowtrap5: #ffeea6;
+  --color-snowtrap6: #ff6b26;
+  --color-snowtrap7: #03147c;
+
+  /* Milo Colors */
+  --color-milo01: #ff4f2e;
+  --color-milo02: #e82b16;
+  --color-milo03: #fff152;
+  --color-milo04: #ffb234;
+  --color-milo05: #1a1a1a;
+  --color-milo06: #cfcfcf;
+  --color-milo07: #ff8d40;
+  --color-milo08: #ffb946;
+  --color-milo09: #33ff59;
+  --color-milo10: #00d740;
 }
 
 body {
-  @apply bg-oscii-wallpaper bg-[length:800px] font-shantellSans text-black m-0 min-w-[320px] min-h-[100svh] relative;
-  /* @apply bg-oscii-wallpaper bg-cover bg-center font-shantellSans text-black m-0 min-w-[320px] min-h-[100svh] relative; */
-  /* @apply bg-meta-image bg-cover bg-center font-shantellSans text-black m-0 min-w-[320px] min-h-[100svh] relative; */
-  /* @apply bg-gradient-to-br from-[#dca978] to-[#89623d] bg-cover bg-center text-white m-0 min-w-[320px] min-h-[100svh] relative; */
-  /* @apply bg-gradient-to-tr from-koscii1 to-oscii2 bg-cover bg-center font-shantellSans m-0 min-w-[320px] min-h-[100svh] relative text-black; */
+  @apply bg-[url('/images/wallpaper.webp')] bg-[length:800px] font-shantellSans text-black m-0 min-w-[320px] min-h-[100svh] relative;
 }
 
 body:before {
   content: " ";
 
-  @apply bg-white bg-opacity-80 min-w-[100svw] min-h-[100svh] h-full w-full absolute z-10;
-  /* @apply bg-white bg-opacity-20 min-w-[100svw] min-h-[100svh] absolute z-10; */
+  @apply bg-white/80 min-w-[100svw] min-h-[100svh] h-full w-full absolute z-10;
 }
 
 main {
-  @apply bg-white bg-opacity-75 rounded-3xl border border-dotted border-primary p-4;
+  @apply bg-white/75 rounded-3xl border border-dotted border-primary p-4;
 }
 
 h1,
@@ -146,24 +107,32 @@ h3 {
 }
 
 hr {
-  @apply mb-4;
+  @apply my-4 mx-auto border-[#e5e7eb];
 }
 
 p {
   @apply my-4;
 }
 
+a,
+button {
+  &.btn {
+    @apply py-6 rounded-xl;
+  }
+
+  &.tooltip {
+    &::before {
+      @apply text-black;
+    }
+  }
+}
+
 footer {
-  @apply font-mono font-thin my-8;
+  @apply font-jetbrainsMono font-extralight my-8;
 }
 
 footer a {
-  @apply text-oscii3 hover:font-semibold;
-}
-
-.font-mono {
-  /* @apply font-sfMono font-light; */
-  @apply font-jetbrainsMono font-extralight;
+  @apply text-primary hover:font-semibold;
 }
 
 .modal-box::webkit-scrollbar {
@@ -175,6 +144,3 @@ footer a {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
-/* @layer base {
-} */

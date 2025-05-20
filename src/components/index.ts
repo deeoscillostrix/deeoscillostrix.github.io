@@ -1,11 +1,9 @@
-export { AboutOscillo, AboutSnowTrap, AboutMilo } from "./Almanac";
+export { default as Almanac } from "./Almanac";
 export { default as Attendance } from "./Attendance";
-export { default as Calendar } from "./Calendar";
-export { default as ClipboardButton } from "./ClipboardButton";
 export { default as ClipboardLink } from "./ClipboardLink";
-export { default as CopyLinks } from "./CopyLinks";
 export { default as Footer } from "./Footer";
 export { default as Gallery } from "./Gallery";
+export { default as GameLinks } from "./GameLinks";
 export { default as HandleClipboardCopy } from "./HandleClipboardCopy";
 export { default as Refs } from "./Refs";
-export { default as SiteHelmet } from "./SiteHelmet";
+export { default as Socials } from "./Socials";

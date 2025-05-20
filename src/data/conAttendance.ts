@@ -40,7 +40,7 @@ const attendance: { [year: number]: Event[] } = {
     {
       name: conNames.lifc,
       startDate: new Date(`2024-07-06${defaultMidnight}${timezones.sgt}`),
-      endDate: new Date(`2024-07-07${defaultMidnight}${timezones.sgt}}`),
+      endDate: new Date(`2024-07-07${defaultMidnight}${timezones.sgt}`),
       venue: "One Farrer Hotel",
       theme: "Bloom and Gloom",
 

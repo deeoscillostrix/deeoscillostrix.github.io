@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { artists } from "../data";
+import { artists, modalSizes } from "../data";
 
 const Gallery = () => {
   const modalId = "modal_gallery";
@@ -49,7 +49,7 @@ const Gallery = () => {
         <form method="dialog" className="modal-backdrop">
           <button>close</button>
         </form>
-        <div className="modal-box w-full lg:w-11/12 max-w-7xl">
+        <div className={modalSizes.large}>
           <form method="dialog">
             {/* if there is a button in form, it will close the modal */}
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">

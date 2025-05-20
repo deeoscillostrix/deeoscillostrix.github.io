@@ -1,7 +1,7 @@
-import { attendance as conAttendance } from "../data";
+import { conAttendance, modalSizes } from "../data";
 
 function MyDateParser(thisDate: Date) {
-  return `${thisDate.getDate()} ${thisDate.toLocaleString('default', { month: 'long' })} ${thisDate.getFullYear()}`;
+  return `${thisDate.getDate()} ${thisDate.toLocaleString("default", { month: "long" })} ${thisDate.getFullYear()}`;
 }
 
 function isComingSoon(startDate: Date, endDate: Date) {
@@ -73,7 +73,7 @@ const Attendance = () => {
         <form method="dialog" className="modal-backdrop">
           <button>close</button>
         </form>
-        <div className="modal-box w-3/4 lg:w-1/2 xl:w-1/3 max-w-7xl">
+        <div className={modalSizes.small}>
           <form method="dialog">
             {/* if there is a button in form, it will close the modal */}
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">

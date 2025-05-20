@@ -1,4 +1,22 @@
-export const AboutOscillo = () => {
+import { modalSizes } from "../data";
+
+const Almanac = () => {
+  return (
+    <>
+      <div className="lg:mx-8">
+        <p>Almanac: Read more about my characters here - lore and shtuff!!</p>
+
+        <AboutOscillo />
+        <AboutSnowTrap />
+        <AboutMilo />
+      </div>
+    </>
+  );
+};
+
+export default Almanac;
+
+const AboutOscillo = () => {
   const modalId = "modal_abtOscillo";
   const title = "About Oscillo 🦉";
 
@@ -19,7 +37,7 @@ export const AboutOscillo = () => {
         <form method="dialog" className="modal-backdrop">
           <button>close</button>
         </form>
-        <div className="modal-box w-full lg:w-11/12 max-w-7xl">
+        <div className={modalSizes.large}>
           <form method="dialog">
             {/* if there is a button in form, it will close the modal */}
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
@@ -124,7 +142,7 @@ export const AboutOscillo = () => {
   );
 };
 
-export const AboutSnowTrap = () => {
+const AboutSnowTrap = () => {
   const modalId = "modal_abtSnowtrap";
   const title = "About SnowTrap ❄️";
 
@@ -145,7 +163,7 @@ export const AboutSnowTrap = () => {
         <form method="dialog" className="modal-backdrop">
           <button>close</button>
         </form>
-        <div className="modal-box w-full lg:w-11/12 max-w-7xl">
+        <div className={modalSizes.large}>
           <form method="dialog">
             {/* if there is a button in form, it will close the modal */}
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
@@ -249,7 +267,7 @@ export const AboutSnowTrap = () => {
   );
 };
 
-export const AboutMilo = () => {
+const AboutMilo = () => {
   const modalId = "modal_abtMilo";
   const title = "About Milo 🔥";
 
@@ -270,7 +288,7 @@ export const AboutMilo = () => {
         <form method="dialog" className="modal-backdrop">
           <button>close</button>
         </form>
-        <div className="modal-box w-full lg:w-11/12 max-w-7xl">
+        <div className={modalSizes.large}>
           <form method="dialog">
             {/* if there is a button in form, it will close the modal */}
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">

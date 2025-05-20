@@ -1,23 +1,8 @@
-import classNames from "classnames";
 import { artists, author } from "../data";
-import { useEffect, useState } from "react";
 
 const Footer = () => {
-  const [loaded, setLoaded] = useState(false);
-  const handleLoad = () => {
-    setLoaded(true);
-  };
-
-  useEffect(() => {
-    window.addEventListener("load", handleLoad);
-  });
-
   return (
-    <footer
-      className={classNames("transition-opacity", "ease-in-out", {
-        "opacity-0": !loaded,
-      })}
-    >
+    <footer>
       @{new Date().getFullYear()} {author.name} 🦉
       <br />
       Artwork by{" "}
