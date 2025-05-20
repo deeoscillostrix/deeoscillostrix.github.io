@@ -1,7 +1,10 @@
+import { createElement } from "react";
 import { GameLinks } from ".";
-import { author } from "../data";
-import { GetIcon } from "../utils";
+import { author, iconMap } from "../data";
+// import iconMap from "../data/iconMap";
+// import { GetIcon } from "../utils";
 
+/*
 function getTooltip(key: string) {
   switch (key) {
     case "telegram":
@@ -25,35 +28,25 @@ function getTooltip(key: string) {
     default:
       return "";
   }
-}
+}*/
 
 const Socials = () => {
   return (
     <>
       <h2 className="mt-8">Let's keep in touch!</h2>
-      {/* <p>Let's keep in touch!</p> */}
 
       <p id="socialIcons">
-        {/* {Object.keys(author.socials).map((socialKey, index) => (
+        {Object.keys(author.socials).map((socialKey, index) => (
           <a
             key={index}
-            href={author.socials[socialKey as keyof typeof author.socials]}
-            target="_blank"
-            rel="noopener"
-            >
-            {createElement(iconMap[socialKey].iconImport)}
-            </a>
-            ))} */}
-
-        {Object.keys(author.socials).map((socialKey, key) => (
-          <a
-            key={key}
             className="tooltip"
-            data-tip={getTooltip(socialKey)}
+            // data-tip={getTooltip(socialKey)}
+            data-tip={iconMap[socialKey].dataTip}
             href={author.socials[socialKey as keyof typeof author.socials]}
             rel="noopener"
           >
-            {GetIcon(socialKey)}
+            {/* {GetIcon(socialKey)} */}
+            {createElement(iconMap[socialKey].iconImport)}
           </a>
         ))}
       </p>
