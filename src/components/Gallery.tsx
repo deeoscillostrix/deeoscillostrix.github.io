@@ -70,6 +70,11 @@ const Gallery = () => {
 
           <h3>{title}</h3>
 
+          <p className="max-sm:hidden mx-auto w-4/5 text-sm">
+            On a non-touch screen device, scroll horizontally by holding the{" "}
+            <kbd className="kbd text-sm">shift</kbd> key and then scrolling on
+            your mouse.
+          </p>
           <div className={carouselClasses}>
             {galleryImages.map((image, index) => (
               <div className="carousel-item" key={index}>
