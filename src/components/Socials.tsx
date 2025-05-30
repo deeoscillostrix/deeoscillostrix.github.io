@@ -43,6 +43,7 @@ const Socials = () => {
             // data-tip={getTooltip(socialKey)}
             data-tip={iconMap[socialKey].dataTip}
             href={author.socials[socialKey as keyof typeof author.socials]}
+            target="_blank"
             rel="noopener"
           >
             {/* {GetIcon(socialKey)} */}
