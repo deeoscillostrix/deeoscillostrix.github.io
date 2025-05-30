@@ -1,5 +1,11 @@
 const timezones = {
-  idt: "+07:00",
+  cet: "+02:00", // Central European Time
+
+  // Indonesia
+  wib: "+07:00", // Western Indonesian Time / Waktu Indonesia Barat
+  wita: "+08:00", // Central Indonesian Time / Waktu Indonesia Tengah
+  wit: "+09:00", // Eastern Indonesian Time / Waktu Indonesia Timur
+
   sgt: "+08:00",
   myt: "+08:00",
 };
@@ -18,9 +24,12 @@ interface Event {
 }
 
 const conNames = {
-  furum: "Furs Upon Malaysia",
-  iwag: "Indonesian Weekend Anthro Gathering",
-  lifc: "Little Island Fur Con",
+  bah: "Borneo Anthro Hub 🇲🇾",
+  furum: "Furs Upon Malaysia 🇲🇾",
+  iwag: "Indonesian Weekend Anthro Gathering 🇮🇩", // wib
+  lifc: "Little Island Fur Con 🇸🇬",
+  nfc: "Nordic FuzzCon 🇸🇪", // cet
+  pawai: "Party Along with Anthro Indonesia 🇮🇩", // wita
 };
 
 const attendance: { [year: number]: Event[] } = {
@@ -71,8 +80,8 @@ const attendance: { [year: number]: Event[] } = {
     },
     {
       name: conNames.iwag,
-      startDate: new Date(`2025-07-12${defaultMidnight}${timezones.idt}`),
-      endDate: new Date(`2025-07-13${defaultMidnight}${timezones.idt}`),
+      startDate: new Date(`2025-07-12${defaultMidnight}${timezones.wib}`),
+      endDate: new Date(`2025-07-13${defaultMidnight}${timezones.wib}`),
       venue: "ibis Styles BSD",
       theme: "IWAG: Return of the Wild",
 
@@ -85,6 +94,15 @@ const attendance: { [year: number]: Event[] } = {
       endDate: new Date(`2025-12-07${defaultMidnight}${timezones.myt}`),
       venue: "Hotel Armada PJ",
       theme: "Fur Piece",
+    },
+  ],
+  2026: [
+    {
+      name: conNames.bah,
+      startDate: new Date(`2026-06-06${defaultMidnight}${timezones.myt}`),
+      endDate: new Date(`2026-06-07${defaultMidnight}${timezones.myt}`),
+      venue: "TBC",
+      theme: "Adventure Below the Wind",
     },
   ],
 };

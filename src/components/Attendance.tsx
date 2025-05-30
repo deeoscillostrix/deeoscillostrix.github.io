@@ -17,10 +17,20 @@ function isComingSoon(startDate: Date, endDate: Date) {
 const AttendanceAccordion = () => {
   const accordionName = "accordion-conAttendance";
 
+  const thisYear = new Date().getFullYear();
+  const thisMonth = new Date().getMonth();
+
   return (
     <div className="join join-vertical bg-base-100 w-full">
       {Object.keys(conAttendance)
         .reverse()
+        .filter(
+          (attYear) =>
+            // display entries for next year if it's currently December
+            // otherwise show only all entries up to this year
+            (thisMonth >= 11 && parseInt(attYear) <= thisYear + 1) ||
+            parseInt(attYear) <= thisYear
+        )
         .map((attYear, key) => (
           <div
             key={key}
