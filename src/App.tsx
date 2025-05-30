@@ -2,8 +2,18 @@ import classNames from "classnames";
 import "./App.css";
 import { Almanac, Art, Attendance, Footer } from "./components";
 import Socials from "./components/Socials";
+// import { useEffect, useState } from "react";
 
 function App() {
+  // const [loaded, setLoaded] = useState(false);
+  // const handleLoad = () => {
+  //   setLoaded(true);
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("load", handleLoad);
+  // });
+
   const briefs = [
     "Stilt Owl",
     "Uni Sensei",
@@ -20,7 +30,11 @@ function App() {
 
   return (
     <>
-      <main>
+      <main
+      // className={classNames("transition-opacity", "ease-in-out", {
+      //   "opacity-0": !loaded,
+      // })}
+      >
         <div className="lg:flex">
           <div id="persona">
             <img src="/images/owl comm_stroke.webp" alt="Oscillo" />
