@@ -3,7 +3,7 @@ export { default as Art } from "./Art";
 export { default as Attendance } from "./Attendance";
 export { default as ClipboardLink } from "./ClipboardLink";
 export { default as Footer } from "./Footer";
-export { default as Gallery } from "./Gallery";
+export { ArtGallery, FursuitGallery } from "./Gallery";
 export { default as GameLinks } from "./GameLinks";
 export { default as HandleClipboardCopy } from "./HandleClipboardCopy";
 export { default as Refs } from "./Refs";

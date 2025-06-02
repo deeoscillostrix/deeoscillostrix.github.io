@@ -1,12 +1,13 @@
 import { FaTelegramPlane } from "react-icons/fa";
-import { Gallery, Refs } from ".";
+import { ArtGallery, FursuitGallery, Refs } from ".";
 import { stickerPacks } from "../data";
 
 const Art = () => {
   return (
     <>
       <div className="lg:mx-8">
-        <Gallery />
+        <ArtGallery />
+        <FursuitGallery />
         <Refs />
 
         {stickerPacks.map((stickerLink, index) => (

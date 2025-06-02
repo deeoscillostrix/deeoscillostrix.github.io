@@ -51,4 +51,27 @@ export default {
     instagram: prefix.instagram + "toastysqxiid",
     bluesky: "https://toastysqxiid.bsky.social",
   },
+
+  // Artists for Fursuits and/or Wearables
+  deleon: {
+    handle: "@deleon_fursuits",
+    twitter: prefix.twitter + "deleon_fursuits",
+    instagram: prefix.instagram + "deleon_fursuits",
+    bluesky: "https://deleonfursuits.bsky.social",
+    website: "https://deleonfursuits.com",
+  },
+  kitsuneshrine: {
+    handle: "@KitsuneShrine",
+    twitter: prefix.twitter + "KitsuneShrine",
+    instagram: prefix.instagram + "kitsune_shrine",
+    bluesky: "https://kitsuneshrine.bsky.social",
+    website: "https://nogitsune-shrine.carrd.co/",
+    // website: "https://nogitsuneshrine.wixsite.com/kitsune-shrine",
+  },
+  nekobit: {
+    handle: "@NekoBit_Hoodies",
+    twitter: prefix.twitter + "NekoBit_Hoodies",
+    instagram: prefix.instagram + "inuandnekobit",
+    bluesky: "https://nekobithoodies.bsky.social",
+  },
 };
