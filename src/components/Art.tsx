@@ -1,5 +1,6 @@
 import { FaTelegramPlane } from "react-icons/fa";
-import { ArtGallery, FursuitGallery, Refs } from ".";
+import { ArtGallery, Refs } from ".";
+// import { ArtGallery, FursuitGallery, Refs } from ".";
 import { stickerPacks } from "../data";
 
 const Art = () => {
