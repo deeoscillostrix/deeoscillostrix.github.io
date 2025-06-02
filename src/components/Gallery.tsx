@@ -24,6 +24,44 @@ const imageClasses = classNames(
   "rounded-box"
 );
 
+const FursuitCredits = () => {
+  return (
+    <>
+      <ul className="my-4">
+        {[
+          {
+            text: "Fursuit created by",
+            link: artists.deleon.website,
+            linkDisplay: artists.deleon.handle,
+          },
+          {
+            text: "Fursuit beanie created by",
+            link: artists.kitsuneshrine.website,
+            linkDisplay: artists.kitsuneshrine.handle,
+          },
+          {
+            text: "Fursuit kigurumi created by",
+            link: artists.nekobit.bluesky,
+            linkDisplay: artists.nekobit.handle,
+          },
+        ].map((credit, index) => (
+          <li className="text-sm" key={index}>
+            {`${credit.text} `}
+            <a
+              href={credit.link}
+              className="text-secondary"
+              target="_blank"
+              rel="noopener"
+            >
+              {credit.linkDisplay}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+};
+
 export const ArtGallery = () => {
   const modalId = "modal_artGallery";
   const title = "Art Gallery";
@@ -207,50 +245,24 @@ export const FursuitGallery = () => {
             key and then use the scroll wheel.
           </p>
           <div className={carouselClasses}>
+            <div className="carousel-item border border-primary rounded-xl px-4 md:max-w-[25dvw] max-sm:my-4 sm:me-4 mx-auto">
+              <FursuitCredits />
+            </div>
             <div className="carousel-item">
-              <div>
+              <div className="mx-auto">
                 <img
                   className={imageClasses}
                   src="/images/fursuit/image (14).webp"
                   // src="/images/fursuit/SAM01104.webp"
                   alt="Just unboxed!"
                 />
-                <p className="text-sm">
-                  One of the first photos taken after unboxing!
-                  <br />
-                  Commissioned in Dec 2022, arrived Jul 2023.
+                <p className="text-sm w-2/5 mx-auto">
+                  One of the first photos taken after unboxing! Commissioned in
+                  Dec 2022, arrived Jul 2023.
                 </p>
-                <ul className="my-4">
-                  {[
-                    {
-                      text: "Fursuit created by",
-                      link: artists.deleon.website,
-                      linkDisplay: artists.deleon.handle,
-                    },
-                    {
-                      text: "Fursuit beanie created by",
-                      link: artists.kitsuneshrine.website,
-                      linkDisplay: artists.kitsuneshrine.handle,
-                    },
-                    {
-                      text: "Fursuit kigurumi created by",
-                      link: artists.nekobit.bluesky,
-                      linkDisplay: artists.nekobit.handle,
-                    },
-                  ].map((credit, index) => (
-                    <li className="text-sm" key={index}>
-                      {`${credit.text} `}
-                      <a
-                        href={credit.link}
-                        className="text-secondary"
-                        target="_blank"
-                        rel="noopener"
-                      >
-                        {credit.linkDisplay}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+                {/* <div className="max-sm:hidden">
+                  <FursuitCredits />
+                </div> */}
               </div>
             </div>
             {galleryImages.map((image, index) => (

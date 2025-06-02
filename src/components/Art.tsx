@@ -7,7 +7,7 @@ const Art = () => {
     <>
       <div className="lg:mx-8">
         <ArtGallery />
-        <FursuitGallery />
+        {/* <FursuitGallery /> */}
         <Refs />
 
         {stickerPacks.map((stickerLink, index) => (
