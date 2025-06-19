@@ -132,12 +132,14 @@ export const ArtGallery = () => {
 
           <h3>{title}</h3>
 
-          <p className="max-sm:hidden mx-auto w-4/5 text-sm">
+          {/* <p className="max-sm:hidden mx-auto w-4/5 text-sm">
             To scroll horizontally on a non-touch screen device, move the cursor
             to the carousel, hold the <kbd className="kbd text-sm">shift</kbd>{" "}
             key and then use the scroll wheel.
-          </p>
-          <div className={carouselClasses}>
+          </p> */}
+
+          {/* CAROUSEL COMPONENT */}
+          {/* <div className={carouselClasses}>
             {galleryImages.map((image, index) => (
               <div className="carousel-item" key={index}>
                 <div>
@@ -170,9 +172,9 @@ export const ArtGallery = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
 
-          {/* {galleryImages.map((image, index) => (
+          {galleryImages.map((image, index) => (
             <div key={index} className="galleryDisplay">
               <div className="imgContainer">
                 <img src={image.src} alt={image.alt} loading="lazy" />
@@ -182,7 +184,7 @@ export const ArtGallery = () => {
                 {image.artist}
               </a>
             </div>
-          ))} */}
+          ))}
         </div>
       </dialog>
     </>
