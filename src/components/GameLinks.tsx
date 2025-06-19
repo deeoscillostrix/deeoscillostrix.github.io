@@ -23,7 +23,7 @@ const GameLinks = () => {
   return (
     <>
       <button
-        className="btn btn-primary btn-outline m-2"
+        className="btn btn-primary btn-outline m-2 transition-all ease-in-out hover:scale-110"
         onClick={() => {
           const modal = document.querySelector(
             `#${modalId}`

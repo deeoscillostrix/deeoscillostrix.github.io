@@ -15,7 +15,7 @@ const Art = () => {
           <a
             key={index}
             href={stickerLink.href}
-            className="btn btn-accent btn-outline m-2"
+            className="btn btn-accent btn-outline m-2 transition-all ease-in-out hover:scale-110"
             target="_blank"
             rel="noopener"
           >

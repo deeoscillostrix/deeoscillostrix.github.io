@@ -103,7 +103,7 @@ const Refs = () => {
   return (
     <>
       <button
-        className="btn btn-secondary btn-outline m-2"
+        className="btn btn-secondary btn-outline m-2 transition-all ease-in-out hover:scale-110"
         onClick={() => {
           const modal = document.querySelector(
             `#${modalId}`
@@ -134,14 +134,19 @@ const Refs = () => {
               </div>
               <p className="mt-2 mb-4">
                 {image.alt} by{" "}
-                <a href={image.artistUrl} target="_blank" rel="noopener">
+                <a
+                  href={image.artistUrl}
+                  target="_blank"
+                  rel="noopener"
+                  className="hover:text-primary"
+                >
                   {image.artist}
                 </a>
                 <span className="ms-2 text-primary">
                   <a
                     href={image.src}
                     target="_blank"
-                    className="btn btn-sm btn-accent text-white py-3!"
+                    className="btn btn-sm btn-accent text-white py-3! transition-all ease-in-out duration-150 hover:scale-110 focus:scale-110"
                   >
                     Download
                   </a>
@@ -172,8 +177,11 @@ const PaletteButtons = ({ palette }: { palette: string[] }) => {
       {palette.map((paletteColor, key) => (
         <button
           key={key}
-          className="btn btn-sm border-none mx-auto h-[60px] w-[100px] tooltip hover:scale-110 transition ease-in-out"
-          style={{ backgroundColor: paletteColor }}
+          className={`btn btn-sm border-none mx-auto h-[60px] w-[100px] tooltip hover:scale-110 transition ease-in-out focus-visible:outline-2`}
+          style={{
+            backgroundColor: paletteColor,
+            outlineColor: `${paletteColor}`,
+          }}
           data-tip={paletteColor.toUpperCase()}
           onClick={() => HandleClipboardCopy(paletteColor.toUpperCase())}
         ></button>

@@ -51,3 +51,8 @@
 #modal_calendar iframe {
   @apply w-full h-full min-h-[65dvh] md:min-h-[75dvh] rounded-xl;
 }
+
+/* .menuButton {
+  @apply btn btn-secondary btn-outline m-2;
+  @apply transition-all ease-in-out hover:scale-110;
+} */

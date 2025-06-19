@@ -108,7 +108,7 @@ export const ArtGallery = () => {
   return (
     <>
       <button
-        className="btn btn-secondary btn-outline m-2"
+        className="btn btn-secondary btn-outline m-2 transition-all ease-in-out hover:scale-110"
         onClick={() => {
           const modal = document.querySelector(
             `#${modalId}`
@@ -215,7 +215,7 @@ export const FursuitGallery = () => {
   return (
     <>
       <button
-        className="btn btn-secondary btn-outline m-2"
+        className="btn btn-secondary btn-outline m-2 transition-all ease-in-out hover:scale-110"
         onClick={() => {
           const modal = document.querySelector(
             `#${modalId}`
