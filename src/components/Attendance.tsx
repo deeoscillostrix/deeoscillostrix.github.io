@@ -8,7 +8,7 @@ function isComingSoon(startDate: Date, endDate: Date) {
   const todaysDate = new Date();
   if (todaysDate < startDate)
     return <span className="font-light text-accent">(soon)</span>;
-  if (todaysDate < endDate)
+  if (todaysDate <= endDate)
     return <span className="font-light text-secondary">(Ongoing!)</span>;
 
   return "";
@@ -69,7 +69,7 @@ const Attendance = () => {
   return (
     <>
       <button
-        className="btn btn-primary btn-outline m-2"
+        className="btn btn-primary btn-outline m-2 transition-all ease-in-out hover:scale-110"
         onClick={() => {
           const modal = document.querySelector(
             `#${modalId}`
