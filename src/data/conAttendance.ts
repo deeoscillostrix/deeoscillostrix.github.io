@@ -94,6 +94,9 @@ const attendance: { [year: number]: Event[] } = {
       endDate: new Date(`2025-12-14${defaultMidnight}${timezones.myt}`),
       venue: "Hotel Armada PJ",
       theme: "Fur Piece",
+
+      ticketNo: 300,
+      tier: "Sponsor",
     },
   ],
   2026: [
