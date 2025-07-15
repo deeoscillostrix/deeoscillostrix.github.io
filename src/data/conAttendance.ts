@@ -90,8 +90,8 @@ const attendance: { [year: number]: Event[] } = {
     },
     {
       name: conNames.furum,
-      startDate: new Date(`2025-12-06${defaultMidnight}${timezones.myt}`),
-      endDate: new Date(`2025-12-07${defaultMidnight}${timezones.myt}`),
+      startDate: new Date(`2025-12-13${defaultMidnight}${timezones.myt}`),
+      endDate: new Date(`2025-12-14${defaultMidnight}${timezones.myt}`),
       venue: "Hotel Armada PJ",
       theme: "Fur Piece",
     },
