@@ -10,6 +10,7 @@ const Refs = () => {
     {
       src: "/images/ref-oscii.webp",
       alt: "Oscillo's Ref",
+      download: "/images/ref-oscii.png",
       artist: artists.eunalis.handle,
       artistUrl: artists.eunalis.fiverr,
       palette: [
@@ -26,6 +27,7 @@ const Refs = () => {
     {
       src: "/images/ref-kidoscii.webp",
       alt: "Kid Oscillo's Ref",
+      download: "/images/ref-kidoscii.png",
       artist: artists.eunalis.handle,
       artistUrl: artists.eunalis.fiverr,
       palette: [
@@ -42,6 +44,7 @@ const Refs = () => {
     {
       src: "/images/ref-teenoscii.webp",
       alt: "Teen Oscillo's Ref",
+      download: "/images/ref-teenoscii.png",
       artist: artists.eunalis.handle,
       artistUrl: artists.eunalis.fiverr,
       palette: [
@@ -56,6 +59,7 @@ const Refs = () => {
     {
       src: "/images/ref-snowtrap.webp",
       alt: "SnowTrap's Ref",
+      download: "/images/ref-snowtrap.png",
       artist: artists.cheekysonas.handle,
       artistUrl: artists.cheekysonas.website,
       palette: [
@@ -71,6 +75,7 @@ const Refs = () => {
     {
       src: "/images/ref-milo.webp",
       alt: "Milo's Ref",
+      download: "/images/ref-milo.png",
       artist: artists.cheekysonas.handle,
       artistUrl: artists.cheekysonas.website,
       palette: [
@@ -89,12 +94,14 @@ const Refs = () => {
     {
       src: "/images/ref-osciioutfits.webp",
       alt: "Oscillo's Outfit Ref",
+      download: "/images/ref-osciioutfits.png",
       artist: artists.orlandofox.handle,
       artistUrl: artists.orlandofox.website,
     },
     {
       src: "/images/ref-osciioutfits2.webp",
       alt: "Oscillo's Outfit Ref Add-ons",
+      download: "/images/ref-osciioutfits2.png",
       artist: artists.orlandofox.handle,
       artistUrl: artists.orlandofox.website,
     },
@@ -144,7 +151,7 @@ const Refs = () => {
                 </a>
                 <span className="ms-2 text-primary">
                   <a
-                    href={image.src}
+                    href={image.download}
                     target="_blank"
                     className="btn btn-sm btn-accent text-white py-3! transition-all ease-in-out duration-150 hover:scale-110 focus:scale-110"
                   >
