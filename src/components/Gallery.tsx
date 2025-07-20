@@ -216,12 +216,40 @@ export const FursuitGallery = () => {
       alt: "Just a fan of the Rowlet line. ^v^",
     },
     {
+      src: "/images/fursuit/IMG_6353.webp",
+      alt: "This was during my first time fursuiting in public.. it was hot, but I loved it! ^v^",
+    },
+    {
       src: "/images/fursuit/001453170029.webp",
       alt: "Fullsuit in complete display!",
     },
     {
+      src: "/images/fursuit/20240707_172652544_iOS.webp",
+      alt: "Hoot hoot! You got mail! 📨",
+    },
+    {
+      src: "/images/fursuit/DSC06109.webp",
+      alt: "Just smile and wave! ^v^",
+    },
+    {
       src: "/images/fursuit/IMG_0234.webp",
       alt: "In full outfit!",
+    },
+    {
+      src: "/images/fursuit/IMG_0850.webp",
+      alt: "What can I say, I lean on the wall a lot for photos.. 😂",
+    },
+    {
+      src: "/images/fursuit/IMG_0760.webp",
+      alt: "Merry Christmas! 🎄",
+    },
+    {
+      src: "/images/fursuit/IMG_2550.webp",
+      alt: "Welcome to Mekdi, may I take your order?",
+    },
+    {
+      src: "/images/fursuit/_MAY1722.webp",
+      alt: "Hi there! In LIFC 2025, I now have a mailman bag! ^v^",
     },
   ];
 
@@ -300,9 +328,9 @@ export const FursuitGallery = () => {
             {galleryImages.map((image, index) => (
               <div key={index} className="galleryDisplay">
                 <div className="imgContainer">
-                  <img src={image.src} alt={image.alt} loading="lazy" />
+                  <img src={image.src} alt={image.alt || ""} loading="lazy" />
                 </div>
-                {image.alt}
+                {index === 0 && (image.alt || "")}
               </div>
             ))}
           </div>
