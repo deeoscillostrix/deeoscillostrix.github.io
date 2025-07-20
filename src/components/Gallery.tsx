@@ -1,28 +1,27 @@
-import classNames from "classnames";
 import { artists, modalSizes } from "../data";
 
-const carouselClasses = classNames(
-  "carousel",
-  "max-sm:carousel-vertical",
-  "max-sm:h-[75dvh]",
-  "carousel-center",
-  "bg-neutral",
-  "rounded-box",
-  "max-w-full",
-  "space-x-4",
-  "p-4"
-);
+// const carouselClasses = classNames(
+//   "carousel",
+//   "max-sm:carousel-vertical",
+//   "max-sm:h-[75dvh]",
+//   "carousel-center",
+//   "bg-neutral",
+//   "rounded-box",
+//   "max-w-full",
+//   "space-x-4",
+//   "p-4"
+// );
 
-const imageClasses = classNames(
-  "mx-auto",
-  "sm:max-h-[35dvh]",
-  "md:max-h-[40dvh]",
-  // "lg:max-h-[50dvh]",
-  "xl:max-h-[70dvh]",
-  // "max-w-xs",
-  "sm:max-w-full",
-  "rounded-box"
-);
+// const imageClasses = classNames(
+//   "mx-auto",
+//   "sm:max-h-[35dvh]",
+//   "md:max-h-[40dvh]",
+//   // "lg:max-h-[50dvh]",
+//   "xl:max-h-[70dvh]",
+//   // "max-w-xs",
+//   "sm:max-w-full",
+//   "rounded-box"
+// );
 
 const FursuitCredits = () => {
   return (
@@ -196,10 +195,10 @@ export const FursuitGallery = () => {
   const title = "Fursuit Gallery";
 
   const galleryImages = [
-    // {
-    //   src: "/images/fursuit/image (14).webp",
-    //   alt: "Just unboxed!",
-    // },
+    {
+      src: "/images/fursuit/image (14).webp",
+      alt: "Just unboxed!",
+    },
     {
       src: "/images/fursuit/SAM01104.webp",
       alt: "Just a fan of the Rowlet line. ^v^",
@@ -241,7 +240,7 @@ export const FursuitGallery = () => {
 
           <h3>{title}</h3>
 
-          <p className="max-sm:hidden mx-auto w-4/5 text-sm">
+          {/* <p className="max-sm:hidden mx-auto w-4/5 text-sm">
             To scroll horizontally on a non-touch screen device, move the cursor
             to the carousel, hold the <kbd className="kbd text-sm">shift</kbd>{" "}
             key and then use the scroll wheel.
@@ -262,9 +261,9 @@ export const FursuitGallery = () => {
                   One of the first photos taken after unboxing! Commissioned in
                   Dec 2022, arrived Jul 2023.
                 </p>
-                {/* <div className="max-sm:hidden">
+                <div className="max-sm:hidden">
                   <FursuitCredits />
-                </div> */}
+                </div>
               </div>
             </div>
             {galleryImages.map((image, index) => (
@@ -278,6 +277,20 @@ export const FursuitGallery = () => {
                   />
                   <p className="text-sm">{image.alt}</p>
                 </div>
+              </div>
+            ))}
+          </div> */}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="text-center">
+              {FursuitCredits()}
+            </div>
+            {galleryImages.map((image, index) => (
+              <div key={index} className="galleryDisplay">
+                <div className="imgContainer">
+                  <img src={image.src} alt={image.alt} loading="lazy" />
+                </div>
+                {image.alt}
               </div>
             ))}
           </div>

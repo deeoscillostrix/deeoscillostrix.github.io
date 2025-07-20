@@ -1,6 +1,6 @@
 import { FaTelegramPlane } from "react-icons/fa";
-import { ArtGallery, Refs } from ".";
-// import { ArtGallery, FursuitGallery, Refs } from ".";
+// import { ArtGallery, Refs } from ".";
+import { ArtGallery, FursuitGallery, Refs } from ".";
 import { stickerPacks } from "../data";
 
 const Art = () => {
@@ -8,7 +8,7 @@ const Art = () => {
     <>
       <div className="lg:mx-8">
         <ArtGallery />
-        {/* <FursuitGallery /> */}
+        <FursuitGallery />
         <Refs />
 
         {stickerPacks.map((stickerLink, index) => (
