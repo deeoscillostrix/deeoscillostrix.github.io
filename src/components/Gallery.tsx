@@ -32,19 +32,31 @@ const FursuitCredits = () => {
             text: "Fursuit created by",
             link: artists.deleon.website,
             linkDisplay: artists.deleon.handle,
+            logo: "/images/logo-deleon.webp",
           },
           {
             text: "Fursuit beanie created by",
             link: artists.kitsuneshrine.website,
             linkDisplay: artists.kitsuneshrine.handle,
+            logo: "/images/logo-kitsuneshrine.webp",
           },
           {
             text: "Fursuit kigurumi created by",
             link: artists.nekobit.bluesky,
             linkDisplay: artists.nekobit.handle,
+            logo: "/images/logo-nekobit.webp",
           },
         ].map((credit, index) => (
           <li className="text-sm" key={index}>
+            {credit.logo && (
+              <div className="mt-4">
+                <img
+                  src={credit.logo}
+                  alt={credit.linkDisplay}
+                  className="w-36 inline-block rounded-full"
+                />
+              </div>
+            )}
             {`${credit.text} `}
             <a
               href={credit.link}
@@ -197,7 +209,7 @@ export const FursuitGallery = () => {
   const galleryImages = [
     {
       src: "/images/fursuit/image (14).webp",
-      alt: "Just unboxed!",
+      alt: "Just unboxed! Commissioned Deleon Fursuits in Dec 2022, arrived Jul 2023. ^v^",
     },
     {
       src: "/images/fursuit/SAM01104.webp",
@@ -283,7 +295,7 @@ export const FursuitGallery = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="text-center">
-              {FursuitCredits()}
+              <FursuitCredits />
             </div>
             {galleryImages.map((image, index) => (
               <div key={index} className="galleryDisplay">
