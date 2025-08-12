@@ -1,4 +1,4 @@
-import { artists, modalSizes } from "../data";
+import { artists, author, modalSizes } from "../data";
 
 // const carouselClasses = classNames(
 //   "carousel",
@@ -330,9 +330,21 @@ export const FursuitGallery = () => {
                 <div className="imgContainer">
                   <img src={image.src} alt={image.alt || ""} loading="lazy" />
                 </div>
-                {index === 0 && (image.alt || "")}
+                <span className="text-sm">
+                  {index === 0 && (image.alt || "")}
+                </span>
               </div>
             ))}
+          </div>
+
+          <div>
+            <a
+              className="btn btn-accent btn-outline m-2 transition-all ease-in-out hover:scale-110"
+              href={author.socials.furtrack}
+              target="_blank"
+            >
+              More photos on FurTrack!
+            </a>
           </div>
         </div>
       </dialog>
