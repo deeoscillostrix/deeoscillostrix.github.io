@@ -7,13 +7,15 @@ export default {
     discord: "https://discordapp.com/users/deezombiedude",
     instagram: "https://instagram.com/deeoscillostrix",
     bluesky: "https://deeoscillostrix.bsky.social",
-    youtube: "https://youtube.com/@deezombiedude",
+    // youtube: "https://youtube.com/@deezombiedude",
     twitch: "https://twitch.tv/deezombiedude",
     steam: "https://steamcommunity.com/id/deezombiedude",
     // tumblr: "https://tumblr.com/deeoscillostrix",
     // mastodon: "https://mastodon.social/@deeoscillostrix",
-    kofi: "https://ko-fi.com/deezombiedude",
+    // kofi: "https://ko-fi.com/deezombiedude",
     facebook: "https://facebook.com/deeoscillostrix",
+
+    furtrack: "https://www.furtrack.com/user/deeoscillostrix/",
   },
 
   friendCodes: {

@@ -5,6 +5,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaMastodon,
+  FaPaw,
   FaSteam,
   FaTelegram,
   FaTumblr,
@@ -30,6 +31,8 @@ const iconMap: { [key: string]: { iconImport: IconType; dataTip: string } } = {
   bluesky: { iconImport: FaBluesky, dataTip: "Bluesky" },
   kofi: { iconImport: SiKofi, dataTip: "Ko-fi" },
   facebook: { iconImport: FaFacebookF, dataTip: "Facebook" },
+
+  furtrack: { iconImport: FaPaw, dataTip: "FurTrack" },
 
   switch: { iconImport: BsNintendoSwitch, dataTip: "Switch Friend Code" },
   pokemonGo: {
