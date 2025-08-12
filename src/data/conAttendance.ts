@@ -96,7 +96,7 @@ const attendance: { [year: number]: Event[] } = {
       theme: "Fur Piece",
 
       ticketNo: 300,
-      tier: "Sponsor",
+      tier: "First Mate",
     },
   ],
   2026: [
