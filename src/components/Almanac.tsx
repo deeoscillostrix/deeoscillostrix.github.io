@@ -355,32 +355,32 @@ const AboutMilo = () => {
                 three befriended each other when they realized that this
                 sweetheart really, really loves anything chocolate.. she's
                 mild-tempered and gentle, but we prefer not to find out how to
-                cross the line to cross her. Keep your favorite chocolate bars
-                and chocolate-flavored snacks away from her!
+                cross the line to cross her. Best to keep away your chocolate
+                treats while you can.
               </p>
 
               <p>
                 It remains unclear when Milo was grown in Crazy Dave's lawn and
                 up until she uprooted itself mysteriously like how SnowTrap did
                 (this was found to be true upon consulting Crazy Dave); SnowTrap
-                has no recollection of meeting her before prior to that first
-                sudden encounter. Regardless, they have since formed a strong
-                sibling-like relationship with each other, despite having
-                opposing natural elements between each other. Between the two,
-                SnowTrap often acts as the older brother to her.
+                has no recollection of meeting her before prior to their first
+                encounter. Regardless, they have since formed a strong
+                sibling-like relationship, despite having opposing natural
+                elements between each other. Between the two, SnowTrap often
+                acts as the older brother to her.
               </p>
 
               <p>
-                Like all the other fire peashooters, Milo started off as being a
-                normal peashooter. However, she has an inner vitality that
-                caused her to combust into her current form. As such, any acts
-                of extinguishing her fire does not kill her, and her having that
+                Like all fire peashooters, Milo started off as being a normal
+                peashooter. However, she has an inner vitality that causes her
+                to combust into her current form. As such, any acts of
+                extinguishing her fire does not kill her, and her having that
                 inner vitality means she would simply blaze herself back into
                 her normal form in a moment's time. "It used to be fun watching
-                them get terrified once they realized they couldn't kill me
-                simply with water or fire extinguishers," she says. "Now it's
-                more of an unwelcome nuisance to me. My hair sure doesn't
-                appreciate that!"
+                them get terrified once they realize they can't kill me simply
+                with water or fire extinguishers," she says. "Now it's more of
+                an unwelcome nuisance to me. My hair sure doesn't appreciate
+                that!"
               </p>
 
               <p>
@@ -397,7 +397,7 @@ const AboutMilo = () => {
                 incidents. "Thankfully, I have never had a history of burning
                 anyone by accident.. but if I had five bucks for each time I had
                 to quickly douse a small fire I accidentally caused ON SOME
-                THING, I'd have enough to buy me a mansion to keep SO MUCH
+                OBJECT, I'd have enough to buy me a mansion to keep SO MUCH
                 CHOCOLATE for myself."
               </p>
             </div>
