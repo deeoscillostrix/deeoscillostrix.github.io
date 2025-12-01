@@ -28,8 +28,10 @@ const conNames = {
   furum: "Furs Upon Malaysia 🇲🇾",
   iwag: "Indonesian Weekend Anthro Gathering 🇮🇩", // wib
   lifc: "Little Island Fur Con 🇸🇬",
+  myfur: "MYFur 🇲🇾",
   nfc: "Nordic FuzzCon 🇸🇪", // cet
   pawai: "Party Along with Anthro Indonesia 🇮🇩", // wita
+  waff: "WA Fur Frenzy",
 };
 
 const attendance: { [year: number]: Event[] } = {
@@ -100,16 +102,26 @@ const attendance: { [year: number]: Event[] } = {
     },
   ],
   2026: [
-    {
-      name: conNames.lifc,
-      startDate: new Date(`2026-06-13${defaultMidnight}${timezones.sgt}`),
-      endDate: new Date(`2026-06-14${defaultMidnight}${timezones.sgt}`),
-      venue: "One Farrer Hotel",
-      theme: "Mission Impawssible",
+    // {
+    //   name: conNames.myfur,
+    //   startDate: new Date(`2026-05-02${defaultMidnight}${timezones.myt}`),
+    //   endDate: new Date(`2026-05-02${defaultMidnight}${timezones.myt}`),
+    //   venue: "Dorsett Grand Subang",
+    //   theme: "MYFur's Got Talent",
 
-      // ticketNo: ,
-      // tier: "",
-    },
+    //   ticketNo: ,
+    //   tier: "",
+    // },
+    // {
+    //   name: conNames.lifc,
+    //   startDate: new Date(`2026-06-13${defaultMidnight}${timezones.sgt}`),
+    //   endDate: new Date(`2026-06-14${defaultMidnight}${timezones.sgt}`),
+    //   venue: "One Farrer Hotel",
+    //   theme: "Mission Impawssible",
+
+    //   // ticketNo: ,
+    //   // tier: "Sponsor",
+    // },
     {
       name: conNames.bah,
       startDate: new Date(`2026-06-20${defaultMidnight}${timezones.myt}`),
@@ -120,16 +132,16 @@ const attendance: { [year: number]: Event[] } = {
       ticketNo: 75, // SS-75
       tier: "Super Sponsor",
     },
-    {
-      name: conNames.iwag,
-      startDate: new Date(`2026-07-04${defaultMidnight}${timezones.wib}`),
-      endDate: new Date(`2026-07-05${defaultMidnight}${timezones.wib}`),
-      venue: "ibis Styles BSD",
-      theme: "Electric Dreams",
+    // {
+    //   name: conNames.iwag,
+    //   startDate: new Date(`2026-07-04${defaultMidnight}${timezones.wib}`),
+    //   endDate: new Date(`2026-07-05${defaultMidnight}${timezones.wib}`),
+    //   venue: "ibis Styles BSD",
+    //   theme: "Electric Dreams",
 
-      // ticketNo: ,
-      // tier: "",
-    },
+    //   // ticketNo: ,
+    //   // tier: "Cipher",
+    // },
   ],
 };
 
