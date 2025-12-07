@@ -40,7 +40,7 @@ const FursuitCredits = () => {
               href={credit.link}
               className="text-secondary"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               {credit.linkDisplay}
             </a>
@@ -102,17 +102,33 @@ export const ArtGallery = () => {
         btnStyle="btn-secondary"
         modalSize="large"
       >
-        {galleryImages.map((image, index) => (
-          <div key={index} className="galleryDisplay">
-            <div className="imgContainer">
-              <img src={image.src} alt={image.alt} loading="lazy" />
+        <p>Click on an image to view it in a new tab.</p>
+
+        <div className="columns-1 md:columns-2 xl:columns-3 gap-4">
+          {galleryImages.map((image, index) => (
+            <div key={index} className="galleryDisplay break-inside-avoid">
+              <div className="imgContainer overflow-hidden rounded-lg">
+                <a href={image.src} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    loading="lazy"
+                    // className="rounded-lg w-full h-auto object-contain cursor-pointer hover:opacity-90 transition"
+                    className="w-full h-auto object-contain cursor-pointer transform transition-transform ease-in-out hover:scale-105"
+                  />
+                </a>
+              </div>
+              Artwork by{" "}
+              <a
+                href={image.artistUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {image.artist}
+              </a>
             </div>
-            Artwork by{" "}
-            <a href={image.artistUrl} target="_blank" rel="noopener">
-              {image.artist}
-            </a>
-          </div>
-        ))}
+          ))}
+        </div>
       </MyModal>
     </>
   );
