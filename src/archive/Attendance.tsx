@@ -8,9 +8,9 @@ function MyDateParser(thisDate: Date) {
 function isComingSoon(startDate: Date, endDate: Date) {
   const todaysDate = new Date();
   if (todaysDate < startDate)
-    return <span className="font-light text-accent">(soon)</span>;
+    return <span className="text-accent font-light">(soon)</span>;
   if (todaysDate <= endDate)
-    return <span className="font-light text-secondary">(Ongoing!)</span>;
+    return <span className="text-secondary font-light">(Ongoing!)</span>;
 
   return "";
 }
@@ -30,12 +30,12 @@ const AttendanceAccordion = () => {
             // display entries for next year if it's currently December
             // otherwise show only all entries up to this year
             (thisMonth >= 11 && parseInt(attYear) <= thisYear + 1) ||
-            parseInt(attYear) <= thisYear
+            parseInt(attYear) <= thisYear,
         )
         .map((attYear, key) => (
           <div
             key={key}
-            className="collapse collapse-arrow join-item border border-primary text-primary"
+            className="collapse-arrow join-item border-primary text-primary collapse border"
           >
             {/* <input type="radio" name="my-accordion-4" defaultChecked /> */}
             <input type="checkbox" name={accordionName} />
@@ -43,7 +43,7 @@ const AttendanceAccordion = () => {
               {attYear}{" "}
               {parseInt(attYear) - new Date().getFullYear() == 0 && `⭐`}
             </div>
-            <div className="collapse-content text-sm text-left">
+            <div className="collapse-content text-left text-sm">
               <ul className="list-[circle] ps-4">
                 {conAttendance[parseInt(attYear)].map((con, key) => (
                   <li key={key} className="py-1">
