@@ -31,7 +31,7 @@ const FursuitCredits = () => {
                 <img
                   src={credit.logo}
                   alt={credit.linkDisplay}
-                  className="w-36 inline-block rounded-full"
+                  className="inline-block w-36 rounded-full"
                 />
               </div>
             )}
@@ -104,17 +104,17 @@ export const ArtGallery = () => {
       >
         <p>Click on an image to view it in a new tab.</p>
 
-        <div className="columns-1 md:columns-2 xl:columns-3 gap-4">
+        <div className="columns-1 gap-4 md:columns-2 xl:columns-3">
           {galleryImages.map((image, index) => (
-            <div key={index} className="galleryDisplay break-inside-avoid">
-              <div className="imgContainer overflow-hidden rounded-lg">
+            <div key={index} className="galleryDisplay">
+              <div className="imgContainer">
                 <a href={image.src} target="_blank" rel="noopener noreferrer">
                   <img
                     src={image.src}
                     alt={image.alt}
                     loading="lazy"
                     // className="rounded-lg w-full h-auto object-contain cursor-pointer hover:opacity-90 transition"
-                    className="w-full h-auto object-contain cursor-pointer transform transition-transform ease-in-out hover:scale-105"
+                    className="h-auto w-full transform cursor-pointer object-contain transition-transform ease-in-out hover:scale-105"
                   />
                 </a>
               </div>
@@ -193,7 +193,7 @@ export const FursuitGallery = () => {
         btnStyle="btn-secondary"
         modalSize="large"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <div className="text-center">
             <FursuitCredits />
           </div>
