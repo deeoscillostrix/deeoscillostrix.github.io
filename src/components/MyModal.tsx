@@ -1,6 +1,8 @@
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { modalSizes } from "../data";
 
+// Refactored modal to adhere to latest DaisyUI practices without using dialogs or direct DOM access
+// Assisted by ChatGPT
 const MyModal = ({
   modalId,
   title,
@@ -16,50 +18,53 @@ const MyModal = ({
   showTitle?: boolean;
   children: ReactNode;
 }) => {
-  let ms = "";
-  switch (modalSize) {
-    case "small":
-      ms = modalSizes.small;
-      break;
-    case "large":
-      ms = modalSizes.large;
-      break;
-    default:
-      ms = modalSizes.small;
-  }
+  const [open, setOpen] = useState(false);
+  const modalSizeClass =
+    modalSizes[modalSize as keyof typeof modalSizes] ?? modalSizes.small;
+
+  // ESC key to close modal
+  useEffect(() => {
+    if (!open) return;
+
+    const handleEsc = (e: KeyboardEvent) => {
+      e.key === "Escape" && setOpen(false);
+    };
+
+    window.addEventListener("keydown", handleEsc);
+
+    // Clean up
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, [open]);
 
   return (
     <>
       <button
         className={`btn ${btnStyle} btn-outline m-2 transition-all ease-in-out hover:scale-110`}
-        onClick={() => {
-          const modal = document.querySelector(
-            `#${modalId}`
-          ) as HTMLDialogElement;
-          modal!.showModal();
-        }}
+        onClick={() => setOpen(true)}
       >
         {title}
       </button>
-      <dialog id={modalId} className="modal">
-        <form method="dialog" className="modal-backdrop">
-          <button>close</button>
-        </form>
-        {/* <div className={modalSizes.small}> */}
-        <div className={ms}>
-          <form method="dialog">
-            {/* if there is a button in form, it will close the modal */}
-            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-              ✕
-            </button>
-          </form>
+      <div id={modalId} className={`modal ${open ? "modal-open" : ""}`}>
+        <div className={`modal-box ${modalSizeClass}`}>
+          <button
+            className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+            onClick={() => setOpen(false)}
+          >
+            ✕
+          </button>
 
           {/* if showTitle is false, the title will not show on top of the modal */}
           {showTitle && <h3>{title}</h3>}
 
+          {/* modal viewable content goes in here */}
           <div className="lg:w-5/6 mx-auto">{children}</div>
         </div>
-      </dialog>
+
+        {/* backdrop (click = close) */}
+        <div className="modal-backdrop" onClick={() => setOpen(false)} />
+      </div>
     </>
   );
 };
