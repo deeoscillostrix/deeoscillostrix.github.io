@@ -10,6 +10,7 @@
 //   myt: "+08:00",
 // };
 
+// IANA Zones
 const timezones = {
   eu_sweden: "Europe/Stockholm",
 

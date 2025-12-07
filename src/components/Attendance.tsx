@@ -1,35 +1,18 @@
 import { MyModal } from ".";
 import { conAttendance } from "../data";
-import { DateTime } from "luxon";
 
-// function MyDateParser(thisDate: Date) {
-//   return `${thisDate.getDate()} ${thisDate.toLocaleString("default", { month: "long" })} ${thisDate.getFullYear()}`;
-// }
-
-function MyDateParser(thisDate: Date, timeZone: string) {
-  // return `${thisDate.getDate()} ${thisDate.toLocaleString("default", { month: "long" })} ${thisDate.getFullYear()}`;
-
-  const dt = DateTime.fromJSDate(thisDate);
-  const zoned = timeZone ? dt.setZone(timeZone) : dt;
-  return zoned.toFormat("d LLL yyyy (ZZZZ)");
+function MyDateParser(thisDate: Date) {
+  return `${thisDate.getDate()} ${thisDate.toLocaleString("default", { month: "long" })} ${thisDate.getFullYear()}`;
 }
 
-function isComingSoon(startDate: Date, endDate: Date, timeZone: string) {
-  // const todaysDate = new Date();
-  // if (todaysDate < startDate)
-  //   return <span className="text-accent font-light">(soon)</span>;
-  // if (todaysDate <= endDate)
-  //   return <span className="text-secondary font-light">(Ongoing!)</span>;
-
-  const todaysDate = DateTime.now().setZone(timeZone);
-  const start = DateTime.fromJSDate(startDate).setZone(timeZone);
-  const end = DateTime.fromJSDate(endDate).setZone(timeZone);
-  if (todaysDate < start)
+function isComingSoon(startDate: Date, endDate: Date) {
+  const todaysDate = new Date();
+  if (todaysDate < startDate)
     return <span className="text-accent font-light">(soon)</span>;
-  if (todaysDate <= end)
+  if (todaysDate <= endDate)
     return <span className="text-secondary font-light">(Ongoing!)</span>;
 
-  return null;
+  return "";
 }
 
 const AttendanceAccordion = () => {
@@ -54,6 +37,7 @@ const AttendanceAccordion = () => {
             key={key}
             className="collapse-arrow join-item border-primary text-primary collapse border"
           >
+            {/* <input type="radio" name="my-accordion-4" defaultChecked /> */}
             <input type="checkbox" name={accordionName} />
             <div className="collapse-title font-semibold">
               {attYear}{" "}
@@ -64,12 +48,11 @@ const AttendanceAccordion = () => {
                 {conAttendance[parseInt(attYear)].map((con, key) => (
                   <li key={key} className="py-1">
                     <span className="font-medium">
-                      {MyDateParser(con.startDate, con.timeZone)} -{" "}
-                      {MyDateParser(con.endDate, con.timeZone)}
+                      {MyDateParser(con.startDate)} -{" "}
+                      {MyDateParser(con.endDate)} ({con.timeZone})
                     </span>
                     <br />
-                    {con.name}{" "}
-                    {isComingSoon(con.startDate, con.endDate, con.timeZone)}
+                    {con.name} {isComingSoon(con.startDate, con.endDate)}
                   </li>
                 ))}
               </ul>
@@ -83,6 +66,46 @@ const AttendanceAccordion = () => {
 const Attendance = () => {
   const modalId = "modal_attendance";
   const title = "Con Attendance";
+
+  // return (
+  //   <>
+  //     <button
+  //       className="btn btn-primary btn-outline m-2 transition-all ease-in-out hover:scale-110"
+  //       onClick={() => {
+  //         const modal = document.querySelector(
+  //           `#${modalId}`
+  //         ) as HTMLDialogElement;
+  //         modal!.showModal();
+  //       }}
+  //     >
+  //       {title}
+  //     </button>
+  //     <dialog id={modalId} className="modal">
+  //       <form method="dialog" className="modal-backdrop">
+  //         <button>close</button>
+  //       </form>
+  //       <div className={modalSizes.small}>
+  //         <form method="dialog">
+  //           {/* if there is a button in form, it will close the modal */}
+  //           <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+  //             ✕
+  //           </button>
+  //         </form>
+
+  //         <h3>{title}</h3>
+
+  //         <div className="lg:w-5/6 mx-auto">
+  //           <AttendanceAccordion />
+
+  //           <p className="text-sm">
+  //             If you are attending any one of these cons too, do feel free to
+  //             come and say hi!
+  //           </p>
+  //         </div>
+  //       </div>
+  //     </dialog>
+  //   </>
+  // );
 
   return (
     <>
