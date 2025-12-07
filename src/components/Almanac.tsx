@@ -66,9 +66,9 @@ const AboutOscillo = () => {
               <li className="mt-2 text-amber-700">
                 Your average, not-so-old, not-so-wise, and inexperienced owl.
                 While usually reserved, he has a keen interest in education and
-                loves being a teacher figure. Definitely not that Grass-type
+                loves being a teacher figure. Definitely not *that* Grass-type
                 Pokémon, if you happen to assume any resemblance. His favorite
-                color isn't green either.
+                color isn't green either, mind you.
               </li>
             </ul>
           </div>
@@ -89,7 +89,7 @@ const AboutOscillo = () => {
             think of really accentuate the long-standing conundrum behind how
             Oscillo initially hatched into existence. "I wish I knew," he
             postulates. "But I really do hope to find out some day. For now, I'm
-            just winging it till that happens!"
+            just winging it till then!"
           </p>
 
           <p>
@@ -108,10 +108,9 @@ const AboutOscillo = () => {
             As an aspiring educator, he's also passionate about education and
             learning. He strives to give his all to ensure the next generations
             are better than he is. "Being on top isn't something that would
-            satisfy me in the long run. It's seeing those lives I touch achieve
-            more than I did that would satisfy me immensely. I think that's what
-            I hoped my teachers I was blessed to have had felt when they taught
-            me."
+            satisfy me in the long run. What does is seeing those lives I touch
+            achieve more than I did. I think that's what I hope my teachers I
+            was blessed to have had felt when they taught me."
           </p>
         </div>
       </MyModal>
@@ -196,7 +195,7 @@ const AboutSnowTrap = () => {
             Currently, he remains close with his adopter, tending to the house
             garden often and accompanying each other in many, many adventures.
             When asked about his relationship with the odd owl, he just shrugged
-            and said, "I'm just besties with him. What more were you expecting?"
+            and said, "I'm just besties with him. Nothing more, nothing less."
           </p>
 
           <p>
@@ -281,13 +280,13 @@ const AboutMilo = () => {
 
         <div className="text-left">
           <p>
-            Milo first got her name from Oscillo after he and pal SnowTrap found
-            her enjoying a cup of hot chocolate that she made herself - from
-            what was available in the kitchen. It was not until the three
-            befriended each other when they realized that this sweetheart
-            really, really loves anything chocolate.. she's mild-tempered and
-            gentle, but we prefer not to find out how to cross the line to cross
-            her. Best to keep away your chocolate treats while you can.
+            Milo first met Oscillo and SnowTrap when they found her enjoying a
+            cup of hot chocolate that she made herself - from what was available
+            in the kitchen. It was not until the three befriended each other
+            when they realized that this sweetheart really, really loves
+            anything chocolate.. she's mild-tempered and gentle, but we prefer
+            not to find out how to cross the line to cross her. Best to keep
+            away your chocolate treats while you can.
           </p>
 
           <p>
@@ -322,12 +321,11 @@ const AboutMilo = () => {
             her liking. She was not always this good with flame control, though.
             During her time learning to acquire the skill, she very frequently
             started insipid flames on various objects around her. However, that
-            also led to her learning to be very quick and resourceful to settle
-            such incidents. "Thankfully, I have never had a history of burning
-            anyone by accident.. but if I had five bucks for each time I had to
-            quickly douse a small fire I accidentally caused ON SOME OBJECT, I'd
-            have enough to buy me a mansion to keep SO MUCH CHOCOLATE for
-            myself."
+            also led her to be very quick and resourceful to settle such
+            incidents. "Thankfully, I have never burned anyone by accident
+            before.. but if I had five bucks for each time I had to quickly
+            douse small fires I accidentally caused on other objects, I'd have
+            enough to buy me a mansion to keep SO MUCH CHOCOLATE for myself."
           </p>
         </div>
       </MyModal>
