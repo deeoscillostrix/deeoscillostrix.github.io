@@ -1,5 +1,5 @@
-import { ClipboardLink } from ".";
-import { author, modalSizes } from "../data";
+import { ClipboardLink, MyModal } from ".";
+import { author } from "../data";
 
 const getGameName = (codeType: string) => {
   switch (codeType) {
@@ -21,61 +21,24 @@ const GameLinks = () => {
   const title = "Game Links";
 
   return (
-    <>
-      <button
-        className="btn btn-primary btn-outline m-2 transition-all ease-in-out hover:scale-110"
-        onClick={() => {
-          const modal = document.querySelector(
-            `#${modalId}`
-          ) as HTMLDialogElement;
-          modal!.showModal();
-        }}
-      >
-        {title}
-      </button>
-      <dialog id={modalId} className="modal">
-        <form method="dialog" className="modal-backdrop">
-          <button>close</button>
-        </form>
-        <div className={modalSizes.small}>
-          <form method="dialog">
-            {/* if there is a button in form, it will close the modal */}
-            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-              ✕
-            </button>
-          </form>
+    <MyModal modalId={modalId} title={title}>
+      <p>Click any of the following to copy to clipboard.</p>
 
-          <h3>{title}</h3>
-
-          <div className="lg:w-5/6 mx-auto">
-            <p>Click any of the following to copy to clipboard.</p>
-
-            {/* <p id="copyLinks"> */}
-            <p>
-              {Object.keys(author.friendCodes).map((codeType, index) => (
-                <span
-                  key={index}
-                  // className="tooltip"
-                  // data-tip={iconMap[codeType].dataTip}
-                >
-                  <ClipboardLink
-                    dataValue={
-                      author.friendCodes[
-                        codeType as keyof typeof author.friendCodes
-                      ]
-                    }
-                    isButton={true}
-                  >
-                    {/* {iconMap[codeType].dataTip} */}
-                    {getGameName(codeType)}
-                  </ClipboardLink>
-                </span>
-              ))}
-            </p>
-          </div>
-        </div>
-      </dialog>
-    </>
+      <p>
+        {Object.keys(author.friendCodes).map((codeType, index) => (
+          <span key={index}>
+            <ClipboardLink
+              dataValue={
+                author.friendCodes[codeType as keyof typeof author.friendCodes]
+              }
+              isButton={true}
+            >
+              {getGameName(codeType)}
+            </ClipboardLink>
+          </span>
+        ))}
+      </p>
+    </MyModal>
   );
 };
 

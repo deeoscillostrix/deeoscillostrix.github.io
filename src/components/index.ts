@@ -6,5 +6,6 @@ export { default as Footer } from "./Footer";
 export { ArtGallery, FursuitGallery } from "./Gallery";
 export { default as GameLinks } from "./GameLinks";
 export { default as HandleClipboardCopy } from "./HandleClipboardCopy";
+export { default as MyModal } from "./MyModal";
 export { default as Refs } from "./Refs";
 export { default as Socials } from "./Socials";

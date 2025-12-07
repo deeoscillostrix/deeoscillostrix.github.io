@@ -1,4 +1,4 @@
-import { MyModal } from ".";
+import { MyModal } from "../components";
 import { conAttendance } from "../data";
 
 function MyDateParser(thisDate: Date) {
@@ -37,6 +37,7 @@ const AttendanceAccordion = () => {
             key={key}
             className="collapse collapse-arrow join-item border border-primary text-primary"
           >
+            {/* <input type="radio" name="my-accordion-4" defaultChecked /> */}
             <input type="checkbox" name={accordionName} />
             <div className="collapse-title font-semibold">
               {attYear}{" "}
@@ -65,6 +66,46 @@ const AttendanceAccordion = () => {
 const Attendance = () => {
   const modalId = "modal_attendance";
   const title = "Con Attendance";
+
+  // return (
+  //   <>
+  //     <button
+  //       className="btn btn-primary btn-outline m-2 transition-all ease-in-out hover:scale-110"
+  //       onClick={() => {
+  //         const modal = document.querySelector(
+  //           `#${modalId}`
+  //         ) as HTMLDialogElement;
+  //         modal!.showModal();
+  //       }}
+  //     >
+  //       {title}
+  //     </button>
+  //     <dialog id={modalId} className="modal">
+  //       <form method="dialog" className="modal-backdrop">
+  //         <button>close</button>
+  //       </form>
+  //       <div className={modalSizes.small}>
+  //         <form method="dialog">
+  //           {/* if there is a button in form, it will close the modal */}
+  //           <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+  //             ✕
+  //           </button>
+  //         </form>
+
+  //         <h3>{title}</h3>
+
+  //         <div className="lg:w-5/6 mx-auto">
+  //           <AttendanceAccordion />
+
+  //           <p className="text-sm">
+  //             If you are attending any one of these cons too, do feel free to
+  //             come and say hi!
+  //           </p>
+  //         </div>
+  //       </div>
+  //     </dialog>
+  //   </>
+  // );
 
   return (
     <>
