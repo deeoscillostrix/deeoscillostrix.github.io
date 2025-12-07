@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import "./App.css";
-import { Almanac, Art, Attendance, Footer } from "./components";
+import { Almanac, Art, Attendance, Footer, GameLinks } from "./components";
 import Socials from "./components/Socials";
 // import { useEffect, useState } from "react";
 
@@ -43,7 +43,10 @@ function App() {
           </div>
 
           <div className="lg:flex-auto lg:mt-10">
+            <h2 className="mt-8">Let's keep in touch!</h2>
+
             <Socials />
+            <GameLinks />
             <Attendance />
             {/* <Socials />
               <Attendance /> */}
