@@ -12,7 +12,8 @@ export default {
     bluesky: "https://eunmao.bsky.social",
   },
   cheekysonas: {
-    handle: "@lucy_was_taken_",
+    // handle: "@lucy_was_taken_",
+    handle: "@cheekysonas",
     twitter: prefix.twitter + "lucy_was_taken_",
     instagram: prefix.instagram + "cheekysonas",
     fiverr: prefix.fiverr + "lucy_was_taken",
