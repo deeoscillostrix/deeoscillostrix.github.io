@@ -25,7 +25,7 @@ const timezones = {
 
 const defaultMidnight = "T00:00:00";
 
-interface Event {
+export interface Event {
   name: string;
   startDate: Date;
   endDate: Date;

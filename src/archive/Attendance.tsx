@@ -1,9 +1,8 @@
-import { MyModal } from ".";
+import { MyModal } from "../components";
 import { conAttendance } from "../data";
 
 function MyDateParser(thisDate: Date) {
-  const options: Intl.DateTimeFormatOptions = { month: "long" };
-  return `${thisDate.getDate()} ${thisDate.toLocaleString("default", options)} ${thisDate.getFullYear()}`;
+  return `${thisDate.getDate()} ${thisDate.toLocaleString("default", { month: "long" })} ${thisDate.getFullYear()}`;
 }
 
 function isComingSoon(startDate: Date, endDate: Date) {
@@ -13,7 +12,7 @@ function isComingSoon(startDate: Date, endDate: Date) {
   if (todaysDate <= endDate)
     return <span className="text-secondary font-light">(Ongoing!)</span>;
 
-  return null;
+  return "";
 }
 
 const AttendanceAccordion = () => {
@@ -25,11 +24,10 @@ const AttendanceAccordion = () => {
   return (
     <div className="join join-vertical bg-base-100 w-full">
       {Object.keys(conAttendance)
-        // .reverse()
-        .sort((a, b) => parseInt(b) - parseInt(a)) // sort years in descending order
+        .reverse()
         .filter(
           (attYear) =>
-            // display entries for next year if it's currently December (thisMonth >= 11)
+            // display entries for next year if it's currently December
             // otherwise show only all entries up to this year
             (thisMonth >= 11 && parseInt(attYear) <= thisYear + 1) ||
             parseInt(attYear) <= thisYear,
@@ -39,6 +37,7 @@ const AttendanceAccordion = () => {
             key={key}
             className="collapse-arrow join-item border-primary text-primary collapse border"
           >
+            {/* <input type="radio" name="my-accordion-4" defaultChecked /> */}
             <input type="checkbox" name={accordionName} />
             <div className="collapse-title font-semibold">
               {attYear}{" "}
@@ -68,13 +67,54 @@ const Attendance = () => {
   const modalId = "modal_attendance";
   const title = "Con Attendance";
 
+  // return (
+  //   <>
+  //     <button
+  //       className="btn btn-primary btn-outline m-2 transition-all ease-in-out hover:scale-110"
+  //       onClick={() => {
+  //         const modal = document.querySelector(
+  //           `#${modalId}`
+  //         ) as HTMLDialogElement;
+  //         modal!.showModal();
+  //       }}
+  //     >
+  //       {title}
+  //     </button>
+  //     <dialog id={modalId} className="modal">
+  //       <form method="dialog" className="modal-backdrop">
+  //         <button>close</button>
+  //       </form>
+  //       <div className={modalSizes.small}>
+  //         <form method="dialog">
+  //           {/* if there is a button in form, it will close the modal */}
+  //           <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+  //             ✕
+  //           </button>
+  //         </form>
+
+  //         <h3>{title}</h3>
+
+  //         <div className="lg:w-5/6 mx-auto">
+  //           <AttendanceAccordion />
+
+  //           <p className="text-sm">
+  //             If you are attending any one of these cons too, do feel free to
+  //             come and say hi!
+  //           </p>
+  //         </div>
+  //       </div>
+  //     </dialog>
+  //   </>
+  // );
+
   return (
     <>
       <MyModal modalId={modalId} title={title}>
         <AttendanceAccordion />
 
         <p className="text-sm">
-          If you are attending any one of these cons, come and say hi!
+          If you are attending any one of these cons too, do feel free to come
+          and say hi!
         </p>
       </MyModal>
     </>
