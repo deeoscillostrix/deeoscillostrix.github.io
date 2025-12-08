@@ -23,7 +23,7 @@
 }
 
 #socialIcons a {
-  @apply m-3 text-3xl text-[var(--color-koscii7)] transition ease-in-out hover:scale-150 hover:cursor-pointer;
+  @apply m-3 text-3xl text-(--color-koscii7) transition ease-in-out hover:scale-150 hover:cursor-pointer;
 
   /* &:before {
     @apply text-black;

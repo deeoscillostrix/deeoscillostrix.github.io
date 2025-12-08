@@ -75,17 +75,17 @@
 }
 
 body {
-  @apply bg-[url('/images/wallpaper.webp')] bg-[length:800px] font-shantellSans text-black m-0 min-w-[320px] min-h-[100svh] relative;
+  @apply font-shantellSans relative m-0 min-h-[100svh] min-w-[320px] bg-[url('/images/wallpaper.webp')] bg-size-[800px] text-black;
 }
 
 body:before {
   content: " ";
 
-  @apply bg-white/80 min-w-[100svw] min-h-[100svh] h-full w-full absolute z-10;
+  @apply absolute z-10 h-full min-h-svh w-full min-w-svw bg-white/80;
 }
 
 main {
-  @apply bg-white/75 rounded-3xl border border-dotted border-primary p-4;
+  @apply border-primary rounded-3xl border border-dotted bg-white/75 p-4;
 }
 
 h1,
@@ -107,7 +107,7 @@ h3 {
 }
 
 hr {
-  @apply my-4 mx-auto border-[#e5e7eb];
+  @apply mx-auto my-4 border-[#e5e7eb];
 }
 
 p {
@@ -117,7 +117,7 @@ p {
 a,
 button {
   &.btn {
-    @apply py-6 rounded-xl;
+    @apply rounded-xl py-6;
   }
 
   &.tooltip {
@@ -132,7 +132,7 @@ kbd {
 }
 
 footer {
-  @apply font-jetbrainsMono font-extralight my-8;
+  @apply font-jetbrainsMono my-8 font-extralight;
 }
 
 footer a {
