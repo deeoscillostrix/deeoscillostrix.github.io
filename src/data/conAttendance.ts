@@ -45,7 +45,7 @@ const conNames = {
   myfur: "MYFur 🇲🇾",
   nfc: "Nordic FuzzCon 🇸🇪", // cet
   pawai: "Party Along with Anthro Indonesia 🇮🇩", // wita
-  waff: "WA Fur Frenzy",
+  waff: "WA Fur Frenzy 🇦🇺",
 };
 
 const attendance: { [year: number]: Event[] } = {
