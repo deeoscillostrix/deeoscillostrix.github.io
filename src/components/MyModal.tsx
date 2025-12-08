@@ -1,6 +1,15 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { modalSizes } from "../data";
 
+interface MyModalProps {
+  modalId: string;
+  title: string;
+  btnStyle?: string;
+  modalSize?: string;
+  showTitle?: boolean;
+  children: ReactNode;
+}
+
 // Refactored modal to adhere to latest DaisyUI practices without using dialogs or direct DOM access
 // Assisted by ChatGPT
 const MyModal = ({
@@ -10,14 +19,7 @@ const MyModal = ({
   modalSize = "small",
   showTitle = true,
   children,
-}: {
-  modalId: string;
-  title: string;
-  btnStyle?: string;
-  modalSize?: string;
-  showTitle?: boolean;
-  children: ReactNode;
-}) => {
+}: MyModalProps) => {
   const [open, setOpen] = useState(false);
   const modalSizeClass =
     modalSizes[modalSize as keyof typeof modalSizes] ?? modalSizes.small;
@@ -49,7 +51,7 @@ const MyModal = ({
       <div id={modalId} className={`modal ${open ? "modal-open" : ""}`}>
         <div className={`modal-box ${modalSizeClass}`}>
           <button
-            className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+            className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2"
             onClick={() => setOpen(false)}
           >
             ✕
@@ -59,7 +61,7 @@ const MyModal = ({
           {showTitle && <h3>{title}</h3>}
 
           {/* modal viewable content goes in here */}
-          <div className="lg:w-5/6 mx-auto">{children}</div>
+          <div className="mx-auto lg:w-5/6">{children}</div>
         </div>
 
         {/* backdrop (click = close) */}
