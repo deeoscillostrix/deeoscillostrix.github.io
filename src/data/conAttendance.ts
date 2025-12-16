@@ -167,6 +167,17 @@ const attendance: { [year: number]: Event[] } = {
     //   // ticketNo: ,
     //   // tier: "Cipher",
     // },
+    // {
+    //   name: conNames.furum,
+    //   startDate: new Date(`2026-12-12${defaultMidnight}`),
+    //   endDate: new Date(`2026-12-13${beforeMidnight}`),
+    //   timeZone: timezones.my_kl,
+    //   venue: "Hotel Armada PJ",
+    //   theme: "FURUM X",
+
+    //   // ticketNo: ,
+    //   // tier: "Sponsor",
+    // },
   ],
 };
 
