@@ -2,7 +2,7 @@ import { MyModal } from ".";
 import { conAttendance } from "../data";
 
 function MyDateParser(thisDate: Date) {
-  const options: Intl.DateTimeFormatOptions = { month: "long" };
+  const options: Intl.DateTimeFormatOptions = { month: "short" };
   return `${thisDate.getDate()} ${thisDate.toLocaleString("default", options)} ${thisDate.getFullYear()}`;
 }
 

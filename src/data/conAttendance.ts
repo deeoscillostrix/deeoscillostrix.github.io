@@ -24,6 +24,7 @@ const timezones = {
 };
 
 const defaultMidnight = "T00:00:00";
+const beforeMidnight = "T23:59:59";
 
 export interface Event {
   name: string;
@@ -53,7 +54,7 @@ const attendance: { [year: number]: Event[] } = {
     {
       name: conNames.lifc,
       startDate: new Date(`2023-06-10${defaultMidnight}`),
-      endDate: new Date(`2023-06-11${defaultMidnight}`),
+      endDate: new Date(`2023-06-11${beforeMidnight}`),
       timeZone: timezones.singapore,
       venue: "Resorts World Sentosa Convention Centre",
       theme: "Swords & Sorcery",
@@ -66,7 +67,7 @@ const attendance: { [year: number]: Event[] } = {
     {
       name: conNames.lifc,
       startDate: new Date(`2024-07-06${defaultMidnight}`),
-      endDate: new Date(`2024-07-07${defaultMidnight}`),
+      endDate: new Date(`2024-07-07${beforeMidnight}`),
       timeZone: timezones.singapore,
       venue: "One Farrer Hotel",
       theme: "Bloom and Gloom",
@@ -80,7 +81,7 @@ const attendance: { [year: number]: Event[] } = {
       theme: "Furkini Bottom",
       timeZone: timezones.my_kl,
       startDate: new Date(`2024-12-07${defaultMidnight}`),
-      endDate: new Date(`2024-12-08${defaultMidnight}`),
+      endDate: new Date(`2024-12-08${beforeMidnight}`),
 
       ticketNo: 858,
       tier: "Sponsor",
@@ -90,7 +91,7 @@ const attendance: { [year: number]: Event[] } = {
     {
       name: conNames.lifc,
       startDate: new Date(`2025-06-14${defaultMidnight}`),
-      endDate: new Date(`2025-06-15${defaultMidnight}`),
+      endDate: new Date(`2025-06-15${beforeMidnight}`),
       timeZone: timezones.singapore,
       venue: "One Farrer Hotel",
       theme: "Retro Arcade",
@@ -101,7 +102,7 @@ const attendance: { [year: number]: Event[] } = {
     {
       name: conNames.iwag,
       startDate: new Date(`2025-07-12${defaultMidnight}`),
-      endDate: new Date(`2025-07-13${defaultMidnight}`),
+      endDate: new Date(`2025-07-13${beforeMidnight}`),
       timeZone: timezones.id_jakarta,
       venue: "ibis Styles BSD",
       theme: "IWAG: Return of the Wild",
@@ -112,7 +113,7 @@ const attendance: { [year: number]: Event[] } = {
     {
       name: conNames.furum,
       startDate: new Date(`2025-12-13${defaultMidnight}`),
-      endDate: new Date(`2025-12-14${defaultMidnight}`),
+      endDate: new Date(`2025-12-14${beforeMidnight}`),
       timeZone: timezones.my_kl,
       venue: "Hotel Armada PJ",
       theme: "Fur Piece",
@@ -125,7 +126,7 @@ const attendance: { [year: number]: Event[] } = {
     // {
     //   name: conNames.myfur,
     //   startDate: new Date(`2026-05-02${defaultMidnight}`),
-    //   endDate: new Date(`2026-05-02${defaultMidnight}`),
+    //   endDate: new Date(`2026-05-02${beforeMidnight}`),
     //   timeZone: timezones.my_kl,
     //   venue: "Dorsett Grand Subang",
     //   theme: "MYFur's Got Talent",
@@ -136,7 +137,7 @@ const attendance: { [year: number]: Event[] } = {
     // {
     //   name: conNames.lifc,
     //   startDate: new Date(`2026-06-13${defaultMidnight}`),
-    //   endDate: new Date(`2026-06-14${defaultMidnight}`),
+    //   endDate: new Date(`2026-06-14${beforeMidnight}`),
     //   timeZone: timezones.singapore,
     //   venue: "One Farrer Hotel",
     //   theme: "Mission Impawssible",
@@ -147,7 +148,7 @@ const attendance: { [year: number]: Event[] } = {
     {
       name: conNames.bah,
       startDate: new Date(`2026-06-20${defaultMidnight}`),
-      endDate: new Date(`2026-06-21${defaultMidnight}`),
+      endDate: new Date(`2026-06-21${beforeMidnight}`),
       timeZone: timezones.my_borneo,
       venue: "Horizon Hotel Kota Kinabalu",
       theme: "Adventure Below the Wind",
@@ -158,7 +159,7 @@ const attendance: { [year: number]: Event[] } = {
     // {
     //   name: conNames.iwag,
     //   startDate: new Date(`2026-07-04${defaultMidnight}`),
-    //   endDate: new Date(`2026-07-05${defaultMidnight}`),
+    //   endDate: new Date(`2026-07-05${beforeMidnight}`),
     //   timeZone: timezones.id_jakarta,
     //   venue: "ibis Styles BSD",
     //   theme: "Electric Dreams",
