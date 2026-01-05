@@ -156,17 +156,17 @@ const attendance: { [year: number]: Event[] } = {
       ticketNo: 75, // SS-75
       tier: "Super Sponsor",
     },
-    // {
-    //   name: conNames.iwag,
-    //   startDate: new Date(`2026-07-04${defaultMidnight}`),
-    //   endDate: new Date(`2026-07-05${beforeMidnight}`),
-    //   timeZone: timezones.id_jakarta,
-    //   venue: "ibis Styles BSD",
-    //   theme: "Electric Dreams",
+    {
+      name: conNames.iwag,
+      startDate: new Date(`2026-07-04${defaultMidnight}`),
+      endDate: new Date(`2026-07-05${beforeMidnight}`),
+      timeZone: timezones.id_jakarta,
+      venue: "ibis Styles BSD",
+      theme: "Electric Dreams",
 
-    //   // ticketNo: ,
-    //   // tier: "Cipher",
-    // },
+      ticketNo: 481,
+      tier: "Cipher",
+    },
     // {
     //   name: conNames.furum,
     //   startDate: new Date(`2026-12-12${defaultMidnight}`),
