@@ -75,6 +75,11 @@ const Attendance = () => {
         <AttendanceAccordion />
 
         <p className="text-sm">
+          {/* 
+          The events marked as "soon" only mean that I have registered for them.
+          Unfortunately, given how life sometimes laughs at our suffering, there may be 
+          circumstances that'll make me unable to go for an event. :'>
+           */}
           If you are attending any one of these cons, come and say hi!
         </p>
       </MyModal>

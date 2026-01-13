@@ -134,17 +134,17 @@ const attendance: { [year: number]: Event[] } = {
     //   ticketNo: ,
     //   tier: "",
     // },
-    // {
-    //   name: conNames.lifc,
-    //   startDate: new Date(`2026-06-13${defaultMidnight}`),
-    //   endDate: new Date(`2026-06-14${beforeMidnight}`),
-    //   timeZone: timezones.singapore,
-    //   venue: "One Farrer Hotel",
-    //   theme: "Mission Impawssible",
+    {
+      name: conNames.lifc,
+      startDate: new Date(`2026-06-13${defaultMidnight}`),
+      endDate: new Date(`2026-06-14${beforeMidnight}`),
+      timeZone: timezones.singapore,
+      venue: "One Farrer Hotel",
+      theme: "Mission Impawssible",
 
-    //   // ticketNo: ,
-    //   // tier: "Sponsor",
-    // },
+      ticketNo: 67,
+      tier: "Sponsor",
+    },
     {
       name: conNames.bah,
       startDate: new Date(`2026-06-20${defaultMidnight}`),
