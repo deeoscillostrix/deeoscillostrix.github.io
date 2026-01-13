@@ -115,6 +115,21 @@ const Refs = () => {
         "#00d740",
       ],
     },
+    // {
+    //   src: "/images/ref-oscii-cheekysonas.webp",
+    //   alt: "Oscillo's Alt Ref",
+    //   download: "/images/ref-oscii-cheekysonas.png",
+    //   artist: artists.cheekysonas.handle,
+    //   artistUrl: artists.cheekysonas.website,
+    //   palette: [
+    //     "#fcec6b",
+    //     "#ff8331",
+    //     "#836443",
+    //     "#f3f0de",
+    //     "#d4ab7f",
+    //     "#4ba57c",
+    //   ],
+    // },
     {
       src: "/images/ref-osciioutfits.webp",
       alt: "Oscillo's Outfit Ref",
