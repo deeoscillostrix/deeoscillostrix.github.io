@@ -75,6 +75,11 @@ export default {
     instagram: prefix.instagram + "inuandnekobit",
     bluesky: "https://nekobithoodies.bsky.social",
   },
+  radishkek: {
+    handle: "@radishkek",
+    instagram: prefix.instagram + "radishcakeholes",
+    website: "https://radishcake.carrd.co",
+  },
   redsews: {
     handle: "@red_sews",
     instagram: prefix.instagram + "red_sews",

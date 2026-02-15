@@ -92,6 +92,18 @@ export const ArtGallery = () => {
       artist: artists.cyannocti.handle,
       artistUrl: artists.cyannocti.instagram,
     },
+    {
+      src: "/images/oscii-playground.webp",
+      alt: "Reminiscing at An Old Playground",
+      artist: artists.radishkek.handle,
+      artistUrl: artists.radishkek.instagram,
+    },
+    {
+      src: "/images/oscii-night-apocalypse.webp",
+      alt: "Oscii Apocalyptic Night",
+      artist: artists.orcaowlart.handle,
+      artistUrl: artists.orcaowlart.website,
+    },
   ];
 
   return (
