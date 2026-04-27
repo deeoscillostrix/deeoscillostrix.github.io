@@ -12,6 +12,8 @@
 
 // IANA Zones
 const timezones = {
+  am_edt: "America/New_York",
+
   eu_sweden: "Europe/Stockholm",
 
   id_bali: "Asia/Makassar",
@@ -41,6 +43,7 @@ export interface Event {
 const conNames = {
   bah: "Borneo Anthro Hub 🇲🇾",
   furum: "Furs Upon Malaysia 🇲🇾",
+  fwa: "Furry Weekend Atlanta 🇺🇸", // Eastern Daylight Time
   iwag: "Indonesian Weekend Anthro Gathering 🇮🇩", // wib
   lifc: "Little Island Fur Con 🇸🇬",
   myfur: "MYFur 🇲🇾",
@@ -123,17 +126,17 @@ const attendance: { [year: number]: Event[] } = {
     },
   ],
   2026: [
-    // {
-    //   name: conNames.myfur,
-    //   startDate: new Date(`2026-05-02${defaultMidnight}`),
-    //   endDate: new Date(`2026-05-02${beforeMidnight}`),
-    //   timeZone: timezones.my_kl,
-    //   venue: "Dorsett Grand Subang",
-    //   theme: "MYFur's Got Talent",
+    {
+      name: conNames.myfur,
+      startDate: new Date(`2026-05-02${defaultMidnight}`),
+      endDate: new Date(`2026-05-02${beforeMidnight}`),
+      timeZone: timezones.my_kl,
+      venue: "Dorsett Grand Subang",
+      theme: "MYFur's Got Talent",
 
-    //   ticketNo: ,
-    //   tier: "",
-    // },
+      ticketNo: 4005505, // order number; can't find the ticket number for some reason
+      tier: "Contestant",
+    },
     {
       name: conNames.lifc,
       startDate: new Date(`2026-06-13${defaultMidnight}`),
@@ -169,16 +172,29 @@ const attendance: { [year: number]: Event[] } = {
     },
     // {
     //   name: conNames.furum,
-    //   startDate: new Date(`2026-12-12${defaultMidnight}`),
+    //   startDate: new Date(`2026-12-11${defaultMidnight}`),
     //   endDate: new Date(`2026-12-13${beforeMidnight}`),
     //   timeZone: timezones.my_kl,
-    //   venue: "Hotel Armada PJ",
+    //   venue: "TBD",
     //   theme: "FURUM X",
 
     //   // ticketNo: ,
     //   // tier: "Sponsor",
     // },
   ],
+  // 2027: [
+  //   {
+  //     name: conNames.fwa,
+  //     startDate: new Date(`2027-05-06${defaultMidnight}`),
+  //     endDate: new Date(`2027-05-09${defaultMidnight}`),
+  //     timeZone: timezones.am_edt,
+  //     venue: "Marriott Marquis",
+  //     theme: "",
+
+  //     ticketNo: -1,
+  //     tier: "",
+  //   },
+  // ],
 };
 
 export default attendance;
