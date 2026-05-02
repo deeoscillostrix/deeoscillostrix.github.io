@@ -134,7 +134,7 @@ const attendance: { [year: number]: Event[] } = {
       venue: "Dorsett Grand Subang",
       theme: "MYFur's Got Talent",
 
-      ticketNo: 4005505, // order number; can't find the ticket number for some reason
+      ticketNo: 370,
       tier: "Contestant",
     },
     {
