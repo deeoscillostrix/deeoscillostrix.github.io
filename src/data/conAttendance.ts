@@ -184,6 +184,17 @@ const attendance: { [year: number]: Event[] } = {
   ],
   // 2027: [
   //   {
+  //     name: conNames.myfur,
+  //     startDate: new Date(`2027-04-24${defaultMidnight}`),
+  //     endDate: new Date(`2027-04-25${defaultMidnight}`),
+  //     timeZone: timezones.my_kl,
+  //     venue: "Hotel Armada PJ",
+  //     theme: "FurGear",
+
+  //     ticketNo: -1,
+  //     tier: "",
+  //   },
+  //   {
   //     name: conNames.fwa,
   //     startDate: new Date(`2027-05-06${defaultMidnight}`),
   //     endDate: new Date(`2027-05-09${defaultMidnight}`),
