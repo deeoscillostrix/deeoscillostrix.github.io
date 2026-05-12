@@ -54,7 +54,18 @@ const AttendanceAccordion = () => {
                       {MyDateParser(con.endDate)} ({con.timeZone})
                     </span>
                     <br />
-                    {con.name} {isComingSoon(con.startDate, con.endDate)}
+                    {con.website ? (
+                      <a
+                        className="hover:text-secondary transition ease-in-out hover:cursor-pointer"
+                        href={con.website}
+                        target="_blank"
+                      >
+                        {con.name}
+                      </a>
+                    ) : (
+                      con.name
+                    )}{" "}
+                    {isComingSoon(con.startDate, con.endDate)}
                   </li>
                 ))}
               </ul>

@@ -12,12 +12,16 @@
 
 // IANA Zones
 const timezones = {
-  am_edt: "America/New_York",
+  am_est: "America/New_York", // UTC-5, EST
 
-  eu_sweden: "Europe/Stockholm",
+  au_bne: "Australia/Brisbane", // UTC+10, AEST
+  au_per: "Australia/Perth", // UTC+9, AWST
 
-  id_bali: "Asia/Makassar",
-  id_jakarta: "Asia/Jakarta",
+  eu_london: "Europe/London", // UTC, GMT
+  eu_sweden: "Europe/Stockholm", // UTC+1, CEST
+
+  id_bali: "Asia/Makassar", // UTC+8, WITA
+  id_jakarta: "Asia/Jakarta", // UTC+7, WIB
 
   my_borneo: "Asia/Kuching",
   my_kl: "Asia/Kuala_Lumpur",
@@ -35,21 +39,46 @@ export interface Event {
   timeZone: string;
   venue?: string;
   theme?: string;
+  website?: string;
 
-  ticketNo?: number;
+  ticketNo?: number | -1;
   tier?: string;
 }
 
 const conNames = {
+  ac: "Anthrocon 🇺🇸", // am_est
   bah: "Borneo Anthro Hub 🇲🇾",
+  cfz: "Confuzzled 🇬🇧", // eu_london
+  furdu: "Furry Down Under 🇦🇺", // au_bne
+  furdu_tot: "Furry Down Under: Tails of Terror 🇦🇺", // au_bne
   furum: "Furs Upon Malaysia 🇲🇾",
-  fwa: "Furry Weekend Atlanta 🇺🇸", // Eastern Daylight Time
-  iwag: "Indonesian Weekend Anthro Gathering 🇮🇩", // wib
+  fwa: "Furry Weekend Atlanta 🇺🇸", // am_est
+  iwag: "Indonesian Weekend Anthro Gathering 🇮🇩", // id_jakarta
   lifc: "Little Island Fur Con 🇸🇬",
   myfur: "MYFur 🇲🇾",
-  nfc: "Nordic FuzzCon 🇸🇪", // cet
-  pawai: "Party Along with Anthro Indonesia 🇮🇩", // wita
-  waff: "WA Fur Frenzy 🇦🇺",
+  nfc: "Nordic FuzzCon 🇸🇪", // eu_sweden
+  pawai: "Party Along with Anthro Indonesia 🇮🇩", // id_bali
+  waff: "WA Fur Frenzy 🇦🇺", //au_per
+};
+
+const conWebsites = {
+  archive: {
+    iwag: "https://iwag-archive.furries.id/",
+    nfc: "https://archive.nordicfuzzcon.org/year/",
+  },
+
+  ac: "https://www.anthrocon.org/",
+  bah: "https://borneoanthrohub.com/",
+  cfz: "https://confuzzled.org.uk/",
+  furum: "https://furum.org/",
+  furdu: "https://furdu.com.au/",
+  fwa: "https://furryweekend.com/",
+  iwag: "https://iwag.furries.id/en/",
+  lifc: "https://www.littleislandfur.com/",
+  myfur: "https://myfur.org/",
+  nfc: "https://nordicfuzzcon.org/",
+  pawai: "https://pawai.id/",
+  waff: "https://waff.net.au/",
 };
 
 const attendance: { [year: number]: Event[] } = {
@@ -64,6 +93,7 @@ const attendance: { [year: number]: Event[] } = {
 
       ticketNo: 171,
       tier: "Attendee",
+      website: `${conWebsites.lifc}2023`,
     },
   ],
   2024: [
@@ -77,6 +107,7 @@ const attendance: { [year: number]: Event[] } = {
 
       ticketNo: 93,
       tier: "Attendee",
+      website: `${conWebsites.lifc}2024`,
     },
     {
       name: conNames.furum,
@@ -88,6 +119,7 @@ const attendance: { [year: number]: Event[] } = {
 
       ticketNo: 858,
       tier: "Sponsor",
+      website: `${conWebsites.furum}2024`,
     },
   ],
   2025: [
@@ -101,6 +133,7 @@ const attendance: { [year: number]: Event[] } = {
 
       ticketNo: 94,
       tier: "Sponsor",
+      website: `${conWebsites.lifc}2025`,
     },
     {
       name: conNames.iwag,
@@ -112,6 +145,7 @@ const attendance: { [year: number]: Event[] } = {
 
       ticketNo: 534,
       tier: "Pathfindeer",
+      website: `${conWebsites.archive.iwag}2025`,
     },
     {
       name: conNames.furum,
@@ -123,6 +157,7 @@ const attendance: { [year: number]: Event[] } = {
 
       ticketNo: 300,
       tier: "First Mate",
+      website: `${conWebsites.furum}2025`,
     },
   ],
   2026: [
@@ -135,7 +170,8 @@ const attendance: { [year: number]: Event[] } = {
       theme: "MYFur's Got Talent",
 
       ticketNo: 370,
-      tier: "Contestant",
+      tier: "Contestant", // Attendee
+      website: `${conWebsites.myfur}2026`,
     },
     {
       name: conNames.lifc,
@@ -147,6 +183,7 @@ const attendance: { [year: number]: Event[] } = {
 
       ticketNo: 67,
       tier: "Sponsor",
+      website: `${conWebsites.lifc}2026`,
     },
     {
       name: conNames.bah,
@@ -158,6 +195,7 @@ const attendance: { [year: number]: Event[] } = {
 
       ticketNo: 75, // SS-75
       tier: "Super Sponsor",
+      website: `${conWebsites.bah}2026`,
     },
     {
       name: conNames.iwag,
@@ -169,7 +207,20 @@ const attendance: { [year: number]: Event[] } = {
 
       ticketNo: 481,
       tier: "Cipher",
+      website: `${conWebsites.iwag}`,
     },
+    // {
+    //   name: conNames.furdu_tot,
+    //   startDate: new Date(`2026-10-02${defaultMidnight}`),
+    //   endDate: new Date(`2026-10-04${beforeMidnight}`),
+    //   timeZone: timezones.au_bne,
+    //   venue: "Hotel Grand Chancellor Brisbane",
+    //   theme: "What Lies Below",
+
+    //   // ticketNo: -1,
+    //   // tier: "Standard",
+    //   website: `${conWebsites.furdu}`,
+    // },
     // {
     //   name: conNames.furum,
     //   startDate: new Date(`2026-12-11${defaultMidnight}`),
@@ -178,32 +229,48 @@ const attendance: { [year: number]: Event[] } = {
     //   venue: "TBD",
     //   theme: "FURUM X",
 
-    //   // ticketNo: ,
+    //   // ticketNo: -1,
     //   // tier: "Sponsor",
+    //   website: `${conWebsites.furum}2026`
     // },
   ],
   // 2027: [
   //   {
+  //     name: conNames.nfc,
+  //     startDate: new Date(`2027-02-24${defaultMidnight}`),
+  //     endDate: new Date(`2027-02-27${beforeMidnight}`),
+  //     timeZone: timezones.eu_sweden,
+  //     venue: "Clarion Malmö Live",
+  //     theme: "Crime Noir",
+
+  //     // ticketNo: -1,
+  //     tier: "",
+  //     website: `${conWebsites.nfc}`,
+  //     // website: `${conWebsites.archive.nfc}2026/live`,
+  //   },
+  //   {
   //     name: conNames.myfur,
   //     startDate: new Date(`2027-04-24${defaultMidnight}`),
-  //     endDate: new Date(`2027-04-25${defaultMidnight}`),
+  //     endDate: new Date(`2027-04-25${beforeMidnight}`),
   //     timeZone: timezones.my_kl,
   //     venue: "Hotel Armada PJ",
   //     theme: "FurGear",
 
-  //     ticketNo: -1,
+  //     // ticketNo: -1,
   //     tier: "",
+  //     website: `${conWebsites.myfur}2027`,
   //   },
   //   {
   //     name: conNames.fwa,
   //     startDate: new Date(`2027-05-06${defaultMidnight}`),
-  //     endDate: new Date(`2027-05-09${defaultMidnight}`),
-  //     timeZone: timezones.am_edt,
+  //     endDate: new Date(`2027-05-09${beforeMidnight}`),
+  //     timeZone: timezones.am_est,
   //     venue: "Marriott Marquis",
   //     theme: "",
 
-  //     ticketNo: -1,
+  //     // ticketNo: -1,
   //     tier: "",
+  //     website: `${conWebsites.fwa}`,
   //   },
   // ],
 };
