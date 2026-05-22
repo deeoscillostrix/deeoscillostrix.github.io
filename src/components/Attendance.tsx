@@ -50,8 +50,11 @@ const AttendanceAccordion = () => {
                 {conAttendance[parseInt(attYear)].map((con, key) => (
                   <li key={key} className="py-1">
                     <span className="font-medium">
-                      {MyDateParser(con.startDate)} -{" "}
-                      {MyDateParser(con.endDate)} ({con.timeZone})
+                      {MyDateParser(con.startDate)}
+                      {MyDateParser(con.endDate) !== MyDateParser(con.startDate)
+                        ? " - " + MyDateParser(con.endDate)
+                        : ""}{" "}
+                      ({con.timeZone})
                     </span>
                     <br />
                     {con.website ? (
