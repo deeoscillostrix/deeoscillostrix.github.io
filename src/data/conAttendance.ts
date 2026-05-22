@@ -221,18 +221,18 @@ const attendance: { [year: number]: Event[] } = {
     //   // tier: "Standard",
     //   website: `${conWebsites.furdu}`,
     // },
-    // {
-    //   name: conNames.furum,
-    //   startDate: new Date(`2026-12-11${defaultMidnight}`),
-    //   endDate: new Date(`2026-12-13${beforeMidnight}`),
-    //   timeZone: timezones.my_kl,
-    //   venue: "TBD",
-    //   theme: "FURUM X",
+    {
+      name: conNames.furum,
+      startDate: new Date(`2026-12-11${defaultMidnight}`),
+      endDate: new Date(`2026-12-13${beforeMidnight}`),
+      timeZone: timezones.my_kl,
+      venue: "TBD",
+      theme: "FURUM X",
 
-    //   // ticketNo: -1,
-    //   // tier: "Sponsor",
-    //   website: `${conWebsites.furum}2026`
-    // },
+      ticketNo: 265,
+      tier: "Sponsor",
+      website: `${conWebsites.furum}2026`,
+    },
   ],
   // 2027: [
   //   {
