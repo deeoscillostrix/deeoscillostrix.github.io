@@ -226,7 +226,7 @@ const attendance: { [year: number]: Event[] } = {
       startDate: new Date(`2026-12-11${defaultMidnight}`),
       endDate: new Date(`2026-12-13${beforeMidnight}`),
       timeZone: timezones.my_kl,
-      venue: "TBD",
+      venue: "M World Hotel Petaling Jaya",
       theme: "FURUM X",
 
       ticketNo: 265,
