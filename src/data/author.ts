@@ -3,8 +3,8 @@ export default {
   username: "deeoscillostrix",
 
   socials: {
-    telegram: "https://t.me/deezombiedude",
-    discord: "https://discordapp.com/users/deezombiedude",
+    // telegram: "https://t.me/deezombiedude",
+    // discord: "https://discordapp.com/users/deezombiedude",
     instagram: "https://instagram.com/deeoscillostrix",
     bluesky: "https://deeoscillostrix.bsky.social",
     // youtube: "https://youtube.com/@deezombiedude",
