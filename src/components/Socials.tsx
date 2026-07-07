@@ -7,6 +7,7 @@ import attendance from "../data/conAttendance";
 function displayTextingSocials(): boolean {
   const today = new Date();
   const conAttendance = attendance[today.getFullYear()];
+  const numExtraDays = 28;
 
   // if no attendance data
   if (!conAttendance) return false;
@@ -20,7 +21,7 @@ function displayTextingSocials(): boolean {
     // obtain the last date 14 days after the con ends
     // end date is always the last day at 23:59:59, so add 14 days and 1 second
     const extendedEndDate = new Date(originalEndDate);
-    extendedEndDate.setDate(extendedEndDate.getDate() + 14);
+    extendedEndDate.setDate(extendedEndDate.getDate() + numExtraDays);
     extendedEndDate.setSeconds(extendedEndDate.getSeconds() + 1);
 
     if (startDate <= today && today <= extendedEndDate) return true;
