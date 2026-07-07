@@ -3,11 +3,11 @@ import { MyModal } from ".";
 import { author, iconMap } from "../data";
 import attendance from "../data/conAttendance";
 
-// show texting socials only for 2 weeks after a recently completed event ends
+// show texting socials only for 31 days after a recently completed event ends
 function displayTextingSocials(): boolean {
   const today = new Date();
   const conAttendance = attendance[today.getFullYear()];
-  const numExtraDays = 28;
+  const numExtraDays = 31;
 
   // if no attendance data
   if (!conAttendance) return false;
@@ -18,8 +18,8 @@ function displayTextingSocials(): boolean {
     const startDate = new Date(currentCon.startDate);
     const originalEndDate = new Date(currentCon.endDate);
 
-    // obtain the last date 14 days after the con ends
-    // end date is always the last day at 23:59:59, so add 14 days and 1 second
+    // obtain the last date 31 days after the con ends
+    // end date is always the last day at 23:59:59, so add 31 days and 1 second
     const extendedEndDate = new Date(originalEndDate);
     extendedEndDate.setDate(extendedEndDate.getDate() + numExtraDays);
     extendedEndDate.setSeconds(extendedEndDate.getSeconds() + 1);
