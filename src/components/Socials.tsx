@@ -1,20 +1,19 @@
 import { createElement } from "react";
 import { MyModal } from ".";
-import { author, iconMap } from "../data";
-import attendance from "../data/conAttendance";
+import { author, conAttendance, iconMap } from "../data";
 
 // show texting socials only for 31 days after a recently completed event ends
 function displayTextingSocials(): boolean {
   const today = new Date();
-  const conAttendance = attendance[today.getFullYear()];
+  const attendanceThisYear = conAttendance[today.getFullYear()];
   const numExtraDays = 31;
 
   // if no attendance data
-  if (!conAttendance) return false;
+  if (!attendanceThisYear) return false;
 
   // iterate through each convention attendance in the year
-  for (let currentCon of conAttendance) {
-    // obtain
+  for (let currentCon of attendanceThisYear) {
+    // obtain the start and end dates of each con
     const startDate = new Date(currentCon.startDate);
     const originalEndDate = new Date(currentCon.endDate);
 
