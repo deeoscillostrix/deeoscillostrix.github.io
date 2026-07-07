@@ -23,5 +23,6 @@ export default {
     pokemonGo: "2742 4927 9116",
     pokemonSleep: "0614-7313-6573",
     pokemonTCGP: "0084-5941-6328-1608",
+    tailtag: "OSCII",
   },
 };

@@ -11,6 +11,8 @@ const getGameName = (codeType: string) => {
       return "Pokémon Sleep";
     case "pokemonTCGP":
       return "Pokémon TCGP";
+    case "tailtag":
+      return "TailTag";
     default:
       return codeType;
   }
@@ -25,18 +27,22 @@ const GameLinks = () => {
       <p>Click any of the following to copy to clipboard.</p>
 
       <p>
-        {Object.keys(author.friendCodes).map((codeType, index) => (
-          <span key={index}>
-            <ClipboardLink
-              dataValue={
-                author.friendCodes[codeType as keyof typeof author.friendCodes]
-              }
-              isButton={true}
-            >
-              {getGameName(codeType)}
-            </ClipboardLink>
-          </span>
-        ))}
+        {Object.keys(author.friendCodes)
+          .filter((codeType) => !["tailtag"].includes(codeType))
+          .map((codeType, index) => (
+            <span key={index}>
+              <ClipboardLink
+                dataValue={
+                  author.friendCodes[
+                    codeType as keyof typeof author.friendCodes
+                  ]
+                }
+                isButton={true}
+              >
+                {getGameName(codeType)}
+              </ClipboardLink>
+            </span>
+          ))}
       </p>
     </MyModal>
   );
