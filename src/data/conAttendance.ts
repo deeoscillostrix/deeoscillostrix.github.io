@@ -20,6 +20,8 @@ const timezones = {
   eu_london: "Europe/London", // UTC, GMT
   eu_sweden: "Europe/Stockholm", // UTC+1, CEST
 
+  hongkong: "Asia/Hong_Kong", // UTC+8, HKT
+
   id_bali: "Asia/Makassar", // UTC+8, WITA
   id_jakarta: "Asia/Jakarta", // UTC+7, WIB
 
@@ -49,6 +51,7 @@ const conNames = {
   ac: "Anthrocon 🇺🇸", // am_est
   bah: "Borneo Anthro Hub 🇲🇾",
   cfz: "Confuzzled 🇬🇧", // eu_london
+  furban: "Furban Jungle 🇭🇰",
   furdu: "Furry Down Under 🇦🇺", // au_bne
   furdu_tot: "Furry Down Under: Tails of Terror 🇦🇺", // au_bne
   furum: "Furs Upon Malaysia 🇲🇾",
@@ -70,6 +73,7 @@ const conWebsites = {
   ac: "https://www.anthrocon.org/",
   bah: "https://borneoanthrohub.com/",
   cfz: "https://confuzzled.org.uk/",
+  furban: "https://www.furban.net/",
   furum: "https://furum.org/",
   furdu: "https://furdu.com.au/",
   fwa: "https://furryweekend.com/",
@@ -269,6 +273,17 @@ const attendance: { [year: number]: Event[] } = {
     //     tier: "",
     //     website: `${conWebsites.fwa}`,
     //   },
+    // {
+    //   name: conNames.furban,
+    //   startDate: new Date(`2027-08-07${defaultMidnight}`),
+    //   endDate: new Date(`2027-08-08${beforeMidnight}`),
+    //   timeZone: timezones.hongkong,
+    //   venue: "Eaton HK, Yau Ta Mei",
+    //   theme: "Street Life",
+    //   // ticketNo: -1,
+    //   tier: "",
+    //   website: `${conWebsites.fwa}`,
+    // },
   ],
 };
 
