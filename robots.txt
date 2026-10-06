@@ -1,0 +1,35 @@
+# Allow Google Search
+User-agent: Googlebot
+Disallow:
+
+# Allow Google Image Search
+User-agent: Googlebot-Image
+Disallow:
+
+# Allow Discord Previews
+User-agent: discordapp
+Disallow:
+
+# # Allow Slack Previews
+# User-agent: Slackbot
+# Disallow:
+
+# Allow Telegram Previews
+User-agent: TelegramBot
+Disallow:
+
+# Allow WhatsApp Previews
+User-agent: WhatsApp
+Disallow:
+
+# Allow Apple iMessage/Preview Previews
+User-agent: Applebot
+Disallow:
+
+# Allow FB Messenger Previews
+User-agent: facebookexternalhit
+Disallow:
+
+# Block all other crawlers
+User-agent: *
+Disallow: /
