@@ -72,10 +72,18 @@
   --color-milo08: #ffb946;
   --color-milo09: #33ff59;
   --color-milo10: #00d740;
+
+  /* Haruomi Colors (to update once ref is finished) */
+  --color-haruomi01: rgb(239, 235, 224);
+  --color-haruomi02: rgb(243, 167, 138);
+  --color-haruomi03: rgb(201, 201, 127);
+  --color-haruomi04: rgb(184, 167, 152);
+  --color-haruomi05: rgb(106, 96, 85);
+  --color-haruomi06: rgb(226, 182, 127);
 }
 
 body {
-  @apply font-shantellSans relative m-0 min-h-[100svh] min-w-[320px] bg-[url('/images/wallpaper.webp')] bg-size-[800px] text-black;
+  @apply font-shantellSans relative m-0 min-h-svh min-w-[320px] bg-[url('/images/wallpaper.webp')] bg-size-[800px] text-black;
 }
 
 body:before {
