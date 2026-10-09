@@ -197,7 +197,7 @@ const attendance: { [year: number]: Event[] } = {
       venue: "Horizon Hotel Kota Kinabalu",
       theme: "Adventure Below the Wind",
 
-      ticketNo: 75, // SS-75
+      ticketNo: 75, // SS-75 (ticket 75 overall, SS doesn't matter)
       tier: "Super Sponsor",
       website: `${conWebsites.bah}2026`,
     },
