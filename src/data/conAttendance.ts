@@ -275,6 +275,18 @@ const attendance: { [year: number]: Event[] } = {
     //   website: `${conWebsites.fwa}`,
     // },
     // {
+    //   name: conNames.iwag,
+    //   startDate: new Date(`2027-07-03${defaultMidnight}`),
+    //   endDate: new Date(`2027-07-04${beforeMidnight}`),
+    //   timeZone: timezones.id_jakarta,
+    //   venue: "ibis Styles BSD",
+    //   theme: "Electric Dreams",
+
+    //   // ticketNo: -1,
+    //   tier: "",
+    //   website: `${conWebsites.iwag}`,
+    // },
+    // {
     //   name: conNames.bah,
     //   startDate: new Date(`2027-07-10${defaultMidnight}`),
     //   endDate: new Date(`2027-07-11${beforeMidnight}`),
