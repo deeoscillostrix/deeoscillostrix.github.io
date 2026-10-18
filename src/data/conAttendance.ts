@@ -211,7 +211,8 @@ const attendance: { [year: number]: Event[] } = {
 
       ticketNo: 481,
       tier: "Cipher",
-      website: `${conWebsites.iwag}`,
+      website: `${conWebsites.archive.iwag}2026`,
+      // website: `${conWebsites.iwag}`,
     },
     // {
     //   name: conNames.furdu_tot,

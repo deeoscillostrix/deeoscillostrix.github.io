@@ -1,3 +1,4 @@
+import React from "react";
 import { MyModal } from ".";
 import { conAttendance } from "../data";
 
@@ -17,65 +18,143 @@ function isComingSoon(startDate: Date, endDate: Date) {
   return null;
 }
 
-const AttendanceAccordion = () => {
-  const accordionName = "accordion-conAttendance";
+function isCurrentYear(currentAttendanceYear: string): boolean {
+  return parseInt(currentAttendanceYear) - new Date().getFullYear() == 0;
+}
+
+// const AttendanceAccordion = () => {
+//   const accordionName = "accordion-conAttendance";
+
+//   const thisYear = new Date().getFullYear();
+//   const thisMonth = new Date().getMonth();
+
+//   return (
+//     <div className="join join-vertical bg-base-100 w-full">
+//       {Object.keys(conAttendance)
+//         // .reverse()
+//         .sort((a, b) => parseInt(b) - parseInt(a)) // sort years in descending order
+//         .filter(
+//           (attYear) =>
+//             // display entries for next year if it's currently December (thisMonth >= 11)
+//             // otherwise show only all entries up to this year
+//             (thisMonth >= 11 && parseInt(attYear) <= thisYear + 1) ||
+//             parseInt(attYear) <= thisYear,
+//         )
+//         .map((attYear, key) => (
+//           <div
+//             key={key}
+//             className="collapse-arrow join-item border-primary text-primary collapse border"
+//           >
+//             <input type="checkbox" name={accordionName} />
+//             <div className="collapse-title font-semibold">
+//               {attYear}{" "}
+//               {parseInt(attYear) - new Date().getFullYear() == 0 && `⭐`}
+//             </div>
+//             <div className="collapse-content text-left text-sm">
+//               <ul className="list-[circle] ps-4">
+//                 {conAttendance[parseInt(attYear)].map((con, key) => (
+//                   <li key={key} className="py-1">
+//                     <span className="font-medium">
+//                       {MyDateParser(con.startDate)}
+//                       {MyDateParser(con.endDate) !== MyDateParser(con.startDate)
+//                         ? " - " + MyDateParser(con.endDate)
+//                         : ""}{" "}
+//                       ({con.timeZone})
+//                     </span>
+//                     <br />
+//                     {con.website ? (
+//                       <a
+//                         className="hover:text-secondary transition ease-in-out hover:cursor-pointer"
+//                         href={con.website}
+//                         target="_blank"
+//                       >
+//                         {con.name}
+//                       </a>
+//                     ) : (
+//                       con.name
+//                     )}{" "}
+//                     {isComingSoon(con.startDate, con.endDate)}
+//                   </li>
+//                 ))}
+//               </ul>
+//             </div>
+//           </div>
+//         ))}
+//     </div>
+//   );
+// };
+
+const AttendanceTabs = () => {
+  const tabGroupName = "tabs-conAttendance";
 
   const thisYear = new Date().getFullYear();
   const thisMonth = new Date().getMonth();
 
+  // const isCurrentYear = (currentAttendanceYear: string): boolean =>
+  //   parseInt(currentAttendanceYear) - new Date().getFullYear() == 0;
+
   return (
-    <div className="join join-vertical bg-base-100 w-full">
-      {Object.keys(conAttendance)
-        // .reverse()
-        .sort((a, b) => parseInt(b) - parseInt(a)) // sort years in descending order
-        .filter(
-          (attYear) =>
-            // display entries for next year if it's currently December (thisMonth >= 11)
-            // otherwise show only all entries up to this year
-            (thisMonth >= 11 && parseInt(attYear) <= thisYear + 1) ||
-            parseInt(attYear) <= thisYear,
-        )
-        .map((attYear, key) => (
-          <div
-            key={key}
-            className="collapse-arrow join-item border-primary text-primary collapse border"
-          >
-            <input type="checkbox" name={accordionName} />
-            <div className="collapse-title font-semibold">
-              {attYear}{" "}
-              {parseInt(attYear) - new Date().getFullYear() == 0 && `⭐`}
-            </div>
-            <div className="collapse-content text-left text-sm">
-              <ul className="list-[circle] ps-4">
-                {conAttendance[parseInt(attYear)].map((con, key) => (
-                  <li key={key} className="py-1">
-                    <span className="font-medium">
-                      {MyDateParser(con.startDate)}
-                      {MyDateParser(con.endDate) !== MyDateParser(con.startDate)
-                        ? " - " + MyDateParser(con.endDate)
-                        : ""}{" "}
-                      ({con.timeZone})
-                    </span>
-                    <br />
-                    {con.website ? (
-                      <a
-                        className="hover:text-secondary transition ease-in-out hover:cursor-pointer"
-                        href={con.website}
-                        target="_blank"
-                      >
-                        {con.name}
-                      </a>
-                    ) : (
-                      con.name
-                    )}{" "}
-                    {isComingSoon(con.startDate, con.endDate)}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
-    </div>
+    <>
+      <div
+        className="tabs tabs-box border-primary bg-amber-50"
+        id="tabs-conAttendance"
+      >
+        {Object.keys(conAttendance)
+          .sort((a, b) => parseInt(b) - parseInt(a)) // sort years in descending order
+          .filter(
+            (attYear) =>
+              // display entries for next year if it's currently December (thisMonth >= 11)
+              // otherwise show only all entries up to this year
+              (thisMonth >= 11 && parseInt(attYear) <= thisYear + 1) ||
+              parseInt(attYear) <= thisYear,
+          )
+          .map((attYear) => (
+            <React.Fragment key={attYear}>
+              <input
+                type="radio"
+                name={tabGroupName}
+                className="tab text-primary"
+                aria-label={
+                  attYear + " " + (isCurrentYear(attYear) ? `⭐` : "")
+                }
+                defaultChecked={isCurrentYear(attYear)}
+              />
+              <div className="tab-content bg-base-100 border-base-300 text-primary p-4">
+                <ul className="list-none text-left text-sm">
+                  {conAttendance[parseInt(attYear)].map((con, key) => (
+                    <>
+                      <li key={key} className="py-1">
+                        <span className="font-medium">
+                          {MyDateParser(con.startDate)}
+                          {MyDateParser(con.endDate) !==
+                          MyDateParser(con.startDate)
+                            ? " - " + MyDateParser(con.endDate)
+                            : ""}{" "}
+                          ({con.timeZone})
+                        </span>
+                        <br />
+                        {con.website ? (
+                          <a
+                            className="hover:text-secondary transition ease-in-out hover:cursor-pointer"
+                            href={con.website}
+                            target="_blank"
+                          >
+                            {con.name}
+                          </a>
+                        ) : (
+                          con.name
+                        )}{" "}
+                        {isComingSoon(con.startDate, con.endDate)}
+                      </li>
+                      {/* {key < conAttendance[parseInt(attYear)].length - 1 && <hr />} */}
+                    </>
+                  ))}
+                </ul>
+              </div>
+            </React.Fragment>
+          ))}
+      </div>
+    </>
   );
 };
 
@@ -86,7 +165,8 @@ const Attendance = () => {
   return (
     <>
       <MyModal modalId={modalId} title={title}>
-        <AttendanceAccordion />
+        {/* <AttendanceAccordion /> */}
+        <AttendanceTabs />
 
         <p className="text-sm">
           {/* 
