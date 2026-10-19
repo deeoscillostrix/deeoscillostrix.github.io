@@ -306,7 +306,7 @@ const Gallery = () => {
     return (
       <div className="columns-1 gap-4 md:columns-2 xl:columns-3">
         {galleryImages.map((image, index) => (
-          <div key={index} className="galleryDisplay">
+          <div key={index} className="galleryDisplay text-sm">
             <div className="imgContainer">
               <a href={image.src} target="_blank" rel="noopener noreferrer">
                 <img
