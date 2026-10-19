@@ -334,25 +334,32 @@ const Gallery = () => {
     ];
 
     return (
-      <div className="columns-1 gap-4 md:columns-2 xl:columns-3">
-        {galleryImages.map((image, index) => (
-          <div key={index} className="galleryDisplay text-sm">
-            <div className="imgContainer">
-              <a href={image.src} target="_blank" rel="noopener noreferrer">
-                <img
-                  {...{ src: image.src, alt: image.alt, loading: "lazy" }}
-                  // className="rounded-lg w-full h-auto object-contain cursor-pointer hover:opacity-90 transition"
-                  className="h-auto w-full transform cursor-pointer object-contain transition-transform ease-in-out hover:scale-105"
-                />
+      <>
+        <p>Click on an image to view it in a new tab.</p>
+        <div className="columns-1 gap-4 md:columns-2 xl:columns-3">
+          {galleryImages.map((image, index) => (
+            <div key={index} className="galleryDisplay text-sm">
+              <div className="imgContainer">
+                <a href={image.src} target="_blank" rel="noopener noreferrer">
+                  <img
+                    {...{ src: image.src, alt: image.alt, loading: "lazy" }}
+                    // className="rounded-lg w-full h-auto object-contain cursor-pointer hover:opacity-90 transition"
+                    className="h-auto w-full transform cursor-pointer object-contain transition-transform ease-in-out hover:scale-105"
+                  />
+                </a>
+              </div>
+              Artwork by{" "}
+              <a
+                href={image.artistUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {image.artist}
               </a>
             </div>
-            Artwork by{" "}
-            <a href={image.artistUrl} target="_blank" rel="noopener noreferrer">
-              {image.artist}
-            </a>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </>
     );
   };
 
@@ -385,25 +392,32 @@ const Gallery = () => {
     ];
 
     return (
-      <div className="columns-1 gap-4 md:columns-2 xl:columns-3">
-        {galleryImages.map((image, index) => (
-          <div key={index} className="galleryDisplay text-sm">
-            <div className="imgContainer">
-              <a href={image.src} target="_blank" rel="noopener noreferrer">
-                <img
-                  {...{ src: image.src, alt: image.alt, loading: "lazy" }}
-                  // className="rounded-lg w-full h-auto object-contain cursor-pointer hover:opacity-90 transition"
-                  className="h-auto w-full transform cursor-pointer object-contain transition-transform ease-in-out hover:scale-105"
-                />
+      <>
+        <p>Click on an image to view it in a new tab.</p>
+        <div className="columns-1 gap-4 md:columns-2 xl:columns-3">
+          {galleryImages.map((image, index) => (
+            <div key={index} className="galleryDisplay text-sm">
+              <div className="imgContainer">
+                <a href={image.src} target="_blank" rel="noopener noreferrer">
+                  <img
+                    {...{ src: image.src, alt: image.alt, loading: "lazy" }}
+                    // className="rounded-lg w-full h-auto object-contain cursor-pointer hover:opacity-90 transition"
+                    className="h-auto w-full transform cursor-pointer object-contain transition-transform ease-in-out hover:scale-105"
+                  />
+                </a>
+              </div>
+              Artwork by{" "}
+              <a
+                href={image.artistUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {image.artist}
               </a>
             </div>
-            Artwork by{" "}
-            <a href={image.artistUrl} target="_blank" rel="noopener noreferrer">
-              {image.artist}
-            </a>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </>
     );
   };
 
