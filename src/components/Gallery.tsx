@@ -251,6 +251,26 @@ const Gallery = () => {
     },
   };
 
+  function InputRadioTab({
+    ariaLabel,
+    defaultChecked = false,
+  }: {
+    ariaLabel: string;
+    defaultChecked?: boolean;
+  }) {
+    return (
+      <input
+        {...{
+          type: "radio",
+          name: tabs.groupName,
+          className: `tab text-primary shadow-md me-1`,
+          "aria-label": ariaLabel,
+          defaultChecked,
+        }}
+      />
+    );
+  }
+
   function DisplayArtGallery() {
     const galleryImages = [
       {
@@ -408,28 +428,17 @@ const Gallery = () => {
       <MyModal
         {...{ modalId, title, btnStyle: "btn-secondary", modalSize: "full" }}
       >
-        <div className="tabs tabs-box border-primary bg-amber-50">
-          <input
-            {...{
-              type: "radio",
-              name: tabs.groupName,
-              className: "tab text-primary",
-              "aria-label": tabs.art.tabLabel,
-              defaultChecked: true,
-            }}
+        <div className="tabs tabs-box bg-amber-50">
+          <InputRadioTab
+            {...{ ariaLabel: tabs.art.tabLabel, defaultChecked: true }}
           />
+
           <div className={tabs.displayClassnames}>
             <DisplayArtGallery />
           </div>
 
-          <input
-            {...{
-              type: "radio",
-              name: tabs.groupName,
-              className: "tab text-primary",
-              "aria-label": tabs.fursuit.tabLabel,
-            }}
-          />
+          <InputRadioTab {...{ ariaLabel: tabs.fursuit.tabLabel }} />
+
           <div className={tabs.displayClassnames}>
             <DisplayFursuitGallery />
           </div>

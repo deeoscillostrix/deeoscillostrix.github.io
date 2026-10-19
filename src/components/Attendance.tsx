@@ -113,7 +113,7 @@ const AttendanceTabs = () => {
               <input
                 type="radio"
                 name={tabGroupName}
-                className="tab text-primary"
+                className="tab text-primary me-1 shadow-md"
                 aria-label={
                   attYear + " " + (isCurrentYear(attYear) ? `⭐` : "")
                 }
