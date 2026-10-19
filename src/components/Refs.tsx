@@ -1,7 +1,7 @@
 import classNames from "classnames";
+import React from "react";
 import { HandleClipboardCopy, MyModal } from ".";
 import { artists } from "../data";
-import React from "react";
 
 const PaletteButtons = ({ palette }: { palette: string[] }) => {
   return (
