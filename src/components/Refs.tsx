@@ -142,6 +142,22 @@ const Refs = () => {
         "#03147c",
       ],
     },
+    {
+      src: "/images/ref-snowtrap-hisui.webp",
+      alt: "SnowTrap's Hisui Outfit Ref",
+      download: "/images/ref-snowtrap-hisui.png",
+      artist: artists.cheekysonas.handle,
+      artistUrl: artists.cheekysonas.website,
+      palette: [
+        "#63cafa",
+        "#a3f9fd",
+        "#48be66",
+        "#fa5a32",
+        "#ffed93",
+        "#9f0f14",
+        "#ffe876",
+      ],
+    },
   ];
 
   const miloRefs: RefImage[] = [
