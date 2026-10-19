@@ -119,7 +119,7 @@ const AttendanceTabs = () => {
                 }
                 defaultChecked={isCurrentYear(attYear)}
               />
-              <div className="tab-content bg-base-100 border-base-300 text-primary p-4">
+              <div className="tab-content bg-base-100 border-base-300 text-primary max-h-72 overflow-y-auto p-4">
                 <ul className="list-none text-left text-sm">
                   {conAttendance[parseInt(attYear)].map((con, key) => (
                     <>
