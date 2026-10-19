@@ -10,18 +10,22 @@ const ClipboardLink = ({
   children: ReactNode;
   isButton?: boolean;
 }) => {
+  const dataValueObj = {
+    "data-value": dataValue,
+    onClick: () => HandleClipboardCopy(dataValue),
+  };
+
   return isButton ? (
     <button
       className="btn btn-outline btn-primary m-2"
-      data-value={dataValue}
-      onClick={() => HandleClipboardCopy(dataValue)}
+      // data-value={dataValue}
+      // onClick={() => HandleClipboardCopy(dataValue)}
+      {...dataValueObj}
     >
       {children}
     </button>
   ) : (
-    <a data-value={dataValue} onClick={() => HandleClipboardCopy(dataValue)}>
-      {children}
-    </a>
+    <a {...dataValueObj}>{children}</a>
   );
 };
 
