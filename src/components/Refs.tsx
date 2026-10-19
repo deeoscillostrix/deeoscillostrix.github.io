@@ -12,14 +12,16 @@ const PaletteButtons = ({ palette }: { palette: string[] }) => {
     >
       {palette.map((paletteColor, key) => (
         <button
-          key={key}
-          className={`btn btn-sm tooltip mx-auto h-[60px] w-[100px] border-none transition ease-in-out hover:scale-110 focus-visible:outline-2`}
-          style={{
-            backgroundColor: paletteColor,
-            outlineColor: `${paletteColor}`,
+          {...{
+            key,
+            style: {
+              backgroundColor: paletteColor,
+              outlineColor: `${paletteColor}`,
+            },
+            "data-tip": paletteColor.toUpperCase(),
+            onClick: () => HandleClipboardCopy(paletteColor.toUpperCase()),
           }}
-          data-tip={paletteColor.toUpperCase()}
-          onClick={() => HandleClipboardCopy(paletteColor.toUpperCase())}
+          className="btn btn-sm tooltip mx-auto h-15 w-25 border-none transition ease-in-out hover:scale-110 focus-visible:outline-2"
         ></button>
       ))}
     </div>
@@ -149,10 +151,7 @@ const Refs = () => {
   return (
     <>
       <MyModal
-        modalId={modalId}
-        title={title}
-        btnStyle="btn-secondary"
-        modalSize="large"
+        {...{ modalId, title, btnStyle: "btn-secondary", modalSize: "large" }}
       >
         {refImages.map((image, index) => (
           <div key={index} className="galleryDisplay">
@@ -162,17 +161,18 @@ const Refs = () => {
             <p className="mt-2 mb-4">
               {image.alt} by{" "}
               <a
-                href={image.artistUrl}
-                target="_blank"
-                rel="noopener"
+                {...{
+                  href: image.artistUrl,
+                  target: "_blank",
+                  rel: "noopener",
+                }}
                 className="hover:text-primary"
               >
                 {image.artist}
               </a>
               <span className="text-primary ms-2">
                 <a
-                  href={image.download}
-                  target="_blank"
+                  {...{ href: image.download, target: "_blank" }}
                   className="btn btn-sm btn-accent py-3! text-white transition-all duration-150 ease-in-out hover:scale-110 focus:scale-110"
                 >
                   Download

@@ -12,7 +12,7 @@ function displayTextingSocials(): boolean {
   if (!attendanceThisYear) return false;
 
   // iterate through each convention attendance in the year
-  for (let currentCon of attendanceThisYear) {
+  for (const currentCon of attendanceThisYear) {
     // obtain the start and end dates of each con
     const startDate = new Date(currentCon.startDate);
     const originalEndDate = new Date(currentCon.endDate);
@@ -52,14 +52,16 @@ const Socials = () => {
 
               return (
                 <a
-                  key={socialKey}
-                  className="tooltip"
-                  data-tip={config.dataTip}
-                  href={
-                    author.socials[socialKey as keyof typeof author.socials]
-                  }
-                  target="_blank"
-                  rel="noopener"
+                  {...{
+                    key: socialKey,
+                    className: "tooltip",
+                    "data-tip": config.dataTip,
+                    href: author.socials[
+                      socialKey as keyof typeof author.socials
+                    ],
+                    target: "_blank",
+                    rel: "noopener",
+                  }}
                 >
                   {createElement(config.iconImport)}
                 </a>

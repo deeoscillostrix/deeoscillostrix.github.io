@@ -136,8 +136,7 @@ const AttendanceTabs = () => {
                         {con.website ? (
                           <a
                             className="hover:text-secondary transition ease-in-out hover:cursor-pointer"
-                            href={con.website}
-                            target="_blank"
+                            {...{ href: con.website, target: "_blank" }}
                           >
                             {con.name}
                           </a>

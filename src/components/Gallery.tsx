@@ -122,9 +122,7 @@ export const ArtGallery = () => {
               <div className="imgContainer">
                 <a href={image.src} target="_blank" rel="noopener noreferrer">
                   <img
-                    src={image.src}
-                    alt={image.alt}
-                    loading="lazy"
+                    {...{ src: image.src, alt: image.alt, loading: "lazy" }}
                     // className="rounded-lg w-full h-auto object-contain cursor-pointer hover:opacity-90 transition"
                     className="h-auto w-full transform cursor-pointer object-contain transition-transform ease-in-out hover:scale-105"
                   />
@@ -132,9 +130,11 @@ export const ArtGallery = () => {
               </div>
               Artwork by{" "}
               <a
-                href={image.artistUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                {...{
+                  href: image.artistUrl,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                }}
               >
                 {image.artist}
               </a>
@@ -224,8 +224,7 @@ export const FursuitGallery = () => {
         <div>
           <a
             className="btn btn-accent btn-outline m-2 transition-all ease-in-out hover:scale-110"
-            href={author.socials.furtrack}
-            target="_blank"
+            {...{ href: author.socials.furtrack, target: "_blank" }}
           >
             More photos on FurTrack!
           </a>
@@ -234,3 +233,210 @@ export const FursuitGallery = () => {
     </>
   );
 };
+
+const Gallery = () => {
+  const modalId = "modal_gallery";
+  const title = "Gallery";
+
+  const tabs = {
+    groupName: "tabs-gallery",
+    displayClassnames:
+      "tab-content bg-base-100 border-base-300 text-primary h-[75dvh] overflow-y-auto p-4",
+    art: {
+      tabLabel: "Art Gallery",
+    },
+    fursuit: {
+      groupName: "tabs-fursuitGallery",
+      tabLabel: "Fursuit Gallery",
+    },
+  };
+
+  function DisplayArtGallery() {
+    const galleryImages = [
+      {
+        src: "/images/snowtrap-vs-octogeddon.webp",
+        alt: "SnowTrap vs. Octogeddon",
+        artist: artists.orlandofox.handle,
+        artistUrl: artists.orlandofox.website,
+      },
+      {
+        src: "/images/oscii-morizora.webp",
+        alt: "Oscillo & SnowTrap in Morizora",
+        artist: artists.kareru.handle,
+        artistUrl: artists.kareru.bluesky,
+      },
+      {
+        src: "/images/oscii-apocalypse-2021.webp",
+        alt: "Oscillo in Post-Apocalypse 2021",
+        artist: artists.orcaowlart.handle,
+        artistUrl: artists.orcaowlart.website,
+      },
+      {
+        src: "/images/snowtrap-yattamengachi.webp",
+        alt: "SnowTrap & No Holds Bard!!!",
+        artist: artists.cheekysonas.handle,
+        artistUrl: artists.cheekysonas.website,
+      },
+      {
+        src: "/images/oscii-halloween2024.webp",
+        alt: "Halloween 2024 with Oscillo, SnowTrap and Milo",
+        artist: artists.kareru.handle,
+        artistUrl: artists.kareru.bluesky,
+      },
+      {
+        src: "/images/oscii-lucy-gift-2025.webp",
+        alt: "Gift for Lucy 2025",
+        artist: artists.cyannocti.handle,
+        artistUrl: artists.cyannocti.instagram,
+      },
+      {
+        src: "/images/oscii-playground.webp",
+        alt: "Reminiscing at An Old Playground",
+        artist: artists.radishkek.handle,
+        artistUrl: artists.radishkek.instagram,
+      },
+      {
+        src: "/images/oscii-night-apocalypse.webp",
+        alt: "Oscii Apocalyptic Night",
+        artist: artists.orcaowlart.handle,
+        artistUrl: artists.orcaowlart.website,
+      },
+    ];
+
+    return (
+      <div className="columns-1 gap-4 md:columns-2 xl:columns-3">
+        {galleryImages.map((image, index) => (
+          <div key={index} className="galleryDisplay">
+            <div className="imgContainer">
+              <a href={image.src} target="_blank" rel="noopener noreferrer">
+                <img
+                  {...{ src: image.src, alt: image.alt, loading: "lazy" }}
+                  // className="rounded-lg w-full h-auto object-contain cursor-pointer hover:opacity-90 transition"
+                  className="h-auto w-full transform cursor-pointer object-contain transition-transform ease-in-out hover:scale-105"
+                />
+              </a>
+            </div>
+            Artwork by{" "}
+            <a href={image.artistUrl} target="_blank" rel="noopener noreferrer">
+              {image.artist}
+            </a>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  function DisplayFursuitGallery() {
+    const galleryImages = [
+      {
+        src: "/images/fursuit/image (14).webp",
+        alt: "Just unboxed! Commissioned Deleon Fursuits in Dec 2022, arrived Jul 2023. ^v^",
+      },
+      {
+        src: "/images/fursuit/SAM01104.webp",
+        alt: "Just a fan of the Rowlet line. ^v^",
+      },
+      {
+        src: "/images/fursuit/IMG_6353.webp",
+        alt: "This was during my first time fursuiting in public.. it was hot, but I loved it! ^v^",
+      },
+      {
+        src: "/images/fursuit/001453170029.webp",
+        alt: "Fullsuit in complete display!",
+      },
+      {
+        src: "/images/fursuit/20240707_172652544_iOS.webp",
+        alt: "Hoot hoot! You got mail! 📨",
+      },
+      {
+        src: "/images/fursuit/DSC06109.webp",
+        alt: "Just smile and wave! ^v^",
+      },
+      {
+        src: "/images/fursuit/IMG_0234.webp",
+        alt: "In full outfit!",
+      },
+      {
+        src: "/images/fursuit/IMG_0850.webp",
+        alt: "What can I say, I lean on the wall a lot for photos.. 😂",
+      },
+      {
+        src: "/images/fursuit/IMG_0760.webp",
+        alt: "Merry Christmas! 🎄",
+      },
+      {
+        src: "/images/fursuit/IMG_2550.webp",
+        alt: "Welcome to Mekdi, may I take your order?",
+      },
+      {
+        src: "/images/fursuit/_MAY1722.webp",
+        alt: "Hi there! In LIFC 2025, I now have a mailman bag! ^v^",
+      },
+    ];
+
+    return (
+      <>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="text-center">
+            <FursuitCredits />
+          </div>
+          {galleryImages.map((image, index) => (
+            <div key={index} className="galleryDisplay">
+              <div className="imgContainer">
+                <img src={image.src} alt={image.alt || ""} loading="lazy" />
+              </div>
+              <span className="text-sm">
+                {index === 0 && (image.alt || "")}
+              </span>
+            </div>
+          ))}
+        </div>
+        <div>
+          <a
+            {...{ href: author.socials.furtrack, target: "_blank" }}
+            className="btn btn-accent btn-outline m-2 transition-all ease-in-out hover:scale-110"
+          >
+            More photos on FurTrack!
+          </a>
+        </div>
+      </>
+    );
+  }
+
+  return (
+    <>
+      <MyModal
+        {...{ modalId, title, btnStyle: "btn-secondary", modalSize: "full" }}
+      >
+        <div className="tabs tabs-box border-primary bg-amber-50">
+          <input
+            {...{
+              type: "radio",
+              name: tabs.groupName,
+              className: "tab text-primary",
+              "aria-label": tabs.art.tabLabel,
+              defaultChecked: true,
+            }}
+          />
+          <div className={tabs.displayClassnames}>
+            <DisplayArtGallery />
+          </div>
+
+          <input
+            {...{
+              type: "radio",
+              name: tabs.groupName,
+              className: "tab text-primary",
+              "aria-label": tabs.fursuit.tabLabel,
+            }}
+          />
+          <div className={tabs.displayClassnames}>
+            <DisplayFursuitGallery />
+          </div>
+        </div>
+      </MyModal>
+    </>
+  );
+};
+
+export default Gallery;

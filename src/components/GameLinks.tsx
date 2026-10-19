@@ -11,8 +11,8 @@ const getGameName = (codeType: string) => {
       return "Pokémon Sleep";
     case "pokemonTCGP":
       return "Pokémon TCGP";
-    case "tailtag":
-      return "TailTag";
+    // case "tailtag":
+    //   return "TailTag";
     default:
       return codeType;
   }
@@ -23,7 +23,7 @@ const GameLinks = () => {
   const title = "Game Links";
 
   return (
-    <MyModal modalId={modalId} title={title}>
+    <MyModal {...{ modalId, title }}>
       <p>Click any of the following to copy to clipboard.</p>
 
       <p>
@@ -32,12 +32,13 @@ const GameLinks = () => {
           .map((codeType, index) => (
             <span key={index}>
               <ClipboardLink
-                dataValue={
-                  author.friendCodes[
-                    codeType as keyof typeof author.friendCodes
-                  ]
-                }
-                isButton={true}
+                {...{
+                  dataValue:
+                    author.friendCodes[
+                      codeType as keyof typeof author.friendCodes
+                    ],
+                  isButton: true,
+                }}
               >
                 {getGameName(codeType)}
               </ClipboardLink>

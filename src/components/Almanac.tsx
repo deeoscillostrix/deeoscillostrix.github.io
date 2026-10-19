@@ -24,17 +24,16 @@ const AboutOscillo = () => {
   return (
     <>
       <MyModal
-        modalId={modalId}
-        title={title}
-        btnStyle="btn-secondary"
-        modalSize="large"
+        {...{ modalId, title, btnStyle: "btn-secondary", modalSize: "large" }}
       >
         <div className="lg:flex">
           <div className="lg:w-1/2">
             <img
-              className="almanacPortrait"
-              src="/images/owl comm_stroke.webp"
-              alt="Oscillo"
+              {...{
+                className: "almanacPortrait",
+                src: "/images/owl comm_stroke.webp",
+                alt: "Oscillo",
+              }}
             />
           </div>
           <div className="text-left lg:mt-6">
@@ -126,18 +125,17 @@ const AboutSnowTrap = () => {
   return (
     <>
       <MyModal
-        modalId={modalId}
-        title={title}
-        btnStyle="btn-secondary"
-        modalSize="large"
+        {...{ modalId, title, btnStyle: "btn-secondary", modalSize: "large" }}
       >
         <div className="lg:flex">
           <div className="lg:w-1/2">
             <img
-              className="almanacPortrait"
-              src="/images/snowtrap_stroke.webp"
-              alt="SnowTrap"
-              // style={{ maxWidth: "400px" }}
+              {...{
+                className: "almanacPortrait",
+                src: "/images/snowtrap_stroke.webp",
+                alt: "SnowTrap",
+                // style: {maxWidth: "400px"},
+              }}
             />
           </div>
           <div className="text-left lg:mt-6">
@@ -226,19 +224,18 @@ const AboutMilo = () => {
   return (
     <>
       <MyModal
-        modalId={modalId}
-        title={title}
-        btnStyle="btn-secondary"
-        modalSize="large"
+        {...{ modalId, title, btnStyle: "btn-secondary", modalSize: "large" }}
       >
         <div className="lg:flex">
           <div className="lg:w-1/2">
             {/* To replace image later? */}
             <img
-              className="almanacPortrait"
-              src="/images/milo.webp"
-              alt="SnowTrap"
-              // style={{ maxWidth: "400px" }}
+              {...{
+                className: "almanacPortrait",
+                src: "/images/milo.webp",
+                alt: "Milo",
+                // style:{ maxWidth: "400px" },
+              }}
             />
           </div>
           <div className="text-left lg:mt-6">

@@ -29,7 +29,8 @@ const MyModal = ({
     if (!open) return;
 
     const handleEsc = (e: KeyboardEvent) => {
-      e.key === "Escape" && setOpen(false);
+      if (e.key === "Escape") setOpen(false);
+      // e.key === "Escape" && setOpen(false);
     };
 
     window.addEventListener("keydown", handleEsc);
