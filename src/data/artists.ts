@@ -52,6 +52,18 @@ export default {
     instagram: prefix.instagram + "toastysqxiid",
     bluesky: "https://toastysqxiid.bsky.social",
   },
+  aishasoup: {
+    handle: "@aishasoup",
+    twitter: prefix.twitter + "aishasoup",
+    instagram: prefix.instagram + "aishasauce",
+    bluesky: "https://aishasoup.bsky.social",
+    website: "https://aisha-comms.carrd.co/",
+  },
+  rencielart: {
+    handle: "@rencielart",
+    instagram: prefix.instagram + "rencielart",
+    website: "https://renciel.com/",
+  },
 
   // Artists for Fursuits and/or Wearables
   deleon: {

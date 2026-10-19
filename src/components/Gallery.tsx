@@ -242,22 +242,20 @@ const Gallery = () => {
     groupName: "tabs-gallery",
     displayClassnames:
       "tab-content bg-base-100 border-base-300 text-primary h-[75dvh] overflow-y-auto p-4",
-    art: {
-      tabLabel: "Art Gallery",
-    },
-    fursuit: {
-      groupName: "tabs-fursuitGallery",
-      tabLabel: "Fursuit Gallery",
+    tabLabel: {
+      apocalypse: "Apocalypse Series",
+      art: "Fantasy",
+      fursuit: "Fursuit Gallery",
     },
   };
 
-  function InputRadioTab({
+  const InputRadioTab = ({
     ariaLabel,
     defaultChecked = false,
   }: {
     ariaLabel: string;
     defaultChecked?: boolean;
-  }) {
+  }) => {
     return (
       <input
         {...{
@@ -269,9 +267,9 @@ const Gallery = () => {
         }}
       />
     );
-  }
+  };
 
-  function DisplayArtGallery() {
+  const DisplayArtGallery = () => {
     const galleryImages = [
       {
         src: "/images/snowtrap-vs-octogeddon.webp",
@@ -285,12 +283,12 @@ const Gallery = () => {
         artist: artists.kareru.handle,
         artistUrl: artists.kareru.bluesky,
       },
-      {
-        src: "/images/oscii-apocalypse-2021.webp",
-        alt: "Oscillo in Post-Apocalypse 2021",
-        artist: artists.orcaowlart.handle,
-        artistUrl: artists.orcaowlart.website,
-      },
+      // {
+      //   src: "/images/oscii-apocalypse-2021.webp",
+      //   alt: "Oscillo in Post-Apocalypse 2021",
+      //   artist: artists.orcaowlart.handle,
+      //   artistUrl: artists.orcaowlart.website,
+      // },
       {
         src: "/images/snowtrap-yattamengachi.webp",
         alt: "SnowTrap & No Holds Bard!!!",
@@ -309,17 +307,29 @@ const Gallery = () => {
         artist: artists.cyannocti.handle,
         artistUrl: artists.cyannocti.instagram,
       },
+      // {
+      //   src: "/images/oscii-playground.webp",
+      //   alt: "Reminiscing at An Old Playground",
+      //   artist: artists.radishkek.handle,
+      //   artistUrl: artists.radishkek.instagram,
+      // },
+      // {
+      //   src: "/images/oscii-night-apocalypse.webp",
+      //   alt: "Oscii Apocalyptic Night",
+      //   artist: artists.orcaowlart.handle,
+      //   artistUrl: artists.orcaowlart.website,
+      // },
+      // {
+      //   src: "/images/oscii-library.webp",
+      //   alt: "Oscii at Library Ruins",
+      //   artist: artists.aishasoup.handle,
+      //   artistUrl: artists.aishasoup.website,
+      // },
       {
-        src: "/images/oscii-playground.webp",
-        alt: "Reminiscing at An Old Playground",
-        artist: artists.radishkek.handle,
-        artistUrl: artists.radishkek.instagram,
-      },
-      {
-        src: "/images/oscii-night-apocalypse.webp",
-        alt: "Oscii Apocalyptic Night",
-        artist: artists.orcaowlart.handle,
-        artistUrl: artists.orcaowlart.website,
+        src: "/images/oscii-cafe.webp",
+        alt: "Oscii at Café",
+        artist: artists.rencielart.handle,
+        artistUrl: artists.rencielart.website,
       },
     ];
 
@@ -344,7 +354,58 @@ const Gallery = () => {
         ))}
       </div>
     );
-  }
+  };
+
+  const DisplayApocalypseGallery = () => {
+    const galleryImages = [
+      {
+        src: "/images/oscii-apocalypse-2021.webp",
+        alt: "Oscillo in Post-Apocalypse 2021",
+        artist: artists.orcaowlart.handle,
+        artistUrl: artists.orcaowlart.website,
+      },
+      {
+        src: "/images/oscii-playground.webp",
+        alt: "Reminiscing at An Old Playground",
+        artist: artists.radishkek.handle,
+        artistUrl: artists.radishkek.instagram,
+      },
+      {
+        src: "/images/oscii-night-apocalypse.webp",
+        alt: "Oscii Apocalyptic Night",
+        artist: artists.orcaowlart.handle,
+        artistUrl: artists.orcaowlart.website,
+      },
+      {
+        src: "/images/oscii-library.webp",
+        alt: "Oscii at Library Ruins",
+        artist: artists.aishasoup.handle,
+        artistUrl: artists.aishasoup.website,
+      },
+    ];
+
+    return (
+      <div className="columns-1 gap-4 md:columns-2 xl:columns-3">
+        {galleryImages.map((image, index) => (
+          <div key={index} className="galleryDisplay text-sm">
+            <div className="imgContainer">
+              <a href={image.src} target="_blank" rel="noopener noreferrer">
+                <img
+                  {...{ src: image.src, alt: image.alt, loading: "lazy" }}
+                  // className="rounded-lg w-full h-auto object-contain cursor-pointer hover:opacity-90 transition"
+                  className="h-auto w-full transform cursor-pointer object-contain transition-transform ease-in-out hover:scale-105"
+                />
+              </a>
+            </div>
+            Artwork by{" "}
+            <a href={image.artistUrl} target="_blank" rel="noopener noreferrer">
+              {image.artist}
+            </a>
+          </div>
+        ))}
+      </div>
+    );
+  };
 
   function DisplayFursuitGallery() {
     const galleryImages = [
@@ -429,15 +490,24 @@ const Gallery = () => {
         {...{ modalId, title, btnStyle: "btn-secondary", modalSize: "full" }}
       >
         <div className="tabs tabs-box bg-amber-50">
+          {/* Regular Art Gallery here */}
           <InputRadioTab
-            {...{ ariaLabel: tabs.art.tabLabel, defaultChecked: true }}
+            {...{ ariaLabel: tabs.tabLabel.art, defaultChecked: true }}
           />
 
           <div className={tabs.displayClassnames}>
             <DisplayArtGallery />
           </div>
 
-          <InputRadioTab {...{ ariaLabel: tabs.fursuit.tabLabel }} />
+          {/* Apocalypse Art Gallery here */}
+          <InputRadioTab {...{ ariaLabel: tabs.tabLabel.apocalypse }} />
+
+          <div className={tabs.displayClassnames}>
+            <DisplayApocalypseGallery />
+          </div>
+
+          {/* Fursuit Gallery here */}
+          <InputRadioTab {...{ ariaLabel: tabs.tabLabel.fursuit }} />
 
           <div className={tabs.displayClassnames}>
             <DisplayFursuitGallery />
