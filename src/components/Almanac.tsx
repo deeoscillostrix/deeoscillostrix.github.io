@@ -9,12 +9,34 @@ const Almanac = () => {
         <AboutOscillo />
         <AboutSnowTrap />
         <AboutMilo />
+        {/* <AboutHaruomi /> */}
       </div>
     </>
   );
 };
 
 export default Almanac;
+
+function DisplayAlmanacImage({
+  src,
+  alt,
+  style,
+}: {
+  src: string;
+  alt: string;
+  style?: React.CSSProperties;
+}) {
+  return <img className="almanacPortrait" {...{ src, alt, style }} />;
+}
+
+const almanacModalClasses = (
+  modalId: string,
+  title: string,
+  btnStyle: string = "btn-secondary",
+  modalSize: string = "large",
+) => {
+  return { modalId, title, btnStyle, modalSize };
+};
 
 // Oscillo's Almanac Entry
 const AboutOscillo = () => {
@@ -23,17 +45,11 @@ const AboutOscillo = () => {
 
   return (
     <>
-      <MyModal
-        {...{ modalId, title, btnStyle: "btn-secondary", modalSize: "large" }}
-      >
+      <MyModal {...almanacModalClasses(modalId, title)}>
         <div className="lg:flex">
           <div className="lg:w-1/2">
-            <img
-              {...{
-                className: "almanacPortrait",
-                src: "/images/owl comm_stroke.webp",
-                alt: "Oscillo",
-              }}
+            <DisplayAlmanacImage
+              {...{ src: "/images/owl comm_stroke.webp", alt: "Oscillo" }}
             />
           </div>
           <div className="text-left lg:mt-6">
@@ -124,18 +140,11 @@ const AboutSnowTrap = () => {
 
   return (
     <>
-      <MyModal
-        {...{ modalId, title, btnStyle: "btn-secondary", modalSize: "large" }}
-      >
+      <MyModal {...almanacModalClasses(modalId, title)}>
         <div className="lg:flex">
           <div className="lg:w-1/2">
-            <img
-              {...{
-                className: "almanacPortrait",
-                src: "/images/snowtrap_stroke.webp",
-                alt: "SnowTrap",
-                // style: {maxWidth: "400px"},
-              }}
+            <DisplayAlmanacImage
+              {...{ src: "/images/snowtrap_stroke.webp", alt: "Snowtrap" }}
             />
           </div>
           <div className="text-left lg:mt-6">
@@ -223,19 +232,12 @@ const AboutMilo = () => {
 
   return (
     <>
-      <MyModal
-        {...{ modalId, title, btnStyle: "btn-secondary", modalSize: "large" }}
-      >
+      <MyModal {...almanacModalClasses(modalId, title)}>
         <div className="lg:flex">
           <div className="lg:w-1/2">
             {/* To replace image later? */}
-            <img
-              {...{
-                className: "almanacPortrait",
-                src: "/images/milo.webp",
-                alt: "Milo",
-                // style:{ maxWidth: "400px" },
-              }}
+            <DisplayAlmanacImage
+              {...{ src: "/images/milo.webp", alt: "Milo" }}
             />
           </div>
           <div className="text-left lg:mt-6">
@@ -329,3 +331,26 @@ const AboutMilo = () => {
     </>
   );
 };
+
+// Haruomi's Almanac Entry
+// function AboutHaruomi() {
+//   const modalId = "modal_abtHaruomi";
+//   const title = "About Haruomi 🪶";
+
+//   return (
+//     <>
+//       <MyModal {...almanacModalClasses(modalId, title)}>
+//         <div className="lg:flex"></div>
+//         <hr className="my-4" />
+//         <div className="text-left">
+//           <p className="italic"></p>
+
+//           <p>
+//             Haruomi is SnowTrap's Pokémon companion from when he got warped into
+//             Hisui (and then back again).
+//           </p>
+//         </div>
+//       </MyModal>
+//     </>
+//   );
+// }
