@@ -146,7 +146,9 @@ const AttendanceTabs = () => {
                         )}{" "}
                         {isComingSoon(con.startDate, con.endDate)}
                       </li>
-                      {/* {key < conAttendance[parseInt(attYear)].length - 1 && <hr />} */}
+                      {key < conAttendance[parseInt(attYear)].length - 1 && (
+                        <hr />
+                      )}
                     </>
                   ))}
                 </ul>
