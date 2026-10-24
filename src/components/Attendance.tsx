@@ -8,7 +8,7 @@ function MyDateParser(thisDate: Date): string {
   // return `${thisDate.getDate()} ${thisDate.toLocaleString("default", options)} ${thisDate.getFullYear()}`;
 }
 
-function isComingSoon({ startDate, endDate }: { startDate: Date; endDate: Date; }) {
+function isComingSoon(startDate: Date, endDate: Date) {
   const todaysDate = new Date();
   if (todaysDate < startDate)
     return <span className="text-accent font-light">(soon)</span>;
@@ -137,7 +137,7 @@ const AttendanceTabs = () => {
                   ) : (
                     con.name
                   )}{" "}
-                  {isComingSoon({ startDate: con.startDate, endDate: con.endDate })}
+                  {isComingSoon(con.startDate, con.endDate)}
                 </li>
                 {key < conAttendance[parseInt(attYear)].length - 1 && <hr />}
               </>
