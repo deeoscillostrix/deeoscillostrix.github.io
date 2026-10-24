@@ -59,7 +59,7 @@ const conNames = {
   iwag: "Indonesian Weekend Anthro Gathering 🇮🇩", // id_jakarta
   lifc: "Little Island Fur Con 🇸🇬",
   myfur: "MYFur 🇲🇾",
-  nfc: "Nordic FuzzCon 🇸🇪", // eu_sweden
+  nfc: "NordicFuzzCon 🇸🇪", // eu_sweden
   pawai: "Party Along with Anthro Indonesia 🇮🇩", // id_bali
   waff: "WA Fur Frenzy 🇦🇺", //au_per
 };
@@ -252,17 +252,17 @@ const attendance: { [year: number]: Event[] } = {
       website: `${conWebsites.nfc}`,
       // website: `${conWebsites.archive.nfc}2027/live`,
     },
-    // {
-    //   name: conNames.myfur,
-    //   startDate: new Date(`2027-04-24${defaultMidnight}`),
-    //   endDate: new Date(`2027-04-25${beforeMidnight}`),
-    //   timeZone: timezones.my_kl,
-    //   venue: "Hotel Armada PJ",
-    //   theme: "FurGear",
-    //   // ticketNo: -1,
-    //   tier: "",
-    //   website: `${conWebsites.myfur}2027`,
-    // },
+    {
+      name: conNames.myfur,
+      startDate: new Date(`2027-04-24${defaultMidnight}`),
+      endDate: new Date(`2027-04-25${beforeMidnight}`),
+      timeZone: timezones.my_kl,
+      venue: "Hotel Armada PJ",
+      theme: "FurGear",
+      ticketNo: 134,
+      tier: "Satria",  // Sponsor
+      website: `${conWebsites.myfur}2027`,
+    },
     // {
     //   name: conNames.fwa,
     //   startDate: new Date(`2027-05-06${defaultMidnight}`),
