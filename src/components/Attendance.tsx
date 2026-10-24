@@ -2,13 +2,13 @@ import React from "react";
 import { MyModal } from ".";
 import { conAttendance } from "../data";
 
-function MyDateParser(thisDate: Date) {
+function MyDateParser(thisDate: Date): string {
   const options: Intl.DateTimeFormatOptions = { month: "long" };
   return `${thisDate.getDate()} ${thisDate.toLocaleString("default", options)}`;
   // return `${thisDate.getDate()} ${thisDate.toLocaleString("default", options)} ${thisDate.getFullYear()}`;
 }
 
-function isComingSoon(startDate: Date, endDate: Date) {
+function isComingSoon({ startDate, endDate }: { startDate: Date; endDate: Date; }) {
   const todaysDate = new Date();
   if (todaysDate < startDate)
     return <span className="text-accent font-light">(soon)</span>;
@@ -93,6 +93,61 @@ const AttendanceTabs = () => {
   // const isCurrentYear = (currentAttendanceYear: string): boolean =>
   //   parseInt(currentAttendanceYear) - new Date().getFullYear() == 0;
 
+  function hasYearAnyConventions(attYear: number): boolean {
+    // display entries for next year if it's currently September (thisMonth >= 8)
+    // otherwise show only all entries up to this year
+    // but do not include if no con attendance for that year
+    return (
+      ((thisMonth >= 8 && attYear <= thisYear + 1) || attYear <= thisYear) &&
+      conAttendance[attYear].length > 0
+    );
+  }
+
+  const ConsEntry = ({ attYear }: { attYear: string }) => {
+    return (
+      <React.Fragment>
+        <input
+          type="radio"
+          name={tabGroupName}
+          className="tab text-primary me-1 shadow-md"
+          aria-label={`${attYear} ${(isCurrentYear(attYear) ? `⭐` : "")}`}
+          // aria-label={attYear + " " + (isCurrentYear(attYear) ? `⭐` : "")}
+          defaultChecked={isCurrentYear(attYear)}
+        />
+        <div className="tab-content bg-base-100 border-base-300 text-primary max-h-72 overflow-y-auto p-4">
+          <ul className="text-left text-sm">
+            {conAttendance[parseInt(attYear)].map((con, key) => (
+              <>
+                <li key={key} className="py-1">
+                  <span className="font-medium">
+                    {MyDateParser(con.startDate)}
+                    {MyDateParser(con.endDate) !== MyDateParser(con.startDate)
+                      ? " - " + MyDateParser(con.endDate)
+                      : ""}{" "}
+                    ({con.timeZone})
+                  </span>
+                  <br />
+                  {con.website ? (
+                    <a
+                      className="hover:text-secondary transition ease-in-out hover:cursor-pointer"
+                      {...{ href: con.website, target: "_blank" }}
+                    >
+                      {con.name}
+                    </a>
+                  ) : (
+                    con.name
+                  )}{" "}
+                  {isComingSoon({ startDate: con.startDate, endDate: con.endDate })}
+                </li>
+                {key < conAttendance[parseInt(attYear)].length - 1 && <hr />}
+              </>
+            ))}
+          </ul>
+        </div>
+      </React.Fragment>
+    );
+  };
+
   return (
     <>
       <div
@@ -101,58 +156,9 @@ const AttendanceTabs = () => {
       >
         {Object.keys(conAttendance)
           .sort((a, b) => parseInt(b) - parseInt(a)) // sort years in descending order
-          .filter(
-            (attYear) =>
-              // display entries for next year if it's currently December (thisMonth >= 11)
-              // otherwise show only all entries up to this year
-              (thisMonth >= 11 && parseInt(attYear) <= thisYear + 1) ||
-              parseInt(attYear) <= thisYear,
-          )
-          .map((attYear) => (
-            <React.Fragment key={attYear}>
-              <input
-                type="radio"
-                name={tabGroupName}
-                className="tab text-primary me-1 shadow-md"
-                aria-label={
-                  attYear + " " + (isCurrentYear(attYear) ? `⭐` : "")
-                }
-                defaultChecked={isCurrentYear(attYear)}
-              />
-              <div className="tab-content bg-base-100 border-base-300 text-primary max-h-72 overflow-y-auto p-4">
-                <ul className="list-none text-left text-sm">
-                  {conAttendance[parseInt(attYear)].map((con, key) => (
-                    <>
-                      <li key={key} className="py-1">
-                        <span className="font-medium">
-                          {MyDateParser(con.startDate)}
-                          {MyDateParser(con.endDate) !==
-                          MyDateParser(con.startDate)
-                            ? " - " + MyDateParser(con.endDate)
-                            : ""}{" "}
-                          ({con.timeZone})
-                        </span>
-                        <br />
-                        {con.website ? (
-                          <a
-                            className="hover:text-secondary transition ease-in-out hover:cursor-pointer"
-                            {...{ href: con.website, target: "_blank" }}
-                          >
-                            {con.name}
-                          </a>
-                        ) : (
-                          con.name
-                        )}{" "}
-                        {isComingSoon(con.startDate, con.endDate)}
-                      </li>
-                      {key < conAttendance[parseInt(attYear)].length - 1 && (
-                        <hr />
-                      )}
-                    </>
-                  ))}
-                </ul>
-              </div>
-            </React.Fragment>
+          .filter((attYear) => hasYearAnyConventions(parseInt(attYear)))
+          .map((attYear, key) => (
+            <ConsEntry {...{ attYear, key }} />
           ))}
       </div>
     </>
