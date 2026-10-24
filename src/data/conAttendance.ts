@@ -214,18 +214,6 @@ const attendance: { [year: number]: Event[] } = {
       website: `${conWebsites.archive.iwag}2026`,
       // website: `${conWebsites.iwag}`,
     },
-    // {
-    //   name: conNames.furdu_tot,
-    //   startDate: new Date(`2026-10-02${defaultMidnight}`),
-    //   endDate: new Date(`2026-10-04${beforeMidnight}`),
-    //   timeZone: timezones.au_bne,
-    //   venue: "Hotel Grand Chancellor Brisbane",
-    //   theme: "What Lies Below",
-
-    //   // ticketNo: -1,
-    //   // tier: "Standard",
-    //   website: `${conWebsites.furdu}`,
-    // },
     {
       name: conNames.furum,
       startDate: new Date(`2026-12-11${defaultMidnight}`),
@@ -261,7 +249,8 @@ const attendance: { [year: number]: Event[] } = {
       theme: "FurGear",
       ticketNo: 134,
       tier: "Satria",  // Sponsor
-      website: `${conWebsites.myfur}2027`,
+      website: `${conWebsites.myfur}`,
+      // website: `${conWebsites.myfur}2027`,
     },
     // {
     //   name: conNames.fwa,
